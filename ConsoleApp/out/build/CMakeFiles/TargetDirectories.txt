@@ -1,0 +1,12 @@
+C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/out/build/CMakeFiles/LzwCompression.dir
+C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/out/build/CMakeFiles/edit_cache.dir
+C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/out/build/CMakeFiles/rebuild_cache.dir
+C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/out/build/compressor/byte/CMakeFiles/byteCompressor.dir
+C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/out/build/compressor/byte/CMakeFiles/edit_cache.dir
+C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/out/build/compressor/byte/CMakeFiles/rebuild_cache.dir
+C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/out/build/compressor/file/CMakeFiles/fileCompressor.dir
+C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/out/build/compressor/file/CMakeFiles/edit_cache.dir
+C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/out/build/compressor/file/CMakeFiles/rebuild_cache.dir
+C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/out/build/file/CMakeFiles/file.dir
+C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/out/build/file/CMakeFiles/edit_cache.dir
+C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/out/build/file/CMakeFiles/rebuild_cache.dir
