@@ -1,4 +1,12 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/LzwCompression.dir/command/executor/CommandExecutor.cpp.obj"
+  "CMakeFiles/LzwCompression.dir/command/executor/CommandExecutor.cpp.obj.d"
+  "CMakeFiles/LzwCompression.dir/command/parser/CommandParser.cpp.obj"
+  "CMakeFiles/LzwCompression.dir/command/parser/CommandParser.cpp.obj.d"
+  "CMakeFiles/LzwCompression.dir/command/utils/ArrayUtils.cpp.obj"
+  "CMakeFiles/LzwCompression.dir/command/utils/ArrayUtils.cpp.obj.d"
+  "CMakeFiles/LzwCompression.dir/command/utils/CharArrUtils.cpp.obj"
+  "CMakeFiles/LzwCompression.dir/command/utils/CharArrUtils.cpp.obj.d"
   "CMakeFiles/LzwCompression.dir/compressor/byte/ByteCompressor.cpp.obj"
   "CMakeFiles/LzwCompression.dir/compressor/byte/ByteCompressor.cpp.obj.d"
   "CMakeFiles/LzwCompression.dir/compressor/directory/DirectoryCompressor.cpp.obj"

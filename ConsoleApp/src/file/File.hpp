@@ -31,6 +31,7 @@ public:
     char readByte();
     char *readBytes(const int bytesCount, int &bytesRead);
     pair<ArchiveHeader, vector<WordCode> *> readArchive();
+    void readTableOfContents(vector<string>& result);
     void readTableOfContents(unordered_map<string, int>& result);
     size_t readTableOfContentsByteSize();
     void appendBytes(const char *bytes, const int bytesCount);

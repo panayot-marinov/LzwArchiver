@@ -82,10 +82,66 @@ CMakeFiles/LzwCompression.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LzwCompression.dir/main.cpp.s"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\main.cpp" -o CMakeFiles\LzwCompression.dir\main.cpp.s
 
+CMakeFiles/LzwCompression.dir/command/parser/CommandParser.cpp.obj: CMakeFiles/LzwCompression.dir/flags.make
+CMakeFiles/LzwCompression.dir/command/parser/CommandParser.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/command/parser/CommandParser.cpp
+CMakeFiles/LzwCompression.dir/command/parser/CommandParser.cpp.obj: CMakeFiles/LzwCompression.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/LzwCompression.dir/command/parser/CommandParser.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LzwCompression.dir/command/parser/CommandParser.cpp.obj -MF CMakeFiles\LzwCompression.dir\command\parser\CommandParser.cpp.obj.d -o CMakeFiles\LzwCompression.dir\command\parser\CommandParser.cpp.obj -c "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\command\parser\CommandParser.cpp"
+
+CMakeFiles/LzwCompression.dir/command/parser/CommandParser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LzwCompression.dir/command/parser/CommandParser.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\command\parser\CommandParser.cpp" > CMakeFiles\LzwCompression.dir\command\parser\CommandParser.cpp.i
+
+CMakeFiles/LzwCompression.dir/command/parser/CommandParser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LzwCompression.dir/command/parser/CommandParser.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\command\parser\CommandParser.cpp" -o CMakeFiles\LzwCompression.dir\command\parser\CommandParser.cpp.s
+
+CMakeFiles/LzwCompression.dir/command/executor/CommandExecutor.cpp.obj: CMakeFiles/LzwCompression.dir/flags.make
+CMakeFiles/LzwCompression.dir/command/executor/CommandExecutor.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/command/executor/CommandExecutor.cpp
+CMakeFiles/LzwCompression.dir/command/executor/CommandExecutor.cpp.obj: CMakeFiles/LzwCompression.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/LzwCompression.dir/command/executor/CommandExecutor.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LzwCompression.dir/command/executor/CommandExecutor.cpp.obj -MF CMakeFiles\LzwCompression.dir\command\executor\CommandExecutor.cpp.obj.d -o CMakeFiles\LzwCompression.dir\command\executor\CommandExecutor.cpp.obj -c "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\command\executor\CommandExecutor.cpp"
+
+CMakeFiles/LzwCompression.dir/command/executor/CommandExecutor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LzwCompression.dir/command/executor/CommandExecutor.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\command\executor\CommandExecutor.cpp" > CMakeFiles\LzwCompression.dir\command\executor\CommandExecutor.cpp.i
+
+CMakeFiles/LzwCompression.dir/command/executor/CommandExecutor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LzwCompression.dir/command/executor/CommandExecutor.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\command\executor\CommandExecutor.cpp" -o CMakeFiles\LzwCompression.dir\command\executor\CommandExecutor.cpp.s
+
+CMakeFiles/LzwCompression.dir/command/utils/ArrayUtils.cpp.obj: CMakeFiles/LzwCompression.dir/flags.make
+CMakeFiles/LzwCompression.dir/command/utils/ArrayUtils.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/command/utils/ArrayUtils.cpp
+CMakeFiles/LzwCompression.dir/command/utils/ArrayUtils.cpp.obj: CMakeFiles/LzwCompression.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/LzwCompression.dir/command/utils/ArrayUtils.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LzwCompression.dir/command/utils/ArrayUtils.cpp.obj -MF CMakeFiles\LzwCompression.dir\command\utils\ArrayUtils.cpp.obj.d -o CMakeFiles\LzwCompression.dir\command\utils\ArrayUtils.cpp.obj -c "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\command\utils\ArrayUtils.cpp"
+
+CMakeFiles/LzwCompression.dir/command/utils/ArrayUtils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LzwCompression.dir/command/utils/ArrayUtils.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\command\utils\ArrayUtils.cpp" > CMakeFiles\LzwCompression.dir\command\utils\ArrayUtils.cpp.i
+
+CMakeFiles/LzwCompression.dir/command/utils/ArrayUtils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LzwCompression.dir/command/utils/ArrayUtils.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\command\utils\ArrayUtils.cpp" -o CMakeFiles\LzwCompression.dir\command\utils\ArrayUtils.cpp.s
+
+CMakeFiles/LzwCompression.dir/command/utils/CharArrUtils.cpp.obj: CMakeFiles/LzwCompression.dir/flags.make
+CMakeFiles/LzwCompression.dir/command/utils/CharArrUtils.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/command/utils/CharArrUtils.cpp
+CMakeFiles/LzwCompression.dir/command/utils/CharArrUtils.cpp.obj: CMakeFiles/LzwCompression.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/LzwCompression.dir/command/utils/CharArrUtils.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LzwCompression.dir/command/utils/CharArrUtils.cpp.obj -MF CMakeFiles\LzwCompression.dir\command\utils\CharArrUtils.cpp.obj.d -o CMakeFiles\LzwCompression.dir\command\utils\CharArrUtils.cpp.obj -c "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\command\utils\CharArrUtils.cpp"
+
+CMakeFiles/LzwCompression.dir/command/utils/CharArrUtils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LzwCompression.dir/command/utils/CharArrUtils.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\command\utils\CharArrUtils.cpp" > CMakeFiles\LzwCompression.dir\command\utils\CharArrUtils.cpp.i
+
+CMakeFiles/LzwCompression.dir/command/utils/CharArrUtils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LzwCompression.dir/command/utils/CharArrUtils.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\command\utils\CharArrUtils.cpp" -o CMakeFiles\LzwCompression.dir\command\utils\CharArrUtils.cpp.s
+
 CMakeFiles/LzwCompression.dir/compressor/byte/ByteCompressor.cpp.obj: CMakeFiles/LzwCompression.dir/flags.make
 CMakeFiles/LzwCompression.dir/compressor/byte/ByteCompressor.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/byte/ByteCompressor.cpp
 CMakeFiles/LzwCompression.dir/compressor/byte/ByteCompressor.cpp.obj: CMakeFiles/LzwCompression.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/LzwCompression.dir/compressor/byte/ByteCompressor.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/LzwCompression.dir/compressor/byte/ByteCompressor.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LzwCompression.dir/compressor/byte/ByteCompressor.cpp.obj -MF CMakeFiles\LzwCompression.dir\compressor\byte\ByteCompressor.cpp.obj.d -o CMakeFiles\LzwCompression.dir\compressor\byte\ByteCompressor.cpp.obj -c "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\compressor\byte\ByteCompressor.cpp"
 
 CMakeFiles/LzwCompression.dir/compressor/byte/ByteCompressor.cpp.i: cmake_force
@@ -99,7 +155,7 @@ CMakeFiles/LzwCompression.dir/compressor/byte/ByteCompressor.cpp.s: cmake_force
 CMakeFiles/LzwCompression.dir/compressor/directory/DirectoryCompressor.cpp.obj: CMakeFiles/LzwCompression.dir/flags.make
 CMakeFiles/LzwCompression.dir/compressor/directory/DirectoryCompressor.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/directory/DirectoryCompressor.cpp
 CMakeFiles/LzwCompression.dir/compressor/directory/DirectoryCompressor.cpp.obj: CMakeFiles/LzwCompression.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/LzwCompression.dir/compressor/directory/DirectoryCompressor.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/LzwCompression.dir/compressor/directory/DirectoryCompressor.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LzwCompression.dir/compressor/directory/DirectoryCompressor.cpp.obj -MF CMakeFiles\LzwCompression.dir\compressor\directory\DirectoryCompressor.cpp.obj.d -o CMakeFiles\LzwCompression.dir\compressor\directory\DirectoryCompressor.cpp.obj -c "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\compressor\directory\DirectoryCompressor.cpp"
 
 CMakeFiles/LzwCompression.dir/compressor/directory/DirectoryCompressor.cpp.i: cmake_force
@@ -113,7 +169,7 @@ CMakeFiles/LzwCompression.dir/compressor/directory/DirectoryCompressor.cpp.s: cm
 CMakeFiles/LzwCompression.dir/compressor/file/FileCompressor.cpp.obj: CMakeFiles/LzwCompression.dir/flags.make
 CMakeFiles/LzwCompression.dir/compressor/file/FileCompressor.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/FileCompressor.cpp
 CMakeFiles/LzwCompression.dir/compressor/file/FileCompressor.cpp.obj: CMakeFiles/LzwCompression.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/LzwCompression.dir/compressor/file/FileCompressor.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/LzwCompression.dir/compressor/file/FileCompressor.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LzwCompression.dir/compressor/file/FileCompressor.cpp.obj -MF CMakeFiles\LzwCompression.dir\compressor\file\FileCompressor.cpp.obj.d -o CMakeFiles\LzwCompression.dir\compressor\file\FileCompressor.cpp.obj -c "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\compressor\file\FileCompressor.cpp"
 
 CMakeFiles/LzwCompression.dir/compressor/file/FileCompressor.cpp.i: cmake_force
@@ -127,7 +183,7 @@ CMakeFiles/LzwCompression.dir/compressor/file/FileCompressor.cpp.s: cmake_force
 CMakeFiles/LzwCompression.dir/file/File.cpp.obj: CMakeFiles/LzwCompression.dir/flags.make
 CMakeFiles/LzwCompression.dir/file/File.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/file/File.cpp
 CMakeFiles/LzwCompression.dir/file/File.cpp.obj: CMakeFiles/LzwCompression.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/LzwCompression.dir/file/File.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/LzwCompression.dir/file/File.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LzwCompression.dir/file/File.cpp.obj -MF CMakeFiles\LzwCompression.dir\file\File.cpp.obj.d -o CMakeFiles\LzwCompression.dir\file\File.cpp.obj -c "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\file\File.cpp"
 
 CMakeFiles/LzwCompression.dir/file/File.cpp.i: cmake_force
@@ -141,7 +197,7 @@ CMakeFiles/LzwCompression.dir/file/File.cpp.s: cmake_force
 CMakeFiles/LzwCompression.dir/path/PathUtils.cpp.obj: CMakeFiles/LzwCompression.dir/flags.make
 CMakeFiles/LzwCompression.dir/path/PathUtils.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/path/PathUtils.cpp
 CMakeFiles/LzwCompression.dir/path/PathUtils.cpp.obj: CMakeFiles/LzwCompression.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/LzwCompression.dir/path/PathUtils.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/LzwCompression.dir/path/PathUtils.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LzwCompression.dir/path/PathUtils.cpp.obj -MF CMakeFiles\LzwCompression.dir\path\PathUtils.cpp.obj.d -o CMakeFiles\LzwCompression.dir\path\PathUtils.cpp.obj -c "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\path\PathUtils.cpp"
 
 CMakeFiles/LzwCompression.dir/path/PathUtils.cpp.i: cmake_force
@@ -155,7 +211,7 @@ CMakeFiles/LzwCompression.dir/path/PathUtils.cpp.s: cmake_force
 CMakeFiles/LzwCompression.dir/wordCode/reader/WordCodeReader.cpp.obj: CMakeFiles/LzwCompression.dir/flags.make
 CMakeFiles/LzwCompression.dir/wordCode/reader/WordCodeReader.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/reader/WordCodeReader.cpp
 CMakeFiles/LzwCompression.dir/wordCode/reader/WordCodeReader.cpp.obj: CMakeFiles/LzwCompression.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/LzwCompression.dir/wordCode/reader/WordCodeReader.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/LzwCompression.dir/wordCode/reader/WordCodeReader.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LzwCompression.dir/wordCode/reader/WordCodeReader.cpp.obj -MF CMakeFiles\LzwCompression.dir\wordCode\reader\WordCodeReader.cpp.obj.d -o CMakeFiles\LzwCompression.dir\wordCode\reader\WordCodeReader.cpp.obj -c "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\wordCode\reader\WordCodeReader.cpp"
 
 CMakeFiles/LzwCompression.dir/wordCode/reader/WordCodeReader.cpp.i: cmake_force
@@ -169,7 +225,7 @@ CMakeFiles/LzwCompression.dir/wordCode/reader/WordCodeReader.cpp.s: cmake_force
 CMakeFiles/LzwCompression.dir/wordCode/writer/WordCodeWriter.cpp.obj: CMakeFiles/LzwCompression.dir/flags.make
 CMakeFiles/LzwCompression.dir/wordCode/writer/WordCodeWriter.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/writer/WordCodeWriter.cpp
 CMakeFiles/LzwCompression.dir/wordCode/writer/WordCodeWriter.cpp.obj: CMakeFiles/LzwCompression.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/LzwCompression.dir/wordCode/writer/WordCodeWriter.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/LzwCompression.dir/wordCode/writer/WordCodeWriter.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LzwCompression.dir/wordCode/writer/WordCodeWriter.cpp.obj -MF CMakeFiles\LzwCompression.dir\wordCode\writer\WordCodeWriter.cpp.obj.d -o CMakeFiles\LzwCompression.dir\wordCode\writer\WordCodeWriter.cpp.obj -c "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\wordCode\writer\WordCodeWriter.cpp"
 
 CMakeFiles/LzwCompression.dir/wordCode/writer/WordCodeWriter.cpp.i: cmake_force
@@ -183,7 +239,7 @@ CMakeFiles/LzwCompression.dir/wordCode/writer/WordCodeWriter.cpp.s: cmake_force
 CMakeFiles/LzwCompression.dir/wordCode/WordCodeUtils.cpp.obj: CMakeFiles/LzwCompression.dir/flags.make
 CMakeFiles/LzwCompression.dir/wordCode/WordCodeUtils.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCodeUtils.cpp
 CMakeFiles/LzwCompression.dir/wordCode/WordCodeUtils.cpp.obj: CMakeFiles/LzwCompression.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/LzwCompression.dir/wordCode/WordCodeUtils.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/LzwCompression.dir/wordCode/WordCodeUtils.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LzwCompression.dir/wordCode/WordCodeUtils.cpp.obj -MF CMakeFiles\LzwCompression.dir\wordCode\WordCodeUtils.cpp.obj.d -o CMakeFiles\LzwCompression.dir\wordCode\WordCodeUtils.cpp.obj -c "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\wordCode\WordCodeUtils.cpp"
 
 CMakeFiles/LzwCompression.dir/wordCode/WordCodeUtils.cpp.i: cmake_force
@@ -197,6 +253,10 @@ CMakeFiles/LzwCompression.dir/wordCode/WordCodeUtils.cpp.s: cmake_force
 # Object files for target LzwCompression
 LzwCompression_OBJECTS = \
 "CMakeFiles/LzwCompression.dir/main.cpp.obj" \
+"CMakeFiles/LzwCompression.dir/command/parser/CommandParser.cpp.obj" \
+"CMakeFiles/LzwCompression.dir/command/executor/CommandExecutor.cpp.obj" \
+"CMakeFiles/LzwCompression.dir/command/utils/ArrayUtils.cpp.obj" \
+"CMakeFiles/LzwCompression.dir/command/utils/CharArrUtils.cpp.obj" \
 "CMakeFiles/LzwCompression.dir/compressor/byte/ByteCompressor.cpp.obj" \
 "CMakeFiles/LzwCompression.dir/compressor/directory/DirectoryCompressor.cpp.obj" \
 "CMakeFiles/LzwCompression.dir/compressor/file/FileCompressor.cpp.obj" \
@@ -210,6 +270,10 @@ LzwCompression_OBJECTS = \
 LzwCompression_EXTERNAL_OBJECTS =
 
 LzwCompression.exe: CMakeFiles/LzwCompression.dir/main.cpp.obj
+LzwCompression.exe: CMakeFiles/LzwCompression.dir/command/parser/CommandParser.cpp.obj
+LzwCompression.exe: CMakeFiles/LzwCompression.dir/command/executor/CommandExecutor.cpp.obj
+LzwCompression.exe: CMakeFiles/LzwCompression.dir/command/utils/ArrayUtils.cpp.obj
+LzwCompression.exe: CMakeFiles/LzwCompression.dir/command/utils/CharArrUtils.cpp.obj
 LzwCompression.exe: CMakeFiles/LzwCompression.dir/compressor/byte/ByteCompressor.cpp.obj
 LzwCompression.exe: CMakeFiles/LzwCompression.dir/compressor/directory/DirectoryCompressor.cpp.obj
 LzwCompression.exe: CMakeFiles/LzwCompression.dir/compressor/file/FileCompressor.cpp.obj
@@ -219,7 +283,11 @@ LzwCompression.exe: CMakeFiles/LzwCompression.dir/wordCode/reader/WordCodeReader
 LzwCompression.exe: CMakeFiles/LzwCompression.dir/wordCode/writer/WordCodeWriter.cpp.obj
 LzwCompression.exe: CMakeFiles/LzwCompression.dir/wordCode/WordCodeUtils.cpp.obj
 LzwCompression.exe: CMakeFiles/LzwCompression.dir/build.make
+LzwCompression.exe: command/utils/libarrayUtils.a
 LzwCompression.exe: compressor/byte/libbyteCompressor.a
+LzwCompression.exe: command/utils/libcharArrUtils.a
+LzwCompression.exe: command/parser/libcommandParser.a
+LzwCompression.exe: command/executor/libcommandExecutor.a
 LzwCompression.exe: compressor/directory/libdirectoryCompressor.a
 LzwCompression.exe: compressor/file/libfileCompressor.a
 LzwCompression.exe: file/libfile.a
@@ -230,7 +298,7 @@ LzwCompression.exe: wordCode/libwordCodeUtils.a
 LzwCompression.exe: CMakeFiles/LzwCompression.dir/linklibs.rsp
 LzwCompression.exe: CMakeFiles/LzwCompression.dir/objects1.rsp
 LzwCompression.exe: CMakeFiles/LzwCompression.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable LzwCompression.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable LzwCompression.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\LzwCompression.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

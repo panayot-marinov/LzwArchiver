@@ -6,6 +6,26 @@
 },
 {
   "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\LzwCompression.dir\\command\\parser\\CommandParser.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\command\\parser\\CommandParser.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/command/parser/CommandParser.cpp"
+},
+{
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\LzwCompression.dir\\command\\executor\\CommandExecutor.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\command\\executor\\CommandExecutor.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/command/executor/CommandExecutor.cpp"
+},
+{
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\LzwCompression.dir\\command\\utils\\ArrayUtils.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\command\\utils\\ArrayUtils.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/command/utils/ArrayUtils.cpp"
+},
+{
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\LzwCompression.dir\\command\\utils\\CharArrUtils.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\command\\utils\\CharArrUtils.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/command/utils/CharArrUtils.cpp"
+},
+{
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build",
   "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\LzwCompression.dir\\compressor\\byte\\ByteCompressor.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\compressor\\byte\\ByteCompressor.cpp\"",
   "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/byte/ByteCompressor.cpp"
 },
@@ -43,6 +63,26 @@
   "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build",
   "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\LzwCompression.dir\\wordCode\\WordCodeUtils.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\wordCode\\WordCodeUtils.cpp\"",
   "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCodeUtils.cpp"
+},
+{
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/command/executor",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\commandExecutor.dir\\CommandExecutor.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\command\\executor\\CommandExecutor.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/command/executor/CommandExecutor.cpp"
+},
+{
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/command/parser",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\commandParser.dir\\CommandParser.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\command\\parser\\CommandParser.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/command/parser/CommandParser.cpp"
+},
+{
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/command/utils",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\arrayUtils.dir\\ArrayUtils.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\command\\utils\\ArrayUtils.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/command/utils/ArrayUtils.cpp"
+},
+{
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/command/utils",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\charArrUtils.dir\\CharArrUtils.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\command\\utils\\CharArrUtils.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/command/utils/CharArrUtils.cpp"
 },
 {
   "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/compressor/byte",

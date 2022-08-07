@@ -129,6 +129,58 @@ LzwCompression/fast:
 .PHONY : LzwCompression/fast
 
 #=============================================================================
+# Target rules for targets named commandExecutor
+
+# Build rule for target.
+commandExecutor: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 commandExecutor
+.PHONY : commandExecutor
+
+# fast build rule for target.
+commandExecutor/fast:
+	$(MAKE) $(MAKESILENT) -f command\executor\CMakeFiles\commandExecutor.dir\build.make command/executor/CMakeFiles/commandExecutor.dir/build
+.PHONY : commandExecutor/fast
+
+#=============================================================================
+# Target rules for targets named commandParser
+
+# Build rule for target.
+commandParser: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 commandParser
+.PHONY : commandParser
+
+# fast build rule for target.
+commandParser/fast:
+	$(MAKE) $(MAKESILENT) -f command\parser\CMakeFiles\commandParser.dir\build.make command/parser/CMakeFiles/commandParser.dir/build
+.PHONY : commandParser/fast
+
+#=============================================================================
+# Target rules for targets named arrayUtils
+
+# Build rule for target.
+arrayUtils: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 arrayUtils
+.PHONY : arrayUtils
+
+# fast build rule for target.
+arrayUtils/fast:
+	$(MAKE) $(MAKESILENT) -f command\utils\CMakeFiles\arrayUtils.dir\build.make command/utils/CMakeFiles/arrayUtils.dir/build
+.PHONY : arrayUtils/fast
+
+#=============================================================================
+# Target rules for targets named charArrUtils
+
+# Build rule for target.
+charArrUtils: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 charArrUtils
+.PHONY : charArrUtils
+
+# fast build rule for target.
+charArrUtils/fast:
+	$(MAKE) $(MAKESILENT) -f command\utils\CMakeFiles\charArrUtils.dir\build.make command/utils/CMakeFiles/charArrUtils.dir/build
+.PHONY : charArrUtils/fast
+
+#=============================================================================
 # Target rules for targets named byteCompressor
 
 # Build rule for target.
@@ -231,6 +283,102 @@ wordCodeUtils: cmake_check_build_system
 wordCodeUtils/fast:
 	$(MAKE) $(MAKESILENT) -f wordCode\CMakeFiles\wordCodeUtils.dir\build.make wordCode/CMakeFiles/wordCodeUtils.dir/build
 .PHONY : wordCodeUtils/fast
+
+command/executor/CommandExecutor.obj: command/executor/CommandExecutor.cpp.obj
+.PHONY : command/executor/CommandExecutor.obj
+
+# target to build an object file
+command/executor/CommandExecutor.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/command/executor/CommandExecutor.cpp.obj
+.PHONY : command/executor/CommandExecutor.cpp.obj
+
+command/executor/CommandExecutor.i: command/executor/CommandExecutor.cpp.i
+.PHONY : command/executor/CommandExecutor.i
+
+# target to preprocess a source file
+command/executor/CommandExecutor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/command/executor/CommandExecutor.cpp.i
+.PHONY : command/executor/CommandExecutor.cpp.i
+
+command/executor/CommandExecutor.s: command/executor/CommandExecutor.cpp.s
+.PHONY : command/executor/CommandExecutor.s
+
+# target to generate assembly for a file
+command/executor/CommandExecutor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/command/executor/CommandExecutor.cpp.s
+.PHONY : command/executor/CommandExecutor.cpp.s
+
+command/parser/CommandParser.obj: command/parser/CommandParser.cpp.obj
+.PHONY : command/parser/CommandParser.obj
+
+# target to build an object file
+command/parser/CommandParser.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/command/parser/CommandParser.cpp.obj
+.PHONY : command/parser/CommandParser.cpp.obj
+
+command/parser/CommandParser.i: command/parser/CommandParser.cpp.i
+.PHONY : command/parser/CommandParser.i
+
+# target to preprocess a source file
+command/parser/CommandParser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/command/parser/CommandParser.cpp.i
+.PHONY : command/parser/CommandParser.cpp.i
+
+command/parser/CommandParser.s: command/parser/CommandParser.cpp.s
+.PHONY : command/parser/CommandParser.s
+
+# target to generate assembly for a file
+command/parser/CommandParser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/command/parser/CommandParser.cpp.s
+.PHONY : command/parser/CommandParser.cpp.s
+
+command/utils/ArrayUtils.obj: command/utils/ArrayUtils.cpp.obj
+.PHONY : command/utils/ArrayUtils.obj
+
+# target to build an object file
+command/utils/ArrayUtils.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/command/utils/ArrayUtils.cpp.obj
+.PHONY : command/utils/ArrayUtils.cpp.obj
+
+command/utils/ArrayUtils.i: command/utils/ArrayUtils.cpp.i
+.PHONY : command/utils/ArrayUtils.i
+
+# target to preprocess a source file
+command/utils/ArrayUtils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/command/utils/ArrayUtils.cpp.i
+.PHONY : command/utils/ArrayUtils.cpp.i
+
+command/utils/ArrayUtils.s: command/utils/ArrayUtils.cpp.s
+.PHONY : command/utils/ArrayUtils.s
+
+# target to generate assembly for a file
+command/utils/ArrayUtils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/command/utils/ArrayUtils.cpp.s
+.PHONY : command/utils/ArrayUtils.cpp.s
+
+command/utils/CharArrUtils.obj: command/utils/CharArrUtils.cpp.obj
+.PHONY : command/utils/CharArrUtils.obj
+
+# target to build an object file
+command/utils/CharArrUtils.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/command/utils/CharArrUtils.cpp.obj
+.PHONY : command/utils/CharArrUtils.cpp.obj
+
+command/utils/CharArrUtils.i: command/utils/CharArrUtils.cpp.i
+.PHONY : command/utils/CharArrUtils.i
+
+# target to preprocess a source file
+command/utils/CharArrUtils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/command/utils/CharArrUtils.cpp.i
+.PHONY : command/utils/CharArrUtils.cpp.i
+
+command/utils/CharArrUtils.s: command/utils/CharArrUtils.cpp.s
+.PHONY : command/utils/CharArrUtils.s
+
+# target to generate assembly for a file
+command/utils/CharArrUtils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/command/utils/CharArrUtils.cpp.s
+.PHONY : command/utils/CharArrUtils.cpp.s
 
 compressor/byte/ByteCompressor.obj: compressor/byte/ByteCompressor.cpp.obj
 .PHONY : compressor/byte/ByteCompressor.obj
@@ -457,7 +605,11 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... LzwCompression
+	@echo ... arrayUtils
 	@echo ... byteCompressor
+	@echo ... charArrUtils
+	@echo ... commandExecutor
+	@echo ... commandParser
 	@echo ... directoryCompressor
 	@echo ... file
 	@echo ... fileCompressor
@@ -465,6 +617,18 @@ help:
 	@echo ... wordCodeReader
 	@echo ... wordCodeUtils
 	@echo ... wordCodeWriter
+	@echo ... command/executor/CommandExecutor.obj
+	@echo ... command/executor/CommandExecutor.i
+	@echo ... command/executor/CommandExecutor.s
+	@echo ... command/parser/CommandParser.obj
+	@echo ... command/parser/CommandParser.i
+	@echo ... command/parser/CommandParser.s
+	@echo ... command/utils/ArrayUtils.obj
+	@echo ... command/utils/ArrayUtils.i
+	@echo ... command/utils/ArrayUtils.s
+	@echo ... command/utils/CharArrUtils.obj
+	@echo ... command/utils/CharArrUtils.i
+	@echo ... command/utils/CharArrUtils.s
 	@echo ... compressor/byte/ByteCompressor.obj
 	@echo ... compressor/byte/ByteCompressor.i
 	@echo ... compressor/byte/ByteCompressor.s

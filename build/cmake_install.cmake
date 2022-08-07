@@ -39,6 +39,21 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/command/executor/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/command/parser/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/command/utils/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/compressor/byte/cmake_install.cmake")
 endif()
 

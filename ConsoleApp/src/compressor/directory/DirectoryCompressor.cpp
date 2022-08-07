@@ -165,3 +165,28 @@ void DirectoryCompressor::unarchiveFile(const char *inputPath, const char *outpu
     fileCompressor.unarchive(fileToUnarchive, outputPath);
     readingPosition = fileToUnarchive.getReadingPosition();
 }
+
+void DirectoryCompressor::printArchiveInfo(const char* inputPath) const
+{
+    File fileToGetInfo(inputPath);
+
+    vector<string> *tableOfContents;
+    try
+    {
+        tableOfContents = new vector<string>;
+    }
+    catch (std::bad_alloc e)
+    {
+        throw std::runtime_error("Memory for table of contents cannot be initialized.");
+    }
+
+    fileToGetInfo.readTableOfContents(*tableOfContents);
+
+    std::cout<<"----------- Archive info: -----------\n";
+    for (size_t i = 0; i < tableOfContents->size(); i++)
+    {
+        std::cout<<(*tableOfContents)[i]<<'\n';
+    }
+    std::cout<<"-------------------------------------"<<std::endl;
+    
+}

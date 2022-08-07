@@ -1,0 +1,2 @@
+C:\mingw64\bin\ar.exe qc libarrayUtils.a CMakeFiles/arrayUtils.dir/ArrayUtils.cpp.obj
+C:\mingw64\bin\ranlib.exe libarrayUtils.a

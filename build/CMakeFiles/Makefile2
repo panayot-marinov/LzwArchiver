@@ -63,6 +63,9 @@ CMAKE_BINARY_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArc
 
 # The main recursive "all" target.
 all: CMakeFiles/LzwCompression.dir/all
+all: command/executor/all
+all: command/parser/all
+all: command/utils/all
 all: compressor/byte/all
 all: compressor/directory/all
 all: compressor/file/all
@@ -74,6 +77,9 @@ all: wordCode/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
+preinstall: command/executor/preinstall
+preinstall: command/parser/preinstall
+preinstall: command/utils/preinstall
 preinstall: compressor/byte/preinstall
 preinstall: compressor/directory/preinstall
 preinstall: compressor/file/preinstall
@@ -86,6 +92,9 @@ preinstall: wordCode/preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/LzwCompression.dir/clean
+clean: command/executor/clean
+clean: command/parser/clean
+clean: command/utils/clean
 clean: compressor/byte/clean
 clean: compressor/directory/clean
 clean: compressor/file/clean
@@ -95,6 +104,53 @@ clean: wordCode/reader/clean
 clean: wordCode/writer/clean
 clean: wordCode/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory command/executor
+
+# Recursive "all" directory target.
+command/executor/all: command/executor/CMakeFiles/commandExecutor.dir/all
+.PHONY : command/executor/all
+
+# Recursive "preinstall" directory target.
+command/executor/preinstall:
+.PHONY : command/executor/preinstall
+
+# Recursive "clean" directory target.
+command/executor/clean: command/executor/CMakeFiles/commandExecutor.dir/clean
+.PHONY : command/executor/clean
+
+#=============================================================================
+# Directory level rules for directory command/parser
+
+# Recursive "all" directory target.
+command/parser/all: command/parser/CMakeFiles/commandParser.dir/all
+.PHONY : command/parser/all
+
+# Recursive "preinstall" directory target.
+command/parser/preinstall:
+.PHONY : command/parser/preinstall
+
+# Recursive "clean" directory target.
+command/parser/clean: command/parser/CMakeFiles/commandParser.dir/clean
+.PHONY : command/parser/clean
+
+#=============================================================================
+# Directory level rules for directory command/utils
+
+# Recursive "all" directory target.
+command/utils/all: command/utils/CMakeFiles/arrayUtils.dir/all
+command/utils/all: command/utils/CMakeFiles/charArrUtils.dir/all
+.PHONY : command/utils/all
+
+# Recursive "preinstall" directory target.
+command/utils/preinstall:
+.PHONY : command/utils/preinstall
+
+# Recursive "clean" directory target.
+command/utils/clean: command/utils/CMakeFiles/arrayUtils.dir/clean
+command/utils/clean: command/utils/CMakeFiles/charArrUtils.dir/clean
+.PHONY : command/utils/clean
 
 #=============================================================================
 # Directory level rules for directory compressor/byte
@@ -220,22 +276,26 @@ wordCode/writer/clean: wordCode/writer/CMakeFiles/wordCodeWriter.dir/clean
 # Target rules for target CMakeFiles/LzwCompression.dir
 
 # All Build rule for target.
+CMakeFiles/LzwCompression.dir/all: command/executor/CMakeFiles/commandExecutor.dir/all
+CMakeFiles/LzwCompression.dir/all: command/parser/CMakeFiles/commandParser.dir/all
+CMakeFiles/LzwCompression.dir/all: command/utils/CMakeFiles/arrayUtils.dir/all
+CMakeFiles/LzwCompression.dir/all: command/utils/CMakeFiles/charArrUtils.dir/all
 CMakeFiles/LzwCompression.dir/all: compressor/byte/CMakeFiles/byteCompressor.dir/all
 CMakeFiles/LzwCompression.dir/all: compressor/directory/CMakeFiles/directoryCompressor.dir/all
 CMakeFiles/LzwCompression.dir/all: compressor/file/CMakeFiles/fileCompressor.dir/all
 CMakeFiles/LzwCompression.dir/all: file/CMakeFiles/file.dir/all
 CMakeFiles/LzwCompression.dir/all: path/CMakeFiles/pathUtils.dir/all
 CMakeFiles/LzwCompression.dir/all: wordCode/reader/CMakeFiles/wordCodeReader.dir/all
-CMakeFiles/LzwCompression.dir/all: wordCode/writer/CMakeFiles/wordCodeWriter.dir/all
 CMakeFiles/LzwCompression.dir/all: wordCode/CMakeFiles/wordCodeUtils.dir/all
+CMakeFiles/LzwCompression.dir/all: wordCode/writer/CMakeFiles/wordCodeWriter.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target LzwCompression"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14 "Built target LzwCompression"
 .PHONY : CMakeFiles/LzwCompression.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/LzwCompression.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" 26
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" 38
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/LzwCompression.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" 0
 .PHONY : CMakeFiles/LzwCompression.dir/rule
@@ -250,13 +310,117 @@ CMakeFiles/LzwCompression.dir/clean:
 .PHONY : CMakeFiles/LzwCompression.dir/clean
 
 #=============================================================================
+# Target rules for target command/executor/CMakeFiles/commandExecutor.dir
+
+# All Build rule for target.
+command/executor/CMakeFiles/commandExecutor.dir/all:
+	$(MAKE) $(MAKESILENT) -f command\executor\CMakeFiles\commandExecutor.dir\build.make command/executor/CMakeFiles/commandExecutor.dir/depend
+	$(MAKE) $(MAKESILENT) -f command\executor\CMakeFiles\commandExecutor.dir\build.make command/executor/CMakeFiles/commandExecutor.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=21,22 "Built target commandExecutor"
+.PHONY : command/executor/CMakeFiles/commandExecutor.dir/all
+
+# Build rule for subdir invocation for target.
+command/executor/CMakeFiles/commandExecutor.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 command/executor/CMakeFiles/commandExecutor.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" 0
+.PHONY : command/executor/CMakeFiles/commandExecutor.dir/rule
+
+# Convenience name for target.
+commandExecutor: command/executor/CMakeFiles/commandExecutor.dir/rule
+.PHONY : commandExecutor
+
+# clean rule for target.
+command/executor/CMakeFiles/commandExecutor.dir/clean:
+	$(MAKE) $(MAKESILENT) -f command\executor\CMakeFiles\commandExecutor.dir\build.make command/executor/CMakeFiles/commandExecutor.dir/clean
+.PHONY : command/executor/CMakeFiles/commandExecutor.dir/clean
+
+#=============================================================================
+# Target rules for target command/parser/CMakeFiles/commandParser.dir
+
+# All Build rule for target.
+command/parser/CMakeFiles/commandParser.dir/all:
+	$(MAKE) $(MAKESILENT) -f command\parser\CMakeFiles\commandParser.dir\build.make command/parser/CMakeFiles/commandParser.dir/depend
+	$(MAKE) $(MAKESILENT) -f command\parser\CMakeFiles\commandParser.dir\build.make command/parser/CMakeFiles/commandParser.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=23,24 "Built target commandParser"
+.PHONY : command/parser/CMakeFiles/commandParser.dir/all
+
+# Build rule for subdir invocation for target.
+command/parser/CMakeFiles/commandParser.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 command/parser/CMakeFiles/commandParser.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" 0
+.PHONY : command/parser/CMakeFiles/commandParser.dir/rule
+
+# Convenience name for target.
+commandParser: command/parser/CMakeFiles/commandParser.dir/rule
+.PHONY : commandParser
+
+# clean rule for target.
+command/parser/CMakeFiles/commandParser.dir/clean:
+	$(MAKE) $(MAKESILENT) -f command\parser\CMakeFiles\commandParser.dir\build.make command/parser/CMakeFiles/commandParser.dir/clean
+.PHONY : command/parser/CMakeFiles/commandParser.dir/clean
+
+#=============================================================================
+# Target rules for target command/utils/CMakeFiles/arrayUtils.dir
+
+# All Build rule for target.
+command/utils/CMakeFiles/arrayUtils.dir/all:
+	$(MAKE) $(MAKESILENT) -f command\utils\CMakeFiles\arrayUtils.dir\build.make command/utils/CMakeFiles/arrayUtils.dir/depend
+	$(MAKE) $(MAKESILENT) -f command\utils\CMakeFiles\arrayUtils.dir\build.make command/utils/CMakeFiles/arrayUtils.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=15,16 "Built target arrayUtils"
+.PHONY : command/utils/CMakeFiles/arrayUtils.dir/all
+
+# Build rule for subdir invocation for target.
+command/utils/CMakeFiles/arrayUtils.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 command/utils/CMakeFiles/arrayUtils.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" 0
+.PHONY : command/utils/CMakeFiles/arrayUtils.dir/rule
+
+# Convenience name for target.
+arrayUtils: command/utils/CMakeFiles/arrayUtils.dir/rule
+.PHONY : arrayUtils
+
+# clean rule for target.
+command/utils/CMakeFiles/arrayUtils.dir/clean:
+	$(MAKE) $(MAKESILENT) -f command\utils\CMakeFiles\arrayUtils.dir\build.make command/utils/CMakeFiles/arrayUtils.dir/clean
+.PHONY : command/utils/CMakeFiles/arrayUtils.dir/clean
+
+#=============================================================================
+# Target rules for target command/utils/CMakeFiles/charArrUtils.dir
+
+# All Build rule for target.
+command/utils/CMakeFiles/charArrUtils.dir/all:
+	$(MAKE) $(MAKESILENT) -f command\utils\CMakeFiles\charArrUtils.dir\build.make command/utils/CMakeFiles/charArrUtils.dir/depend
+	$(MAKE) $(MAKESILENT) -f command\utils\CMakeFiles\charArrUtils.dir\build.make command/utils/CMakeFiles/charArrUtils.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=19,20 "Built target charArrUtils"
+.PHONY : command/utils/CMakeFiles/charArrUtils.dir/all
+
+# Build rule for subdir invocation for target.
+command/utils/CMakeFiles/charArrUtils.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 command/utils/CMakeFiles/charArrUtils.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" 0
+.PHONY : command/utils/CMakeFiles/charArrUtils.dir/rule
+
+# Convenience name for target.
+charArrUtils: command/utils/CMakeFiles/charArrUtils.dir/rule
+.PHONY : charArrUtils
+
+# clean rule for target.
+command/utils/CMakeFiles/charArrUtils.dir/clean:
+	$(MAKE) $(MAKESILENT) -f command\utils\CMakeFiles\charArrUtils.dir\build.make command/utils/CMakeFiles/charArrUtils.dir/clean
+.PHONY : command/utils/CMakeFiles/charArrUtils.dir/clean
+
+#=============================================================================
 # Target rules for target compressor/byte/CMakeFiles/byteCompressor.dir
 
 # All Build rule for target.
 compressor/byte/CMakeFiles/byteCompressor.dir/all:
 	$(MAKE) $(MAKESILENT) -f compressor\byte\CMakeFiles\byteCompressor.dir\build.make compressor/byte/CMakeFiles/byteCompressor.dir/depend
 	$(MAKE) $(MAKESILENT) -f compressor\byte\CMakeFiles\byteCompressor.dir\build.make compressor/byte/CMakeFiles/byteCompressor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=11,12 "Built target byteCompressor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=17,18 "Built target byteCompressor"
 .PHONY : compressor/byte/CMakeFiles/byteCompressor.dir/all
 
 # Build rule for subdir invocation for target.
@@ -282,7 +446,7 @@ compressor/byte/CMakeFiles/byteCompressor.dir/clean:
 compressor/directory/CMakeFiles/directoryCompressor.dir/all:
 	$(MAKE) $(MAKESILENT) -f compressor\directory\CMakeFiles\directoryCompressor.dir\build.make compressor/directory/CMakeFiles/directoryCompressor.dir/depend
 	$(MAKE) $(MAKESILENT) -f compressor\directory\CMakeFiles\directoryCompressor.dir\build.make compressor/directory/CMakeFiles/directoryCompressor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=13,14 "Built target directoryCompressor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=25,26 "Built target directoryCompressor"
 .PHONY : compressor/directory/CMakeFiles/directoryCompressor.dir/all
 
 # Build rule for subdir invocation for target.
@@ -308,7 +472,7 @@ compressor/directory/CMakeFiles/directoryCompressor.dir/clean:
 compressor/file/CMakeFiles/fileCompressor.dir/all:
 	$(MAKE) $(MAKESILENT) -f compressor\file\CMakeFiles\fileCompressor.dir\build.make compressor/file/CMakeFiles/fileCompressor.dir/depend
 	$(MAKE) $(MAKESILENT) -f compressor\file\CMakeFiles\fileCompressor.dir\build.make compressor/file/CMakeFiles/fileCompressor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=17,18 "Built target fileCompressor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=29,30 "Built target fileCompressor"
 .PHONY : compressor/file/CMakeFiles/fileCompressor.dir/all
 
 # Build rule for subdir invocation for target.
@@ -334,7 +498,7 @@ compressor/file/CMakeFiles/fileCompressor.dir/clean:
 file/CMakeFiles/file.dir/all:
 	$(MAKE) $(MAKESILENT) -f file\CMakeFiles\file.dir\build.make file/CMakeFiles/file.dir/depend
 	$(MAKE) $(MAKESILENT) -f file\CMakeFiles\file.dir\build.make file/CMakeFiles/file.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=15,16 "Built target file"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=27,28 "Built target file"
 .PHONY : file/CMakeFiles/file.dir/all
 
 # Build rule for subdir invocation for target.
@@ -360,7 +524,7 @@ file/CMakeFiles/file.dir/clean:
 path/CMakeFiles/pathUtils.dir/all:
 	$(MAKE) $(MAKESILENT) -f path\CMakeFiles\pathUtils.dir\build.make path/CMakeFiles/pathUtils.dir/depend
 	$(MAKE) $(MAKESILENT) -f path\CMakeFiles\pathUtils.dir\build.make path/CMakeFiles/pathUtils.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=19,20 "Built target pathUtils"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=31,32 "Built target pathUtils"
 .PHONY : path/CMakeFiles/pathUtils.dir/all
 
 # Build rule for subdir invocation for target.
@@ -386,7 +550,7 @@ path/CMakeFiles/pathUtils.dir/clean:
 wordCode/reader/CMakeFiles/wordCodeReader.dir/all:
 	$(MAKE) $(MAKESILENT) -f wordCode\reader\CMakeFiles\wordCodeReader.dir\build.make wordCode/reader/CMakeFiles/wordCodeReader.dir/depend
 	$(MAKE) $(MAKESILENT) -f wordCode\reader\CMakeFiles\wordCodeReader.dir\build.make wordCode/reader/CMakeFiles/wordCodeReader.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=21,22 "Built target wordCodeReader"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=33,34 "Built target wordCodeReader"
 .PHONY : wordCode/reader/CMakeFiles/wordCodeReader.dir/all
 
 # Build rule for subdir invocation for target.
@@ -412,7 +576,7 @@ wordCode/reader/CMakeFiles/wordCodeReader.dir/clean:
 wordCode/writer/CMakeFiles/wordCodeWriter.dir/all:
 	$(MAKE) $(MAKESILENT) -f wordCode\writer\CMakeFiles\wordCodeWriter.dir\build.make wordCode/writer/CMakeFiles/wordCodeWriter.dir/depend
 	$(MAKE) $(MAKESILENT) -f wordCode\writer\CMakeFiles\wordCodeWriter.dir\build.make wordCode/writer/CMakeFiles/wordCodeWriter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=25,26 "Built target wordCodeWriter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=37,38 "Built target wordCodeWriter"
 .PHONY : wordCode/writer/CMakeFiles/wordCodeWriter.dir/all
 
 # Build rule for subdir invocation for target.
@@ -438,7 +602,7 @@ wordCode/writer/CMakeFiles/wordCodeWriter.dir/clean:
 wordCode/CMakeFiles/wordCodeUtils.dir/all:
 	$(MAKE) $(MAKESILENT) -f wordCode\CMakeFiles\wordCodeUtils.dir\build.make wordCode/CMakeFiles/wordCodeUtils.dir/depend
 	$(MAKE) $(MAKESILENT) -f wordCode\CMakeFiles\wordCodeUtils.dir\build.make wordCode/CMakeFiles/wordCodeUtils.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=23,24 "Built target wordCodeUtils"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=35,36 "Built target wordCodeUtils"
 .PHONY : wordCode/CMakeFiles/wordCodeUtils.dir/all
 
 # Build rule for subdir invocation for target.

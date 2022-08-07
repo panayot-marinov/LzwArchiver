@@ -8,6 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/command/executor/CommandExecutor.cpp" "CMakeFiles/LzwCompression.dir/command/executor/CommandExecutor.cpp.obj" "gcc" "CMakeFiles/LzwCompression.dir/command/executor/CommandExecutor.cpp.obj.d"
+  "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/command/parser/CommandParser.cpp" "CMakeFiles/LzwCompression.dir/command/parser/CommandParser.cpp.obj" "gcc" "CMakeFiles/LzwCompression.dir/command/parser/CommandParser.cpp.obj.d"
+  "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/command/utils/ArrayUtils.cpp" "CMakeFiles/LzwCompression.dir/command/utils/ArrayUtils.cpp.obj" "gcc" "CMakeFiles/LzwCompression.dir/command/utils/ArrayUtils.cpp.obj.d"
+  "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/command/utils/CharArrUtils.cpp" "CMakeFiles/LzwCompression.dir/command/utils/CharArrUtils.cpp.obj" "gcc" "CMakeFiles/LzwCompression.dir/command/utils/CharArrUtils.cpp.obj.d"
   "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/byte/ByteCompressor.cpp" "CMakeFiles/LzwCompression.dir/compressor/byte/ByteCompressor.cpp.obj" "gcc" "CMakeFiles/LzwCompression.dir/compressor/byte/ByteCompressor.cpp.obj.d"
   "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/directory/DirectoryCompressor.cpp" "CMakeFiles/LzwCompression.dir/compressor/directory/DirectoryCompressor.cpp.obj" "gcc" "CMakeFiles/LzwCompression.dir/compressor/directory/DirectoryCompressor.cpp.obj.d"
   "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/FileCompressor.cpp" "CMakeFiles/LzwCompression.dir/compressor/file/FileCompressor.cpp.obj" "gcc" "CMakeFiles/LzwCompression.dir/compressor/file/FileCompressor.cpp.obj.d"
@@ -21,7 +25,11 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/command/utils/CMakeFiles/arrayUtils.dir/DependInfo.cmake"
   "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/compressor/byte/CMakeFiles/byteCompressor.dir/DependInfo.cmake"
+  "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/command/utils/CMakeFiles/charArrUtils.dir/DependInfo.cmake"
+  "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/command/parser/CMakeFiles/commandParser.dir/DependInfo.cmake"
+  "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/command/executor/CMakeFiles/commandExecutor.dir/DependInfo.cmake"
   "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/compressor/directory/CMakeFiles/directoryCompressor.dir/DependInfo.cmake"
   "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/compressor/file/CMakeFiles/fileCompressor.dir/DependInfo.cmake"
   "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/file/CMakeFiles/file.dir/DependInfo.cmake"

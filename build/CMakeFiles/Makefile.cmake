@@ -29,6 +29,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/CMake/share/cmake-3.22/Modules/Platform/Windows.cmake"
   "C:/Program Files/CMake/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake"
   "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/CMakeLists.txt"
+  "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/command/executor/CMakeLists.txt"
+  "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/command/parser/CMakeLists.txt"
+  "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/command/utils/CMakeLists.txt"
   "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/byte/CMakeLists.txt"
   "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/directory/CMakeLists.txt"
   "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/CMakeLists.txt"
@@ -52,6 +55,9 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "command/executor/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "command/parser/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "command/utils/CMakeFiles/CMakeDirectoryInformation.cmake"
   "compressor/byte/CMakeFiles/CMakeDirectoryInformation.cmake"
   "compressor/directory/CMakeFiles/CMakeDirectoryInformation.cmake"
   "compressor/file/CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -65,6 +71,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/LzwCompression.dir/DependInfo.cmake"
+  "command/executor/CMakeFiles/commandExecutor.dir/DependInfo.cmake"
+  "command/parser/CMakeFiles/commandParser.dir/DependInfo.cmake"
+  "command/utils/CMakeFiles/arrayUtils.dir/DependInfo.cmake"
+  "command/utils/CMakeFiles/charArrUtils.dir/DependInfo.cmake"
   "compressor/byte/CMakeFiles/byteCompressor.dir/DependInfo.cmake"
   "compressor/directory/CMakeFiles/directoryCompressor.dir/DependInfo.cmake"
   "compressor/file/CMakeFiles/fileCompressor.dir/DependInfo.cmake"

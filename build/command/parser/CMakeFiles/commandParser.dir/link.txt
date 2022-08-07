@@ -1,0 +1,2 @@
+C:\mingw64\bin\ar.exe qc libcommandParser.a CMakeFiles/commandParser.dir/CommandParser.cpp.obj
+C:\mingw64\bin\ranlib.exe libcommandParser.a

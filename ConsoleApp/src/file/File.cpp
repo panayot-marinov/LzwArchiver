@@ -111,7 +111,7 @@ pair<ArchiveHeader, vector<WordCode> *> File::readArchive()
     return std::make_pair(archiveHeader, wordCodes);
 }
 
-void File::readTableOfContents(unordered_map<string, int>& result)
+void File::readTableOfContents(vector<string> &result)
 {
     if (!readStream.is_open())
     {
@@ -123,7 +123,35 @@ void File::readTableOfContents(unordered_map<string, int>& result)
     }
 
     int tableOfContentsByteSize;
-    readStream >>tableOfContentsByteSize;
+    readStream >> tableOfContentsByteSize;
+
+    int tableOfContentsSize;
+    readStream >> tableOfContentsSize;
+
+    for (size_t i = 0; i < tableOfContentsSize; i++)
+    {
+        string entryName;
+        int entryFirstBytePos;
+
+        readStream >> entryName;
+        readStream >> entryFirstBytePos;
+        result.push_back(entryName);
+    }
+}
+
+void File::readTableOfContents(unordered_map<string, int> &result)
+{
+    if (!readStream.is_open())
+    {
+        readStream.open(path, std::ios::in);
+        if (!readStream.good())
+        {
+            throw std::invalid_argument("Read stream cannot be opened");
+        }
+    }
+
+    int tableOfContentsByteSize;
+    readStream >> tableOfContentsByteSize;
 
     int tableOfContentsSize;
     readStream >> tableOfContentsSize;
@@ -152,7 +180,7 @@ size_t File::readTableOfContentsByteSize()
 
     int tableOfContentsByteSize;
     readStream >> tableOfContentsByteSize;
-    
+
     return tableOfContentsByteSize;
 }
 

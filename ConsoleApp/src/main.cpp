@@ -1,5 +1,6 @@
 #include "file/File.hpp"
 #include "wordCode/WordCode.hpp"
+#include "command/parser/CommandParser.hpp"
 #include "compressor/byte/ByteCompressor.hpp"
 #include "compressor/directory/DirectoryCompressor.hpp"
 #include "compressor/file/FileCompressor.hpp"
@@ -24,9 +25,17 @@ int main()
 
     DirectoryCompressor directoryCompressor;
 
-    vector<const char *> inputPaths {"../InputFiles/fold1", "../InputFiles/fold2"};
+    vector<const char *> inputPaths{"../InputFiles/fold1", "../InputFiles/fold2"};
     directoryCompressor.archive(inputPaths, "../OutputFiles/Archived", "archive", "lzw");
     directoryCompressor.unarchive("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived");
+    directoryCompressor.printArchiveInfo("../OutputFiles/Archived/archive.lzw");
+
+    // CommandParser commandParser;
+    // commandParser.parseCommand(std::cin);
+    // std::cout<<commandParser.getCommandType()<<" ";
+    // std::cout<<commandParser.getNumberOfArguments()<<" ";
+    // std::cout<<commandParser.getArgument(0)<<" \n";
+
     // directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "\\a.txt");
     // directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "\\b.txt");
     // directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "\\c.txt");
@@ -35,17 +44,4 @@ int main()
     // directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "\\fold\\e.txt");
     // directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "\\fold\\foldInt\\f.txt");
     // directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "\\foldd");
-
-    // fstream writeStream;
-    // writeStream.open("../OutputFiles/b.txt", std::ios::out);
-    // writeStream.write("abc",4);
-
-    // const std::filesystem::path sandbox{"../InputFiles"};
-
-    // std::cout << "directory_iterator:\n";
-    // // directory_iterator can be iterated using a range-for loop
-    // for (auto const &dir_entry : std::filesystem::directory_iterator{sandbox})
-    // {
-    //     std::cout << dir_entry.path() << '\n';
-    // }
 }

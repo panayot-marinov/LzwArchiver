@@ -1,0 +1,2 @@
+C:\mingw64\bin\ar.exe qc libcommandExecutor.a CMakeFiles/commandExecutor.dir/CommandExecutor.cpp.obj
+C:\mingw64\bin\ranlib.exe libcommandExecutor.a
