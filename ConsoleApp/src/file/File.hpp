@@ -5,6 +5,7 @@
 #include <vector>
 #include <fstream>
 #include <utility>
+#include <unordered_map>
 #include "../compressor/file/ArchiveHeader.hpp"
 #include "../wordCode/WordCode.hpp"
 
@@ -12,6 +13,7 @@ using std::fstream;
 using std::pair;
 using std::string;
 using std::vector;
+using std::unordered_map;
 
 class File
 {
@@ -29,7 +31,8 @@ public:
     char readByte();
     char *readBytes(const int bytesCount, int &bytesRead);
     pair<ArchiveHeader, vector<WordCode> *> readArchive();
-    void readTableOfContents(vector<pair<string, int>>* result);
+    void readTableOfContents(unordered_map<string, int>& result);
+    size_t readTableOfContentsByteSize();
     void appendBytes(const char *bytes, const int bytesCount);
     void writeBytes(const char *bytes, const int bytesCount);
     void clear();

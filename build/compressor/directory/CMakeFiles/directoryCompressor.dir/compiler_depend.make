@@ -154,6 +154,16 @@ compressor/directory/CMakeFiles/directoryCompressor.dir/DirectoryCompressor.cpp.
   C:/mingw64/include/c++/12.1.0/bits/fstream.tcc \
   C:/mingw64/include/c++/12.1.0/utility \
   C:/mingw64/include/c++/12.1.0/bits/stl_relops.h \
+  C:/mingw64/include/c++/12.1.0/unordered_map \
+  C:/mingw64/include/c++/12.1.0/ext/aligned_buffer.h \
+  C:/mingw64/include/c++/12.1.0/bits/hashtable.h \
+  C:/mingw64/include/c++/12.1.0/bits/hashtable_policy.h \
+  C:/mingw64/include/c++/12.1.0/tuple \
+  C:/mingw64/include/c++/12.1.0/bits/uses_allocator.h \
+  C:/mingw64/include/c++/12.1.0/bits/enable_special_members.h \
+  C:/mingw64/include/c++/12.1.0/bits/node_handle.h \
+  C:/mingw64/include/c++/12.1.0/bits/unordered_map.h \
+  C:/mingw64/include/c++/12.1.0/bits/erase_if.h \
   C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/ArchiveHeader.hpp \
   C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCode.hpp \
   C:/mingw64/include/c++/12.1.0/bitset \
@@ -183,9 +193,6 @@ compressor/directory/CMakeFiles/directoryCompressor.dir/DirectoryCompressor.cpp.
   C:/mingw64/include/c++/12.1.0/bits/shared_ptr_base.h \
   C:/mingw64/include/c++/12.1.0/bits/allocated_ptr.h \
   C:/mingw64/include/c++/12.1.0/bits/unique_ptr.h \
-  C:/mingw64/include/c++/12.1.0/tuple \
-  C:/mingw64/include/c++/12.1.0/bits/uses_allocator.h \
-  C:/mingw64/include/c++/12.1.0/ext/aligned_buffer.h \
   C:/mingw64/include/c++/12.1.0/bits/fs_dir.h \
   C:/mingw64/include/c++/12.1.0/bits/fs_ops.h \
   C:/mingw64/include/c++/12.1.0/iostream \
@@ -516,6 +523,22 @@ C:/mingw64/include/c++/12.1.0/utility:
 
 C:/mingw64/include/c++/12.1.0/bits/stl_relops.h:
 
+C:/mingw64/include/c++/12.1.0/unordered_map:
+
+C:/mingw64/include/c++/12.1.0/ext/aligned_buffer.h:
+
+C:/mingw64/include/c++/12.1.0/bits/hashtable.h:
+
+C:/mingw64/include/c++/12.1.0/bits/hashtable_policy.h:
+
+C:/mingw64/include/c++/12.1.0/bits/enable_special_members.h:
+
+C:/mingw64/include/c++/12.1.0/bits/node_handle.h:
+
+C:/mingw64/include/c++/12.1.0/bits/unordered_map.h:
+
+C:/mingw64/include/c++/12.1.0/bits/erase_if.h:
+
 C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/ArchiveHeader.hpp:
 
 C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCode.hpp:
@@ -563,8 +586,6 @@ C:/mingw64/include/c++/12.1.0/bits/shared_ptr_base.h:
 C:/mingw64/include/c++/12.1.0/bits/allocated_ptr.h:
 
 C:/mingw64/include/c++/12.1.0/bits/unique_ptr.h:
-
-C:/mingw64/include/c++/12.1.0/ext/aligned_buffer.h:
 
 C:/mingw64/include/c++/12.1.0/bits/fs_dir.h:
 

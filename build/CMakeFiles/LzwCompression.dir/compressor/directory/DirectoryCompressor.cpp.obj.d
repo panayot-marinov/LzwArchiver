@@ -151,6 +151,16 @@ CMakeFiles/LzwCompression.dir/compressor/directory/DirectoryCompressor.cpp.obj: 
  c:\mingw64\include\c++\12.1.0\bits\fstream.tcc \
  c:\mingw64\include\c++\12.1.0\utility \
  c:\mingw64\include\c++\12.1.0\bits\stl_relops.h \
+ c:\mingw64\include\c++\12.1.0\unordered_map \
+ c:\mingw64\include\c++\12.1.0\ext\aligned_buffer.h \
+ c:\mingw64\include\c++\12.1.0\bits\hashtable.h \
+ c:\mingw64\include\c++\12.1.0\bits\hashtable_policy.h \
+ c:\mingw64\include\c++\12.1.0\tuple \
+ c:\mingw64\include\c++\12.1.0\bits\uses_allocator.h \
+ c:\mingw64\include\c++\12.1.0\bits\enable_special_members.h \
+ c:\mingw64\include\c++\12.1.0\bits\node_handle.h \
+ c:\mingw64\include\c++\12.1.0\bits\unordered_map.h \
+ c:\mingw64\include\c++\12.1.0\bits\erase_if.h \
  c:\users\panayot\ marinov\desktop\fmi\ 2021\sdp\project\lzwarchiver\consoleapp\src\compressor\file\archiveheader.hpp \
  c:\users\panayot\ marinov\desktop\fmi\ 2021\sdp\project\lzwarchiver\consoleapp\src\wordcode\wordcode.hpp \
  c:\mingw64\include\c++\12.1.0\bitset \
@@ -179,9 +189,6 @@ CMakeFiles/LzwCompression.dir/compressor/directory/DirectoryCompressor.cpp.obj: 
  c:\mingw64\include\c++\12.1.0\bits\shared_ptr_base.h \
  c:\mingw64\include\c++\12.1.0\bits\allocated_ptr.h \
  c:\mingw64\include\c++\12.1.0\bits\unique_ptr.h \
- c:\mingw64\include\c++\12.1.0\tuple \
- c:\mingw64\include\c++\12.1.0\bits\uses_allocator.h \
- c:\mingw64\include\c++\12.1.0\ext\aligned_buffer.h \
  c:\mingw64\include\c++\12.1.0\bits\fs_dir.h \
  c:\mingw64\include\c++\12.1.0\bits\fs_ops.h \
  c:\mingw64\include\c++\12.1.0\iostream \

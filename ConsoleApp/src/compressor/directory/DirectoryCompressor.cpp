@@ -4,12 +4,15 @@
 #include "../../path/PathUtils.hpp"
 #include <filesystem>
 #include <iostream>
+#include <cstdlib>
 #include <cstring>
 #include <string>
+#include <unordered_map>
 #include <vector>
 #include <utility>
 
 using std::pair;
+using std::unordered_map;
 
 void DirectoryCompressor::archive(const char *inputPath, const char *outputPath,
                                   const char *outputFilename, const char *outputFileExtension)
@@ -39,24 +42,39 @@ void DirectoryCompressor::archive(const char *inputPath, const char *outputPath,
         }
 
         std::string currentFileInputPath = dir_entry.path().u8string().c_str();
-        std::cout << currentFileInputPath << "aa" << currentFileInputPath.find_last_of('.') << std::endl;
         std::string currentFileArchivePath =
             currentFileInputPath.substr(strlen(inputPath));
         std::string currentFileOutputPath = outputPath;
         currentFileOutputPath += "/";
         currentFileOutputPath += currentFileArchivePath.substr(0, currentFileArchivePath.find_last_of('.')) + ".lzw";
 
-        tableOfContents.push_back(std::make_pair(currentFileInputPath, firstBytePos));
-        tableOfContentsBytes += (sizeof(' ') + sizeof(currentFileInputPath) + sizeof(' ') + sizeof(firstBytePos));
+        tableOfContents.push_back(std::make_pair(currentFileArchivePath, firstBytePos));
+        std::cout << sizeof(' ') << std::endl
+                  << currentFileArchivePath.length() << std::endl
+                  << strlen(std::to_string(firstBytePos).c_str()) << std::endl;
+
+        tableOfContentsBytes += (sizeof(' ') + currentFileArchivePath.length() + sizeof(' ') + strlen(std::to_string(firstBytePos).c_str()));
         firstBytePos +=
             fileCompressor.archive(currentFileInputPath.c_str(), currentFileArchivePath.c_str(), tempArchiveFile, isRegularFile);
     }
-    tableOfContentsBytes += sizeof(tableOfContents.size());
+    tableOfContentsBytes += strlen(std::to_string(tableOfContents.size()).c_str());
 
     std::cout << "tableOfContents\n";
     for (size_t i = 0; i < tableOfContents.size(); i++)
     {
+        int oldValue = strlen(std::to_string(tableOfContents[i].second).c_str());
         tableOfContents[i].second += tableOfContentsBytes;
+        int newValue = strlen(std::to_string(tableOfContents[i].second).c_str());
+        tableOfContents[i].second -= tableOfContentsBytes;
+        tableOfContentsBytes += (newValue - oldValue);
+
+        std::cout << tableOfContents[i].first << " " << tableOfContents[i].second << "\n";
+    }
+
+    tableOfContentsBytes += (strlen(std::to_string(tableOfContentsBytes).c_str()) + sizeof(' '));
+    for (size_t i = 0; i < tableOfContents.size(); i++)
+    {
+        tableOfContents[i].second += (tableOfContentsBytes + 1); // TODO: why + 2
 
         std::cout << tableOfContents[i].first << " " << tableOfContents[i].second << "\n";
     }
@@ -70,6 +88,9 @@ void DirectoryCompressor::archive(const char *inputPath, const char *outputPath,
 
     File archiveFile(bigArchiveFilePath);
     archiveFile.clear();
+    string tableOfContentsStr = std::to_string(tableOfContentsBytes);
+    tableOfContentsStr += ' ';
+    archiveFile.appendBytes(tableOfContentsStr.c_str(), tableOfContentsStr.length());
     archiveFile.appendTableOfContents(tableOfContents);
     archiveFile.appendFile(tempArchiveFile);
 }
@@ -78,35 +99,65 @@ void DirectoryCompressor::unarchive(const char *inputPath, const char *outputPat
 {
     const std::filesystem::path sandbox{"../OutputFiles/Archived"};
 
-    FileCompressor fileCompressor;
     File fileToUnarchive(inputPath);
     size_t fileSize = fileToUnarchive.getSize();
 
-    vector<pair<string, int>> *result;
-    try
-    {
-        result = new vector<pair<string,int>>;
-    }
-    catch (std::bad_alloc e)
-    {
-        throw std::runtime_error("Memory for table of contents cannot be initialized.");
-    }
+    size_t tableOfContentsByteSize = fileToUnarchive.readTableOfContentsByteSize();
+    std::cout << "tbs:" << tableOfContentsByteSize << std::endl;
+    fileToUnarchive.setReadingPosition(tableOfContentsByteSize + 1);
+    // unordered_map<pair<string, int>> *result;
+    // try
+    // {
+    //     result = new unordered_map<pair<string, int>>;
+    // }
+    // catch (std::bad_alloc e)
+    // {
+    //     throw std::runtime_error("Memory for table of contents cannot be initialized.");
+    // }
 
-    fileToUnarchive.readTableOfContents(result);
+    // fileToUnarchive.readTableOfContents(result);
     int readingPosition = fileToUnarchive.getReadingPosition();
+
+    FileCompressor fileCompressor;
     while (readingPosition < fileSize)
     {
         std::cout << "readingPos= " << readingPosition << std::endl;
         fileCompressor.unarchive(fileToUnarchive, outputPath);
         readingPosition = fileToUnarchive.getReadingPosition();
     }
+}
 
-    // for (auto const &dir_entry : std::filesystem::directory_iterator{sandbox})
-    // {
-    //     std::cout << dir_entry.path() << '\n';
-    //     std::string outputPath = "../OutputFiles/Unarchived/";
-    //     //std::string inputPath = dir_entry.path().u8string().c_str();
+void DirectoryCompressor::unarchiveFile(const char *inputPath, const char *outputPath, const char *filename)
+{
+    const std::filesystem::path sandbox{"../OutputFiles/Archived"};
 
-    //     fileCompressor.unarchive(fileToUnarchive, outputPath.c_str());
-    // }
+    File fileToUnarchive(inputPath);
+    size_t fileSize = fileToUnarchive.getSize();
+
+    unordered_map<string, int> *tableOfContents;
+    try
+    {
+        tableOfContents = new unordered_map<string, int>;
+    }
+    catch (std::bad_alloc e)
+    {
+        throw std::runtime_error("Memory for table of contents cannot be initialized.");
+    }
+
+    fileToUnarchive.readTableOfContents(*tableOfContents);
+
+    for (auto it = tableOfContents->cbegin(); it != tableOfContents->cend(); ++it)
+    {
+        std::cout << "{" << (*it).first << ": " << (*it).second << "}\n";
+    }
+
+    int resultFileFirstByte = tableOfContents->find(string(filename))->second;
+    fileToUnarchive.setReadingPosition(resultFileFirstByte);
+    int readingPosition = fileToUnarchive.getReadingPosition();
+
+    FileCompressor fileCompressor;
+
+    std::cout << "readingPos= " << readingPosition << std::endl;
+    fileCompressor.unarchive(fileToUnarchive, outputPath);
+    readingPosition = fileToUnarchive.getReadingPosition();
 }

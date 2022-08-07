@@ -155,6 +155,16 @@ wordCode/reader/CMakeFiles/wordCodeReader.dir/WordCodeReader.cpp.obj: C:/Users/P
   C:/mingw64/include/c++/12.1.0/bits/fstream.tcc \
   C:/mingw64/include/c++/12.1.0/utility \
   C:/mingw64/include/c++/12.1.0/bits/stl_relops.h \
+  C:/mingw64/include/c++/12.1.0/unordered_map \
+  C:/mingw64/include/c++/12.1.0/ext/aligned_buffer.h \
+  C:/mingw64/include/c++/12.1.0/bits/hashtable.h \
+  C:/mingw64/include/c++/12.1.0/bits/hashtable_policy.h \
+  C:/mingw64/include/c++/12.1.0/tuple \
+  C:/mingw64/include/c++/12.1.0/bits/uses_allocator.h \
+  C:/mingw64/include/c++/12.1.0/bits/enable_special_members.h \
+  C:/mingw64/include/c++/12.1.0/bits/node_handle.h \
+  C:/mingw64/include/c++/12.1.0/bits/unordered_map.h \
+  C:/mingw64/include/c++/12.1.0/bits/erase_if.h \
   C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/ArchiveHeader.hpp \
   C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCode.hpp \
   C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCodeUtils.hpp \
@@ -173,6 +183,8 @@ C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/s
 C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/ctype_inline.h:
 
 C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/c++config.h:
+
+C:/mingw64/include/c++/12.1.0/tuple:
 
 C:/mingw64/include/c++/12.1.0/ext/type_traits.h:
 
@@ -426,6 +438,8 @@ C:/mingw64/include/c++/12.1.0/istream:
 
 C:/mingw64/include/c++/12.1.0/ios:
 
+C:/mingw64/include/c++/12.1.0/bits/uses_allocator.h:
+
 C:/mingw64/include/c++/12.1.0/exception:
 
 C:/mingw64/include/c++/12.1.0/bits/exception_ptr.h:
@@ -469,6 +483,22 @@ C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/c++io.h:
 C:/mingw64/include/c++/12.1.0/utility:
 
 C:/mingw64/include/c++/12.1.0/bits/stl_relops.h:
+
+C:/mingw64/include/c++/12.1.0/unordered_map:
+
+C:/mingw64/include/c++/12.1.0/ext/aligned_buffer.h:
+
+C:/mingw64/include/c++/12.1.0/bits/hashtable.h:
+
+C:/mingw64/include/c++/12.1.0/bits/hashtable_policy.h:
+
+C:/mingw64/include/c++/12.1.0/bits/enable_special_members.h:
+
+C:/mingw64/include/c++/12.1.0/bits/node_handle.h:
+
+C:/mingw64/include/c++/12.1.0/bits/unordered_map.h:
+
+C:/mingw64/include/c++/12.1.0/bits/erase_if.h:
 
 C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/ArchiveHeader.hpp:
 

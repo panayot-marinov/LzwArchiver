@@ -153,10 +153,6 @@ CMakeFiles/LzwCompression.dir/compressor/byte/ByteCompressor.cpp.obj: C:/Users/P
   C:/mingw64/include/c++/12.1.0/bits/fstream.tcc \
   C:/mingw64/include/c++/12.1.0/utility \
   C:/mingw64/include/c++/12.1.0/bits/stl_relops.h \
-  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/ArchiveHeader.hpp \
-  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCode.hpp \
-  C:/mingw64/include/c++/12.1.0/bitset \
-  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCode.hpp \
   C:/mingw64/include/c++/12.1.0/unordered_map \
   C:/mingw64/include/c++/12.1.0/ext/aligned_buffer.h \
   C:/mingw64/include/c++/12.1.0/bits/hashtable.h \
@@ -167,6 +163,10 @@ CMakeFiles/LzwCompression.dir/compressor/byte/ByteCompressor.cpp.obj: C:/Users/P
   C:/mingw64/include/c++/12.1.0/bits/node_handle.h \
   C:/mingw64/include/c++/12.1.0/bits/unordered_map.h \
   C:/mingw64/include/c++/12.1.0/bits/erase_if.h \
+  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/ArchiveHeader.hpp \
+  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCode.hpp \
+  C:/mingw64/include/c++/12.1.0/bitset \
+  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCode.hpp \
   C:/mingw64/include/c++/12.1.0/iostream
 
 CMakeFiles/LzwCompression.dir/compressor/directory/DirectoryCompressor.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/directory/DirectoryCompressor.cpp \
@@ -322,6 +322,16 @@ CMakeFiles/LzwCompression.dir/compressor/directory/DirectoryCompressor.cpp.obj: 
   C:/mingw64/include/c++/12.1.0/bits/fstream.tcc \
   C:/mingw64/include/c++/12.1.0/utility \
   C:/mingw64/include/c++/12.1.0/bits/stl_relops.h \
+  C:/mingw64/include/c++/12.1.0/unordered_map \
+  C:/mingw64/include/c++/12.1.0/ext/aligned_buffer.h \
+  C:/mingw64/include/c++/12.1.0/bits/hashtable.h \
+  C:/mingw64/include/c++/12.1.0/bits/hashtable_policy.h \
+  C:/mingw64/include/c++/12.1.0/tuple \
+  C:/mingw64/include/c++/12.1.0/bits/uses_allocator.h \
+  C:/mingw64/include/c++/12.1.0/bits/enable_special_members.h \
+  C:/mingw64/include/c++/12.1.0/bits/node_handle.h \
+  C:/mingw64/include/c++/12.1.0/bits/unordered_map.h \
+  C:/mingw64/include/c++/12.1.0/bits/erase_if.h \
   C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/ArchiveHeader.hpp \
   C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCode.hpp \
   C:/mingw64/include/c++/12.1.0/bitset \
@@ -351,9 +361,6 @@ CMakeFiles/LzwCompression.dir/compressor/directory/DirectoryCompressor.cpp.obj: 
   C:/mingw64/include/c++/12.1.0/bits/shared_ptr_base.h \
   C:/mingw64/include/c++/12.1.0/bits/allocated_ptr.h \
   C:/mingw64/include/c++/12.1.0/bits/unique_ptr.h \
-  C:/mingw64/include/c++/12.1.0/tuple \
-  C:/mingw64/include/c++/12.1.0/bits/uses_allocator.h \
-  C:/mingw64/include/c++/12.1.0/ext/aligned_buffer.h \
   C:/mingw64/include/c++/12.1.0/bits/fs_dir.h \
   C:/mingw64/include/c++/12.1.0/bits/fs_ops.h \
   C:/mingw64/include/c++/12.1.0/iostream \
@@ -514,11 +521,6 @@ CMakeFiles/LzwCompression.dir/compressor/file/FileCompressor.cpp.obj: C:/Users/P
   C:/mingw64/include/c++/12.1.0/bits/fstream.tcc \
   C:/mingw64/include/c++/12.1.0/utility \
   C:/mingw64/include/c++/12.1.0/bits/stl_relops.h \
-  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCode.hpp \
-  C:/mingw64/include/c++/12.1.0/bitset \
-  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/byte/ByteCompressor.hpp \
-  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/file/File.hpp \
-  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCode.hpp \
   C:/mingw64/include/c++/12.1.0/unordered_map \
   C:/mingw64/include/c++/12.1.0/ext/aligned_buffer.h \
   C:/mingw64/include/c++/12.1.0/bits/hashtable.h \
@@ -529,6 +531,11 @@ CMakeFiles/LzwCompression.dir/compressor/file/FileCompressor.cpp.obj: C:/Users/P
   C:/mingw64/include/c++/12.1.0/bits/node_handle.h \
   C:/mingw64/include/c++/12.1.0/bits/unordered_map.h \
   C:/mingw64/include/c++/12.1.0/bits/erase_if.h \
+  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCode.hpp \
+  C:/mingw64/include/c++/12.1.0/bitset \
+  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/byte/ByteCompressor.hpp \
+  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/file/File.hpp \
+  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCode.hpp \
   C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/path/PathUtils.hpp \
   C:/mingw64/include/c++/12.1.0/iostream \
   C:/mingw64/include/c++/12.1.0/cmath \
@@ -727,6 +734,16 @@ CMakeFiles/LzwCompression.dir/file/File.cpp.obj: C:/Users/Panayot\ Marinov/Deskt
   C:/mingw64/include/c++/12.1.0/bits/fstream.tcc \
   C:/mingw64/include/c++/12.1.0/utility \
   C:/mingw64/include/c++/12.1.0/bits/stl_relops.h \
+  C:/mingw64/include/c++/12.1.0/unordered_map \
+  C:/mingw64/include/c++/12.1.0/ext/aligned_buffer.h \
+  C:/mingw64/include/c++/12.1.0/bits/hashtable.h \
+  C:/mingw64/include/c++/12.1.0/bits/hashtable_policy.h \
+  C:/mingw64/include/c++/12.1.0/tuple \
+  C:/mingw64/include/c++/12.1.0/bits/uses_allocator.h \
+  C:/mingw64/include/c++/12.1.0/bits/enable_special_members.h \
+  C:/mingw64/include/c++/12.1.0/bits/node_handle.h \
+  C:/mingw64/include/c++/12.1.0/bits/unordered_map.h \
+  C:/mingw64/include/c++/12.1.0/bits/erase_if.h \
   C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/ArchiveHeader.hpp \
   C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCode.hpp \
   C:/mingw64/include/c++/12.1.0/bitset \
@@ -922,13 +939,6 @@ CMakeFiles/LzwCompression.dir/main.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FM
   C:/mingw64/include/c++/12.1.0/bits/fstream.tcc \
   C:/mingw64/include/c++/12.1.0/utility \
   C:/mingw64/include/c++/12.1.0/bits/stl_relops.h \
-  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/ArchiveHeader.hpp \
-  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCode.hpp \
-  C:/mingw64/include/c++/12.1.0/bitset \
-  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCode.hpp \
-  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/byte/ByteCompressor.hpp \
-  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/file/File.hpp \
-  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCode.hpp \
   C:/mingw64/include/c++/12.1.0/unordered_map \
   C:/mingw64/include/c++/12.1.0/ext/aligned_buffer.h \
   C:/mingw64/include/c++/12.1.0/bits/hashtable.h \
@@ -939,6 +949,13 @@ CMakeFiles/LzwCompression.dir/main.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FM
   C:/mingw64/include/c++/12.1.0/bits/node_handle.h \
   C:/mingw64/include/c++/12.1.0/bits/unordered_map.h \
   C:/mingw64/include/c++/12.1.0/bits/erase_if.h \
+  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/ArchiveHeader.hpp \
+  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCode.hpp \
+  C:/mingw64/include/c++/12.1.0/bitset \
+  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCode.hpp \
+  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/byte/ByteCompressor.hpp \
+  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/file/File.hpp \
+  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCode.hpp \
   C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/directory/DirectoryCompressor.hpp \
   C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/FileCompressor.hpp \
   C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/file/File.hpp \
@@ -1299,6 +1316,16 @@ CMakeFiles/LzwCompression.dir/wordCode/reader/WordCodeReader.cpp.obj: C:/Users/P
   C:/mingw64/include/c++/12.1.0/bits/fstream.tcc \
   C:/mingw64/include/c++/12.1.0/utility \
   C:/mingw64/include/c++/12.1.0/bits/stl_relops.h \
+  C:/mingw64/include/c++/12.1.0/unordered_map \
+  C:/mingw64/include/c++/12.1.0/ext/aligned_buffer.h \
+  C:/mingw64/include/c++/12.1.0/bits/hashtable.h \
+  C:/mingw64/include/c++/12.1.0/bits/hashtable_policy.h \
+  C:/mingw64/include/c++/12.1.0/tuple \
+  C:/mingw64/include/c++/12.1.0/bits/uses_allocator.h \
+  C:/mingw64/include/c++/12.1.0/bits/enable_special_members.h \
+  C:/mingw64/include/c++/12.1.0/bits/node_handle.h \
+  C:/mingw64/include/c++/12.1.0/bits/unordered_map.h \
+  C:/mingw64/include/c++/12.1.0/bits/erase_if.h \
   C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/ArchiveHeader.hpp \
   C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCode.hpp \
   C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCodeUtils.hpp \
@@ -1808,10 +1835,6 @@ C:/mingw64/include/c++/12.1.0/utility:
 
 C:/mingw64/include/c++/12.1.0/bits/stl_relops.h:
 
-C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/ArchiveHeader.hpp:
-
-C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCode.hpp:
-
 C:/mingw64/include/c++/12.1.0/unordered_map:
 
 C:/mingw64/include/c++/12.1.0/ext/aligned_buffer.h:
@@ -1829,6 +1852,10 @@ C:/mingw64/include/c++/12.1.0/bits/unordered_map.h:
 C:/mingw64/include/c++/12.1.0/bits/stl_heap.h:
 
 C:/mingw64/include/c++/12.1.0/bits/erase_if.h:
+
+C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/ArchiveHeader.hpp:
+
+C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCode.hpp:
 
 C:/mingw64/include/c++/12.1.0/iostream:
 
