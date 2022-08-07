@@ -23,16 +23,18 @@ int main()
     // fileCompressor.unarchive("../OutputFiles/Archived/a.lzw", "../OutputFiles/Unarchived/a.txt");
 
     DirectoryCompressor directoryCompressor;
-    directoryCompressor.archive("../InputFiles/fold1", "../OutputFiles/Archived", "archive", "lzw");
-    // directoryCompressor.unarchive("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived");
-    directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "\\a.txt");
-    directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "\\b.txt");
-    directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "\\c.txt");
 
-    directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "\\fold\\d.txt");
-    directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "\\fold\\e.txt");
-    directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "\\fold\\foldInt\\f.txt");
-    directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "\\foldd");
+    vector<const char *> inputPaths {"../InputFiles/fold1", "../InputFiles/fold2"};
+    directoryCompressor.archive(inputPaths, "../OutputFiles/Archived", "archive", "lzw");
+    directoryCompressor.unarchive("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived");
+    // directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "\\a.txt");
+    // directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "\\b.txt");
+    // directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "\\c.txt");
+
+    // directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "\\fold\\d.txt");
+    // directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "\\fold\\e.txt");
+    // directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "\\fold\\foldInt\\f.txt");
+    // directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "\\foldd");
 
     // fstream writeStream;
     // writeStream.open("../OutputFiles/b.txt", std::ios::out);

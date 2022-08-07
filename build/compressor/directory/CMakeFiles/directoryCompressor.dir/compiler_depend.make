@@ -3,15 +3,54 @@
 
 compressor/directory/CMakeFiles/directoryCompressor.dir/DirectoryCompressor.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/directory/DirectoryCompressor.cpp \
   C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/directory/DirectoryCompressor.hpp \
-  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/FileCompressor.hpp \
-  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/file/File.hpp \
-  C:/mingw64/include/c++/12.1.0/string \
+  C:/mingw64/include/c++/12.1.0/vector \
+  C:/mingw64/include/c++/12.1.0/bits/stl_algobase.h \
   C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/c++config.h \
   C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/os_defines.h \
   C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/mingw64/include/c++/12.1.0/pstl/pstl_config.h \
-  C:/mingw64/include/c++/12.1.0/bits/stringfwd.h \
+  C:/mingw64/include/c++/12.1.0/bits/functexcept.h \
+  C:/mingw64/include/c++/12.1.0/bits/exception_defines.h \
+  C:/mingw64/include/c++/12.1.0/bits/cpp_type_traits.h \
+  C:/mingw64/include/c++/12.1.0/ext/type_traits.h \
+  C:/mingw64/include/c++/12.1.0/ext/numeric_traits.h \
+  C:/mingw64/include/c++/12.1.0/bits/stl_pair.h \
+  C:/mingw64/include/c++/12.1.0/type_traits \
+  C:/mingw64/include/c++/12.1.0/bits/move.h \
+  C:/mingw64/include/c++/12.1.0/bits/utility.h \
+  C:/mingw64/include/c++/12.1.0/bits/stl_iterator_base_types.h \
+  C:/mingw64/include/c++/12.1.0/bits/stl_iterator_base_funcs.h \
+  C:/mingw64/include/c++/12.1.0/bits/concept_check.h \
+  C:/mingw64/include/c++/12.1.0/debug/assertions.h \
+  C:/mingw64/include/c++/12.1.0/bits/stl_iterator.h \
+  C:/mingw64/include/c++/12.1.0/bits/ptr_traits.h \
+  C:/mingw64/include/c++/12.1.0/debug/debug.h \
+  C:/mingw64/include/c++/12.1.0/bits/predefined_ops.h \
+  C:/mingw64/include/c++/12.1.0/bits/allocator.h \
+  C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/c++allocator.h \
+  C:/mingw64/include/c++/12.1.0/bits/new_allocator.h \
+  C:/mingw64/include/c++/12.1.0/new \
+  C:/mingw64/include/c++/12.1.0/bits/exception.h \
   C:/mingw64/include/c++/12.1.0/bits/memoryfwd.h \
+  C:/mingw64/include/c++/12.1.0/bits/stl_construct.h \
+  C:/mingw64/include/c++/12.1.0/bits/stl_uninitialized.h \
+  C:/mingw64/include/c++/12.1.0/ext/alloc_traits.h \
+  C:/mingw64/include/c++/12.1.0/bits/alloc_traits.h \
+  C:/mingw64/include/c++/12.1.0/bits/stl_vector.h \
+  C:/mingw64/include/c++/12.1.0/initializer_list \
+  C:/mingw64/include/c++/12.1.0/bits/stl_bvector.h \
+  C:/mingw64/include/c++/12.1.0/bits/functional_hash.h \
+  C:/mingw64/include/c++/12.1.0/bits/hash_bytes.h \
+  C:/mingw64/include/c++/12.1.0/bits/refwrap.h \
+  C:/mingw64/include/c++/12.1.0/bits/invoke.h \
+  C:/mingw64/include/c++/12.1.0/bits/stl_function.h \
+  C:/mingw64/include/c++/12.1.0/backward/binders.h \
+  C:/mingw64/include/c++/12.1.0/bits/range_access.h \
+  C:/mingw64/include/c++/12.1.0/bits/vector.tcc \
+  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/FileCompressor.hpp \
+  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/file/File.hpp \
+  C:/mingw64/include/c++/12.1.0/string \
+  C:/mingw64/include/c++/12.1.0/bits/stringfwd.h \
   C:/mingw64/include/c++/12.1.0/bits/char_traits.h \
   C:/mingw64/include/c++/12.1.0/bits/postypes.h \
   C:/mingw64/include/c++/12.1.0/cwchar \
@@ -28,22 +67,12 @@ compressor/directory/CMakeFiles/directoryCompressor.dir/DirectoryCompressor.cpp.
   C:/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h \
   C:/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
   C:/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
-  C:/mingw64/include/c++/12.1.0/type_traits \
   C:/mingw64/include/c++/12.1.0/cstdint \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.1.0/include/stdint.h \
   C:/mingw64/x86_64-w64-mingw32/include/stdint.h \
   C:/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.1.0/include/stddef.h \
   C:/mingw64/x86_64-w64-mingw32/include/stddef.h \
-  C:/mingw64/include/c++/12.1.0/bits/allocator.h \
-  C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/c++allocator.h \
-  C:/mingw64/include/c++/12.1.0/bits/new_allocator.h \
-  C:/mingw64/include/c++/12.1.0/new \
-  C:/mingw64/include/c++/12.1.0/bits/exception.h \
-  C:/mingw64/include/c++/12.1.0/bits/functexcept.h \
-  C:/mingw64/include/c++/12.1.0/bits/exception_defines.h \
-  C:/mingw64/include/c++/12.1.0/bits/move.h \
-  C:/mingw64/include/c++/12.1.0/bits/cpp_type_traits.h \
   C:/mingw64/include/c++/12.1.0/bits/localefwd.h \
   C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/c++locale.h \
   C:/mingw64/include/c++/12.1.0/clocale \
@@ -55,25 +84,6 @@ compressor/directory/CMakeFiles/directoryCompressor.dir/DirectoryCompressor.cpp.
   C:/mingw64/x86_64-w64-mingw32/include/ctype.h \
   C:/mingw64/include/c++/12.1.0/bits/ostream_insert.h \
   C:/mingw64/include/c++/12.1.0/bits/cxxabi_forced.h \
-  C:/mingw64/include/c++/12.1.0/bits/stl_iterator_base_types.h \
-  C:/mingw64/include/c++/12.1.0/bits/stl_iterator_base_funcs.h \
-  C:/mingw64/include/c++/12.1.0/bits/concept_check.h \
-  C:/mingw64/include/c++/12.1.0/debug/assertions.h \
-  C:/mingw64/include/c++/12.1.0/bits/stl_iterator.h \
-  C:/mingw64/include/c++/12.1.0/ext/type_traits.h \
-  C:/mingw64/include/c++/12.1.0/bits/ptr_traits.h \
-  C:/mingw64/include/c++/12.1.0/bits/stl_function.h \
-  C:/mingw64/include/c++/12.1.0/backward/binders.h \
-  C:/mingw64/include/c++/12.1.0/ext/numeric_traits.h \
-  C:/mingw64/include/c++/12.1.0/bits/stl_algobase.h \
-  C:/mingw64/include/c++/12.1.0/bits/stl_pair.h \
-  C:/mingw64/include/c++/12.1.0/bits/utility.h \
-  C:/mingw64/include/c++/12.1.0/debug/debug.h \
-  C:/mingw64/include/c++/12.1.0/bits/predefined_ops.h \
-  C:/mingw64/include/c++/12.1.0/bits/refwrap.h \
-  C:/mingw64/include/c++/12.1.0/bits/invoke.h \
-  C:/mingw64/include/c++/12.1.0/bits/range_access.h \
-  C:/mingw64/include/c++/12.1.0/initializer_list \
   C:/mingw64/include/c++/12.1.0/bits/basic_string.h \
   C:/mingw64/include/c++/12.1.0/ext/atomicity.h \
   C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/gthr.h \
@@ -96,12 +106,7 @@ compressor/directory/CMakeFiles/directoryCompressor.dir/DirectoryCompressor.cpp.
   C:/mingw64/x86_64-w64-mingw32/include/pthread_compat.h \
   C:/mingw64/x86_64-w64-mingw32/include/pthread_unistd.h \
   C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/atomic_word.h \
-  C:/mingw64/include/c++/12.1.0/ext/alloc_traits.h \
-  C:/mingw64/include/c++/12.1.0/bits/alloc_traits.h \
-  C:/mingw64/include/c++/12.1.0/bits/stl_construct.h \
   C:/mingw64/include/c++/12.1.0/string_view \
-  C:/mingw64/include/c++/12.1.0/bits/functional_hash.h \
-  C:/mingw64/include/c++/12.1.0/bits/hash_bytes.h \
   C:/mingw64/include/c++/12.1.0/bits/string_view.tcc \
   C:/mingw64/include/c++/12.1.0/ext/string_conversions.h \
   C:/mingw64/include/c++/12.1.0/cstdlib \
@@ -115,11 +120,6 @@ compressor/directory/CMakeFiles/directoryCompressor.dir/DirectoryCompressor.cpp.
   C:/mingw64/include/c++/12.1.0/cerrno \
   C:/mingw64/include/c++/12.1.0/bits/charconv.h \
   C:/mingw64/include/c++/12.1.0/bits/basic_string.tcc \
-  C:/mingw64/include/c++/12.1.0/vector \
-  C:/mingw64/include/c++/12.1.0/bits/stl_uninitialized.h \
-  C:/mingw64/include/c++/12.1.0/bits/stl_vector.h \
-  C:/mingw64/include/c++/12.1.0/bits/stl_bvector.h \
-  C:/mingw64/include/c++/12.1.0/bits/vector.tcc \
   C:/mingw64/include/c++/12.1.0/fstream \
   C:/mingw64/include/c++/12.1.0/istream \
   C:/mingw64/include/c++/12.1.0/ios \
@@ -201,13 +201,17 @@ compressor/directory/CMakeFiles/directoryCompressor.dir/DirectoryCompressor.cpp.
   C:/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h
 
 
+C:/mingw64/include/c++/12.1.0/bits/stl_algobase.h:
+
+C:/mingw64/include/c++/12.1.0/bits/parse_numbers.h:
+
+C:/mingw64/include/c++/12.1.0/vector:
+
 C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/directory/DirectoryCompressor.cpp:
 
-C:/mingw64/include/c++/12.1.0/cctype:
+C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/c++locale.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/vadefs.h:
-
-C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/c++locale.h:
 
 C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/cpu_defines.h:
 
@@ -215,85 +219,23 @@ C:/mingw64/include/c++/12.1.0/bits/move.h:
 
 C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/directory/DirectoryCompressor.hpp:
 
-C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/FileCompressor.hpp:
-
-C:/mingw64/include/c++/12.1.0/bits/stl_iterator_base_types.h:
-
-C:/mingw64/include/c++/12.1.0/cwctype:
-
-C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/file/File.hpp:
-
-C:/mingw64/include/c++/12.1.0/bits/stl_function.h:
-
-C:/mingw64/include/c++/12.1.0/string:
-
 C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/ctype_inline.h:
 
 C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/c++config.h:
 
-C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/os_defines.h:
-
 C:/mingw64/include/c++/12.1.0/bits/postypes.h:
+
+C:/mingw64/include/c++/12.1.0/bits/refwrap.h:
 
 C:/mingw64/include/c++/12.1.0/stdexcept:
 
 C:/mingw64/include/c++/12.1.0/pstl/pstl_config.h:
 
-C:/mingw64/x86_64-w64-mingw32/include/stddef.h:
+C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/os_defines.h:
 
-C:/mingw64/include/c++/12.1.0/bits/stringfwd.h:
+C:/mingw64/include/c++/12.1.0/cstdio:
 
-C:/mingw64/include/c++/12.1.0/bits/memoryfwd.h:
-
-C:/mingw64/x86_64-w64-mingw32/include/locale.h:
-
-C:/mingw64/include/c++/12.1.0/bits/char_traits.h:
-
-C:/mingw64/include/c++/12.1.0/cwchar:
-
-C:/mingw64/x86_64-w64-mingw32/include/wchar.h:
-
-C:/mingw64/include/c++/12.1.0/bits/cpp_type_traits.h:
-
-C:/mingw64/x86_64-w64-mingw32/include/corecrt.h:
-
-C:/mingw64/include/c++/12.1.0/cstdint:
-
-C:/mingw64/x86_64-w64-mingw32/include/_mingw.h:
-
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.1.0/include/stddef.h:
-
-C:/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h:
-
-C:/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h:
-
-C:/mingw64/x86_64-w64-mingw32/include/stdio.h:
-
-C:/mingw64/include/c++/12.1.0/type_traits:
-
-C:/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h:
-
-C:/mingw64/include/c++/12.1.0/bits/ostream_insert.h:
-
-C:/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h:
-
-C:/mingw64/include/c++/12.1.0/bits/fstream.tcc:
-
-C:/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h:
-
-C:/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h:
-
-C:/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h:
-
-C:/mingw64/x86_64-w64-mingw32/include/swprintf.inl:
-
-C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h:
-
-C:/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h:
-
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.1.0/include/stdint.h:
-
-C:/mingw64/x86_64-w64-mingw32/include/stdint.h:
+C:/mingw64/include/c++/12.1.0/bits/vector.tcc:
 
 C:/mingw64/include/c++/12.1.0/tuple:
 
@@ -301,7 +243,65 @@ C:/mingw64/include/c++/12.1.0/ext/type_traits.h:
 
 C:/mingw64/include/c++/12.1.0/bits/functexcept.h:
 
-C:/mingw64/x86_64-w64-mingw32/include/crtdefs.h:
+C:/mingw64/include/c++/12.1.0/debug/assertions.h:
+
+C:/mingw64/include/c++/12.1.0/bits/exception_defines.h:
+
+C:/mingw64/include/c++/12.1.0/cstdint:
+
+C:/mingw64/x86_64-w64-mingw32/include/corecrt.h:
+
+C:/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h:
+
+C:/mingw64/include/c++/12.1.0/bits/invoke.h:
+
+C:/mingw64/include/c++/12.1.0/bits/cpp_type_traits.h:
+
+C:/mingw64/include/c++/12.1.0/ext/numeric_traits.h:
+
+C:/mingw64/include/c++/12.1.0/bits/stl_pair.h:
+
+C:/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h:
+
+C:/mingw64/include/c++/12.1.0/type_traits:
+
+C:/mingw64/include/c++/12.1.0/backward/binders.h:
+
+C:/mingw64/include/c++/12.1.0/bits/utility.h:
+
+C:/mingw64/include/c++/12.1.0/bits/new_allocator.h:
+
+C:/mingw64/include/c++/12.1.0/cwctype:
+
+C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/file/File.hpp:
+
+C:/mingw64/include/c++/12.1.0/bits/stl_iterator_base_types.h:
+
+C:/mingw64/x86_64-w64-mingw32/include/pthread.h:
+
+C:/mingw64/include/c++/12.1.0/bits/stl_iterator_base_funcs.h:
+
+C:/mingw64/include/c++/12.1.0/new:
+
+C:/mingw64/include/c++/12.1.0/bits/concept_check.h:
+
+C:/mingw64/x86_64-w64-mingw32/include/signal.h:
+
+C:/mingw64/include/c++/12.1.0/bits/hash_bytes.h:
+
+C:/mingw64/include/c++/12.1.0/bits/stl_iterator.h:
+
+C:/mingw64/include/c++/12.1.0/bits/charconv.h:
+
+C:/mingw64/include/c++/12.1.0/bits/ptr_traits.h:
+
+C:/mingw64/include/c++/12.1.0/debug/debug.h:
+
+C:/mingw64/include/c++/12.1.0/bits/fs_path.h:
+
+C:/mingw64/include/c++/12.1.0/bits/stl_vector.h:
+
+C:/mingw64/include/c++/12.1.0/bits/predefined_ops.h:
 
 C:/mingw64/include/c++/12.1.0/bits/istream.tcc:
 
@@ -311,63 +311,93 @@ C:/mingw64/include/c++/12.1.0/bits/allocator.h:
 
 C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/c++allocator.h:
 
-C:/mingw64/include/c++/12.1.0/backward/binders.h:
+C:/mingw64/include/c++/12.1.0/bits/memoryfwd.h:
 
-C:/mingw64/include/c++/12.1.0/bits/utility.h:
+C:/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h:
 
-C:/mingw64/include/c++/12.1.0/bits/new_allocator.h:
+C:/mingw64/include/c++/12.1.0/bits/stl_bvector.h:
 
-C:/mingw64/include/c++/12.1.0/bits/concept_check.h:
+C:/mingw64/x86_64-w64-mingw32/include/string.h:
 
-C:/mingw64/include/c++/12.1.0/new:
+C:/mingw64/include/c++/12.1.0/bits/stl_construct.h:
 
-C:/mingw64/include/c++/12.1.0/debug/assertions.h:
+C:/mingw64/include/c++/12.1.0/bits/stl_uninitialized.h:
 
-C:/mingw64/include/c++/12.1.0/bits/exception_defines.h:
+C:/mingw64/include/c++/12.1.0/bits/fstream.tcc:
 
-C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h:
+C:/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h:
 
-C:/mingw64/include/c++/12.1.0/bits/localefwd.h:
+C:/mingw64/include/c++/12.1.0/ext/alloc_traits.h:
 
-C:/mingw64/include/c++/12.1.0/bits/stl_iterator.h:
+C:/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h:
 
-C:/mingw64/include/c++/12.1.0/clocale:
+C:/mingw64/include/c++/12.1.0/bits/alloc_traits.h:
 
-C:/mingw64/include/c++/12.1.0/bits/cxxabi_forced.h:
+C:/mingw64/include/c++/12.1.0/initializer_list:
 
-C:/mingw64/include/c++/12.1.0/iosfwd:
+C:/mingw64/include/c++/12.1.0/bits/functional_hash.h:
 
-C:/mingw64/x86_64-w64-mingw32/include/ctype.h:
+C:/mingw64/include/c++/12.1.0/string:
 
-C:/mingw64/x86_64-w64-mingw32/include/pthread.h:
-
-C:/mingw64/include/c++/12.1.0/bits/stl_iterator_base_funcs.h:
-
-C:/mingw64/include/c++/12.1.0/bits/charconv.h:
-
-C:/mingw64/include/c++/12.1.0/bits/ptr_traits.h:
-
-C:/mingw64/include/c++/12.1.0/ext/numeric_traits.h:
-
-C:/mingw64/include/c++/12.1.0/bits/stl_algobase.h:
-
-C:/mingw64/include/c++/12.1.0/bits/stl_pair.h:
-
-C:/mingw64/include/c++/12.1.0/debug/debug.h:
-
-C:/mingw64/include/c++/12.1.0/bits/predefined_ops.h:
-
-C:/mingw64/include/c++/12.1.0/bits/refwrap.h:
-
-C:/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h:
-
-C:/mingw64/include/c++/12.1.0/bits/invoke.h:
+C:/mingw64/include/c++/12.1.0/bits/stl_function.h:
 
 C:/mingw64/include/c++/12.1.0/bits/streambuf_iterator.h:
 
 C:/mingw64/include/c++/12.1.0/bits/range_access.h:
 
-C:/mingw64/include/c++/12.1.0/initializer_list:
+C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/FileCompressor.hpp:
+
+C:/mingw64/include/c++/12.1.0/bits/stringfwd.h:
+
+C:/mingw64/include/c++/12.1.0/bits/char_traits.h:
+
+C:/mingw64/include/c++/12.1.0/cwchar:
+
+C:/mingw64/x86_64-w64-mingw32/include/wchar.h:
+
+C:/mingw64/x86_64-w64-mingw32/include/_mingw.h:
+
+C:/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h:
+
+C:/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h:
+
+C:/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h:
+
+C:/mingw64/x86_64-w64-mingw32/include/swprintf.inl:
+
+C:/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.1.0/include/stdint.h:
+
+C:/mingw64/x86_64-w64-mingw32/include/stdint.h:
+
+C:/mingw64/x86_64-w64-mingw32/include/crtdefs.h:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.1.0/include/stddef.h:
+
+C:/mingw64/x86_64-w64-mingw32/include/stddef.h:
+
+C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h:
+
+C:/mingw64/include/c++/12.1.0/bits/localefwd.h:
+
+C:/mingw64/include/c++/12.1.0/clocale:
+
+C:/mingw64/x86_64-w64-mingw32/include/locale.h:
+
+C:/mingw64/x86_64-w64-mingw32/include/stdio.h:
+
+C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h:
+
+C:/mingw64/include/c++/12.1.0/iosfwd:
+
+C:/mingw64/include/c++/12.1.0/cctype:
+
+C:/mingw64/x86_64-w64-mingw32/include/ctype.h:
+
+C:/mingw64/include/c++/12.1.0/bits/ostream_insert.h:
+
+C:/mingw64/include/c++/12.1.0/bits/cxxabi_forced.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h:
 
@@ -395,10 +425,6 @@ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.1.0/include-fixed/syslimits.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/limits.h:
 
-C:/mingw64/include/c++/12.1.0/bits/hash_bytes.h:
-
-C:/mingw64/x86_64-w64-mingw32/include/signal.h:
-
 C:/mingw64/x86_64-w64-mingw32/include/pthread_signal.h:
 
 C:/mingw64/include/c++/12.1.0/bits/locale_facets.h:
@@ -417,17 +443,7 @@ C:/mingw64/x86_64-w64-mingw32/include/pthread_unistd.h:
 
 C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/atomic_word.h:
 
-C:/mingw64/include/c++/12.1.0/ext/alloc_traits.h:
-
-C:/mingw64/include/c++/12.1.0/bits/alloc_traits.h:
-
-C:/mingw64/x86_64-w64-mingw32/include/string.h:
-
-C:/mingw64/include/c++/12.1.0/bits/stl_construct.h:
-
 C:/mingw64/include/c++/12.1.0/string_view:
-
-C:/mingw64/include/c++/12.1.0/bits/functional_hash.h:
 
 C:/mingw64/include/c++/12.1.0/bits/string_view.tcc:
 
@@ -447,25 +463,9 @@ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.1.0/include/mm_malloc.h:
 
 C:/mingw64/include/c++/12.1.0/bits/std_abs.h:
 
-C:/mingw64/include/c++/12.1.0/bits/vector.tcc:
-
-C:/mingw64/include/c++/12.1.0/cstdio:
-
 C:/mingw64/include/c++/12.1.0/cerrno:
 
 C:/mingw64/include/c++/12.1.0/bits/basic_string.tcc:
-
-C:/mingw64/include/c++/12.1.0/bits/parse_numbers.h:
-
-C:/mingw64/include/c++/12.1.0/vector:
-
-C:/mingw64/include/c++/12.1.0/bits/stl_uninitialized.h:
-
-C:/mingw64/include/c++/12.1.0/bits/fs_path.h:
-
-C:/mingw64/include/c++/12.1.0/bits/stl_vector.h:
-
-C:/mingw64/include/c++/12.1.0/bits/stl_bvector.h:
 
 C:/mingw64/include/c++/12.1.0/fstream:
 

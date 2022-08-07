@@ -14,11 +14,9 @@
 using std::pair;
 using std::unordered_map;
 
-void DirectoryCompressor::archive(const char *inputPath, const char *outputPath,
+void DirectoryCompressor::archive(vector<const char *> inputPaths, const char *outputPath,
                                   const char *outputFilename, const char *outputFileExtension)
 {
-    const std::filesystem::path sandbox{inputPath};
-
     std::string tempArchiveFilePath = outputPath;
     tempArchiveFilePath += "/";
     tempArchiveFilePath += outputFilename;
@@ -28,58 +26,6 @@ void DirectoryCompressor::archive(const char *inputPath, const char *outputPath,
     File tempArchiveFile(tempArchiveFilePath.c_str());
     tempArchiveFile.clear();
 
-    FileCompressor fileCompressor;
-    vector<pair<string, int>> tableOfContents;
-    int tableOfContentsBytes = 0;
-    int firstBytePos = 0;
-    for (auto const &dir_entry : std::filesystem::recursive_directory_iterator{sandbox})
-    {
-        std::cout << dir_entry.path() << '\n';
-        bool isRegularFile = true;
-        if (std::filesystem::is_directory(dir_entry))
-        {
-            isRegularFile = false;
-        }
-
-        std::string currentFileInputPath = dir_entry.path().u8string().c_str();
-        std::string currentFileArchivePath =
-            currentFileInputPath.substr(strlen(inputPath));
-        std::string currentFileOutputPath = outputPath;
-        currentFileOutputPath += "/";
-        currentFileOutputPath += currentFileArchivePath.substr(0, currentFileArchivePath.find_last_of('.')) + ".lzw";
-
-        tableOfContents.push_back(std::make_pair(currentFileArchivePath, firstBytePos));
-        std::cout << sizeof(' ') << std::endl
-                  << currentFileArchivePath.length() << std::endl
-                  << strlen(std::to_string(firstBytePos).c_str()) << std::endl;
-
-        tableOfContentsBytes += (sizeof(' ') + currentFileArchivePath.length() + sizeof(' ') + strlen(std::to_string(firstBytePos).c_str()));
-        firstBytePos +=
-            fileCompressor.archive(currentFileInputPath.c_str(), currentFileArchivePath.c_str(), tempArchiveFile, isRegularFile);
-    }
-    tableOfContentsBytes += strlen(std::to_string(tableOfContents.size()).c_str());
-
-    std::cout << "tableOfContents\n";
-    for (size_t i = 0; i < tableOfContents.size(); i++)
-    {
-        int oldValue = strlen(std::to_string(tableOfContents[i].second).c_str());
-        tableOfContents[i].second += tableOfContentsBytes;
-        int newValue = strlen(std::to_string(tableOfContents[i].second).c_str());
-        tableOfContents[i].second -= tableOfContentsBytes;
-        tableOfContentsBytes += (newValue - oldValue);
-
-        std::cout << tableOfContents[i].first << " " << tableOfContents[i].second << "\n";
-    }
-
-    tableOfContentsBytes += (strlen(std::to_string(tableOfContentsBytes).c_str()) + sizeof(' '));
-    for (size_t i = 0; i < tableOfContents.size(); i++)
-    {
-        tableOfContents[i].second += (tableOfContentsBytes + 1); // TODO: why + 2
-
-        std::cout << tableOfContents[i].first << " " << tableOfContents[i].second << "\n";
-    }
-    std::cout << std::endl;
-
     std::string bigArchiveFilePath = outputPath;
     bigArchiveFilePath += "/";
     bigArchiveFilePath += outputFilename;
@@ -88,11 +34,69 @@ void DirectoryCompressor::archive(const char *inputPath, const char *outputPath,
 
     File archiveFile(bigArchiveFilePath);
     archiveFile.clear();
-    string tableOfContentsStr = std::to_string(tableOfContentsBytes);
-    tableOfContentsStr += ' ';
-    archiveFile.appendBytes(tableOfContentsStr.c_str(), tableOfContentsStr.length());
-    archiveFile.appendTableOfContents(tableOfContents);
-    archiveFile.appendFile(tempArchiveFile);
+    for (size_t i = 0; i < inputPaths.size(); i++)
+    {
+        const std::filesystem::path sandbox{inputPaths[i]};
+        std::string lastDirectoryName = sandbox.filename().u8string();
+
+        FileCompressor fileCompressor;
+        vector<pair<string, int>> tableOfContents;
+        int tableOfContentsBytes = 0;
+        int firstBytePos = 0;
+        for (auto const &dir_entry : std::filesystem::recursive_directory_iterator{sandbox})
+        {
+            std::cout << dir_entry.path() << '\n';
+            bool isRegularFile = true;
+            if (std::filesystem::is_directory(dir_entry))
+            {
+                isRegularFile = false;
+            }
+
+            std::string currentFileInputPath = dir_entry.path().u8string().c_str();
+            std::string currentFileArchivePath = "/" + lastDirectoryName +
+                                                 currentFileInputPath.substr(strlen(inputPaths[i]));
+            std::string currentFileOutputPath = outputPath;
+            currentFileOutputPath += "/";
+            currentFileOutputPath += currentFileArchivePath.substr(0, currentFileArchivePath.find_last_of('.')) + ".lzw";
+
+            tableOfContents.push_back(std::make_pair(currentFileArchivePath, firstBytePos));
+            std::cout << sizeof(' ') << std::endl
+                      << currentFileArchivePath.length() << std::endl
+                      << strlen(std::to_string(firstBytePos).c_str()) << std::endl;
+
+            tableOfContentsBytes += (sizeof(' ') + currentFileArchivePath.length() + sizeof(' ') + strlen(std::to_string(firstBytePos).c_str()));
+            firstBytePos +=
+                fileCompressor.archive(currentFileInputPath.c_str(), currentFileArchivePath.c_str(), tempArchiveFile, isRegularFile);
+        }
+        tableOfContentsBytes += strlen(std::to_string(tableOfContents.size()).c_str());
+
+        std::cout << "tableOfContents\n";
+        for (size_t i = 0; i < tableOfContents.size(); i++)
+        {
+            int oldValue = strlen(std::to_string(tableOfContents[i].second).c_str());
+            tableOfContents[i].second += tableOfContentsBytes;
+            int newValue = strlen(std::to_string(tableOfContents[i].second).c_str());
+            tableOfContents[i].second -= tableOfContentsBytes;
+            tableOfContentsBytes += (newValue - oldValue);
+
+            std::cout << tableOfContents[i].first << " " << tableOfContents[i].second << "\n";
+        }
+
+        tableOfContentsBytes += (strlen(std::to_string(tableOfContentsBytes).c_str()) + sizeof(' '));
+        for (size_t i = 0; i < tableOfContents.size(); i++)
+        {
+            tableOfContents[i].second += (tableOfContentsBytes + 1); // TODO: why + 2
+
+            std::cout << tableOfContents[i].first << " " << tableOfContents[i].second << "\n";
+        }
+        std::cout << std::endl;
+
+        string tableOfContentsStr = std::to_string(tableOfContentsBytes);
+        tableOfContentsStr += ' ';
+        archiveFile.appendBytes(tableOfContentsStr.c_str(), tableOfContentsStr.length());
+        archiveFile.appendTableOfContents(tableOfContents);
+        archiveFile.appendFile(tempArchiveFile);
+    }
 }
 
 void DirectoryCompressor::unarchive(const char *inputPath, const char *outputPath)
