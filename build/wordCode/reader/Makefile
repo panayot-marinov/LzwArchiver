@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src"
+CMAKE_SOURCE_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build"
+CMAKE_BINARY_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,14 +86,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\CMakeFiles" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\wordCode\reader\\CMakeFiles\progress.marks"
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 wordCode/reader/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\CMakeFiles" 0
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\wordCode\reader\\CMakeFiles\progress.marks"
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 wordCode/reader/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 wordCode/reader/clean
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 wordCode/reader/clean
 .PHONY : clean
 
 # The main clean target
@@ -102,22 +102,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 wordCode/reader/preinstall
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 wordCode/reader/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 wordCode/reader/preinstall
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 wordCode/reader/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 wordCode/reader/CMakeFiles/wordCodeReader.dir/rule:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 wordCode/reader/CMakeFiles/wordCodeReader.dir/rule
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 wordCode/reader/CMakeFiles/wordCodeReader.dir/rule
 .PHONY : wordCode/reader/CMakeFiles/wordCodeReader.dir/rule
 
 # Convenience name for target.
@@ -126,7 +126,7 @@ wordCodeReader: wordCode/reader/CMakeFiles/wordCodeReader.dir/rule
 
 # fast build rule for target.
 wordCodeReader/fast:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f wordCode\reader\CMakeFiles\wordCodeReader.dir\build.make wordCode/reader/CMakeFiles/wordCodeReader.dir/build
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f wordCode\reader\CMakeFiles\wordCodeReader.dir\build.make wordCode/reader/CMakeFiles/wordCodeReader.dir/build
 .PHONY : wordCodeReader/fast
 
 WordCodeReader.obj: WordCodeReader.cpp.obj
@@ -134,7 +134,7 @@ WordCodeReader.obj: WordCodeReader.cpp.obj
 
 # target to build an object file
 WordCodeReader.cpp.obj:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f wordCode\reader\CMakeFiles\wordCodeReader.dir\build.make wordCode/reader/CMakeFiles/wordCodeReader.dir/WordCodeReader.cpp.obj
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f wordCode\reader\CMakeFiles\wordCodeReader.dir\build.make wordCode/reader/CMakeFiles/wordCodeReader.dir/WordCodeReader.cpp.obj
 .PHONY : WordCodeReader.cpp.obj
 
 WordCodeReader.i: WordCodeReader.cpp.i
@@ -142,7 +142,7 @@ WordCodeReader.i: WordCodeReader.cpp.i
 
 # target to preprocess a source file
 WordCodeReader.cpp.i:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f wordCode\reader\CMakeFiles\wordCodeReader.dir\build.make wordCode/reader/CMakeFiles/wordCodeReader.dir/WordCodeReader.cpp.i
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f wordCode\reader\CMakeFiles\wordCodeReader.dir\build.make wordCode/reader/CMakeFiles/wordCodeReader.dir/WordCodeReader.cpp.i
 .PHONY : WordCodeReader.cpp.i
 
 WordCodeReader.s: WordCodeReader.cpp.s
@@ -150,7 +150,7 @@ WordCodeReader.s: WordCodeReader.cpp.s
 
 # target to generate assembly for a file
 WordCodeReader.cpp.s:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f wordCode\reader\CMakeFiles\wordCodeReader.dir\build.make wordCode/reader/CMakeFiles/wordCodeReader.dir/WordCodeReader.cpp.s
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f wordCode\reader\CMakeFiles\wordCodeReader.dir\build.make wordCode/reader/CMakeFiles/wordCodeReader.dir/WordCodeReader.cpp.s
 .PHONY : WordCodeReader.cpp.s
 
 # Help Target
@@ -176,6 +176,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

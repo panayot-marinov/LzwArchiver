@@ -1,0 +1,2 @@
+C:\mingw64\bin\ar.exe qc libpathUtils.a CMakeFiles/pathUtils.dir/PathUtils.cpp.obj
+C:\mingw64\bin\ranlib.exe libpathUtils.a

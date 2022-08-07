@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src"
+CMAKE_SOURCE_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build"
+CMAKE_BINARY_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build"
 
 # Include any dependencies generated for this target.
 include compressor/byte/CMakeFiles/byteCompressor.dir/depend.make
@@ -69,18 +69,18 @@ include compressor/byte/CMakeFiles/byteCompressor.dir/progress.make
 include compressor/byte/CMakeFiles/byteCompressor.dir/flags.make
 
 compressor/byte/CMakeFiles/byteCompressor.dir/ByteCompressor.cpp.obj: compressor/byte/CMakeFiles/byteCompressor.dir/flags.make
-compressor/byte/CMakeFiles/byteCompressor.dir/ByteCompressor.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwCompression/ConsoleApp/src/compressor/byte/ByteCompressor.cpp
+compressor/byte/CMakeFiles/byteCompressor.dir/ByteCompressor.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/byte/ByteCompressor.cpp
 compressor/byte/CMakeFiles/byteCompressor.dir/ByteCompressor.cpp.obj: compressor/byte/CMakeFiles/byteCompressor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object compressor/byte/CMakeFiles/byteCompressor.dir/ByteCompressor.cpp.obj"
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\COMPRE~1\byte && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\X86_64~2.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT compressor/byte/CMakeFiles/byteCompressor.dir/ByteCompressor.cpp.obj -MF CMakeFiles\byteCompressor.dir\ByteCompressor.cpp.obj.d -o CMakeFiles\byteCompressor.dir\ByteCompressor.cpp.obj -c "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src\compressor\byte\ByteCompressor.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object compressor/byte/CMakeFiles/byteCompressor.dir/ByteCompressor.cpp.obj"
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\COMPRE~1\byte && C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT compressor/byte/CMakeFiles/byteCompressor.dir/ByteCompressor.cpp.obj -MF CMakeFiles\byteCompressor.dir\ByteCompressor.cpp.obj.d -o CMakeFiles\byteCompressor.dir\ByteCompressor.cpp.obj -c "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\compressor\byte\ByteCompressor.cpp"
 
 compressor/byte/CMakeFiles/byteCompressor.dir/ByteCompressor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/byteCompressor.dir/ByteCompressor.cpp.i"
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\COMPRE~1\byte && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\X86_64~2.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src\compressor\byte\ByteCompressor.cpp" > CMakeFiles\byteCompressor.dir\ByteCompressor.cpp.i
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\COMPRE~1\byte && C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\compressor\byte\ByteCompressor.cpp" > CMakeFiles\byteCompressor.dir\ByteCompressor.cpp.i
 
 compressor/byte/CMakeFiles/byteCompressor.dir/ByteCompressor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/byteCompressor.dir/ByteCompressor.cpp.s"
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\COMPRE~1\byte && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\X86_64~2.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src\compressor\byte\ByteCompressor.cpp" -o CMakeFiles\byteCompressor.dir\ByteCompressor.cpp.s
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\COMPRE~1\byte && C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\compressor\byte\ByteCompressor.cpp" -o CMakeFiles\byteCompressor.dir\ByteCompressor.cpp.s
 
 # Object files for target byteCompressor
 byteCompressor_OBJECTS = \
@@ -92,19 +92,19 @@ byteCompressor_EXTERNAL_OBJECTS =
 compressor/byte/libbyteCompressor.a: compressor/byte/CMakeFiles/byteCompressor.dir/ByteCompressor.cpp.obj
 compressor/byte/libbyteCompressor.a: compressor/byte/CMakeFiles/byteCompressor.dir/build.make
 compressor/byte/libbyteCompressor.a: compressor/byte/CMakeFiles/byteCompressor.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libbyteCompressor.a"
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\COMPRE~1\byte && $(CMAKE_COMMAND) -P CMakeFiles\byteCompressor.dir\cmake_clean_target.cmake
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\COMPRE~1\byte && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\byteCompressor.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libbyteCompressor.a"
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\COMPRE~1\byte && $(CMAKE_COMMAND) -P CMakeFiles\byteCompressor.dir\cmake_clean_target.cmake
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\COMPRE~1\byte && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\byteCompressor.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 compressor/byte/CMakeFiles/byteCompressor.dir/build: compressor/byte/libbyteCompressor.a
 .PHONY : compressor/byte/CMakeFiles/byteCompressor.dir/build
 
 compressor/byte/CMakeFiles/byteCompressor.dir/clean:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\COMPRE~1\byte && $(CMAKE_COMMAND) -P CMakeFiles\byteCompressor.dir\cmake_clean.cmake
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\COMPRE~1\byte && $(CMAKE_COMMAND) -P CMakeFiles\byteCompressor.dir\cmake_clean.cmake
 .PHONY : compressor/byte/CMakeFiles/byteCompressor.dir/clean
 
 compressor/byte/CMakeFiles/byteCompressor.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src\compressor\byte" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\compressor\byte" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\compressor\byte\CMakeFiles\byteCompressor.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\compressor\byte" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\compressor\byte" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\compressor\byte\CMakeFiles\byteCompressor.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : compressor/byte/CMakeFiles/byteCompressor.dir/depend
 

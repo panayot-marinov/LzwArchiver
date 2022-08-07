@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/src/compressor/byte/ByteCompressor.cpp" "compressor/byte/CMakeFiles/byteCompressor.dir/ByteCompressor.cpp.obj" "gcc" "compressor/byte/CMakeFiles/byteCompressor.dir/ByteCompressor.cpp.obj.d"
+  "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/byte/ByteCompressor.cpp" "compressor/byte/CMakeFiles/byteCompressor.dir/ByteCompressor.cpp.obj" "gcc" "compressor/byte/CMakeFiles/byteCompressor.dir/ByteCompressor.cpp.obj.d"
   )
 
 # Targets to which this target links.

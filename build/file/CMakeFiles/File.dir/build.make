@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src"
+CMAKE_SOURCE_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build"
+CMAKE_BINARY_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build"
 
 # Include any dependencies generated for this target.
 include file/CMakeFiles/file.dir/depend.make
@@ -69,18 +69,18 @@ include file/CMakeFiles/file.dir/progress.make
 include file/CMakeFiles/file.dir/flags.make
 
 file/CMakeFiles/file.dir/File.cpp.obj: file/CMakeFiles/file.dir/flags.make
-file/CMakeFiles/file.dir/File.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwCompression/ConsoleApp/src/file/File.cpp
+file/CMakeFiles/file.dir/File.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/file/File.cpp
 file/CMakeFiles/file.dir/File.cpp.obj: file/CMakeFiles/file.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object file/CMakeFiles/file.dir/File.cpp.obj"
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\file && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\X86_64~2.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT file/CMakeFiles/file.dir/File.cpp.obj -MF CMakeFiles\file.dir\File.cpp.obj.d -o CMakeFiles\file.dir\File.cpp.obj -c "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src\file\File.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object file/CMakeFiles/file.dir/File.cpp.obj"
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\file && C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT file/CMakeFiles/file.dir/File.cpp.obj -MF CMakeFiles\file.dir\File.cpp.obj.d -o CMakeFiles\file.dir\File.cpp.obj -c "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\file\File.cpp"
 
 file/CMakeFiles/file.dir/File.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/file.dir/File.cpp.i"
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\file && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\X86_64~2.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src\file\File.cpp" > CMakeFiles\file.dir\File.cpp.i
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\file && C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\file\File.cpp" > CMakeFiles\file.dir\File.cpp.i
 
 file/CMakeFiles/file.dir/File.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/file.dir/File.cpp.s"
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\file && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\X86_64~2.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src\file\File.cpp" -o CMakeFiles\file.dir\File.cpp.s
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\file && C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\file\File.cpp" -o CMakeFiles\file.dir\File.cpp.s
 
 # Object files for target file
 file_OBJECTS = \
@@ -92,19 +92,19 @@ file_EXTERNAL_OBJECTS =
 file/libfile.a: file/CMakeFiles/file.dir/File.cpp.obj
 file/libfile.a: file/CMakeFiles/file.dir/build.make
 file/libfile.a: file/CMakeFiles/file.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libfile.a"
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\file && $(CMAKE_COMMAND) -P CMakeFiles\file.dir\cmake_clean_target.cmake
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\file && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\file.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libfile.a"
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\file && $(CMAKE_COMMAND) -P CMakeFiles\file.dir\cmake_clean_target.cmake
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\file && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\file.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 file/CMakeFiles/file.dir/build: file/libfile.a
 .PHONY : file/CMakeFiles/file.dir/build
 
 file/CMakeFiles/file.dir/clean:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\file && $(CMAKE_COMMAND) -P CMakeFiles\file.dir\cmake_clean.cmake
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\file && $(CMAKE_COMMAND) -P CMakeFiles\file.dir\cmake_clean.cmake
 .PHONY : file/CMakeFiles/file.dir/clean
 
 file/CMakeFiles/file.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src\file" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\file" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\file\CMakeFiles\File.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\file" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\file" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\file\CMakeFiles\File.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : file/CMakeFiles/file.dir/depend
 

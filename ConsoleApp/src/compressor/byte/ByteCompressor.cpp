@@ -49,14 +49,23 @@ void ByteCompressor::decompressAndWriteBytes(vector<WordCode> &wordCodes, File &
     unordered_map<std::bitset<WordCode::BITS>, string> dictionary;
     initDecompressionDictionary(dictionary);
 
-    file.clear();
     for (size_t i = 0; i < wordCodes.size() - 1; i++)
     {
         WordCode current = wordCodes[i];
         WordCode next = wordCodes[i + 1];
 
+        std::cout << "find current value:" << current.value << std::endl;
         string currentValue = dictionary.find(current.value)->second;
-        string nextValue = dictionary.find(next.value)->second;
+        std::cout << "find next value:" << next.value << std::endl;
+        string nextValue;
+        if (dictionary.find(next.value) != dictionary.end())
+        {
+            nextValue = dictionary.find(next.value)->second;
+        }
+        else
+        {
+            nextValue = currentValue;
+        }
         string newValue = currentValue + nextValue;
 
         dictionary[(std::bitset<WordCode::BITS>)dictionary.size()] = newValue;

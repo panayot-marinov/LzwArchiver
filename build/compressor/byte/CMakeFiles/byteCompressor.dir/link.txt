@@ -1,2 +1,2 @@
-C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\ar.exe qc libbyteCompressor.a CMakeFiles/byteCompressor.dir/ByteCompressor.cpp.obj
-C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\ranlib.exe libbyteCompressor.a
+C:\mingw64\bin\ar.exe qc libbyteCompressor.a CMakeFiles/byteCompressor.dir/ByteCompressor.cpp.obj
+C:\mingw64\bin\ranlib.exe libbyteCompressor.a

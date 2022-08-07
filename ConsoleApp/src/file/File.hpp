@@ -16,6 +16,7 @@ using std::vector;
 class File
 {
 private:
+    const size_t APPEND_FILE_TRANSFER_BYTES = 100;
     string path;
     fstream readStream;
 
@@ -28,13 +29,17 @@ public:
     char readByte();
     char *readBytes(const int bytesCount, int &bytesRead);
     pair<ArchiveHeader, vector<WordCode> *> readArchive();
+    void readTableOfContents(vector<pair<string, int>>* result);
     void appendBytes(const char *bytes, const int bytesCount);
     void writeBytes(const char *bytes, const int bytesCount);
     void clear();
-    void appendCodes(const vector<WordCode> &codes);
+    int appendCodes(const vector<WordCode> &codes);
+    void appendTableOfContents(const vector<pair<string, int>> tableOfContents);
+    void appendFile(File &file);
     //   void writeCodes(const vector<WordCode> &codes);
     pair<size_t, ArchiveHeader> readHeader();
-    void writeHeader(const ArchiveHeader &archiveHeader);
+    int appendHeader(const ArchiveHeader &archiveHeader);
+    int getReadingPosition();
     void setReadingPosition(size_t position);
 
 private:

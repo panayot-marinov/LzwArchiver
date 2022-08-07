@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src"
+CMAKE_SOURCE_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build"
+CMAKE_BINARY_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,14 +86,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\CMakeFiles" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\compressor\file\\CMakeFiles\progress.marks"
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 compressor/file/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\CMakeFiles" 0
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\compressor\file\\CMakeFiles\progress.marks"
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 compressor/file/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 compressor/file/clean
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 compressor/file/clean
 .PHONY : clean
 
 # The main clean target
@@ -102,22 +102,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 compressor/file/preinstall
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 compressor/file/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 compressor/file/preinstall
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 compressor/file/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 compressor/file/CMakeFiles/fileCompressor.dir/rule:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 compressor/file/CMakeFiles/fileCompressor.dir/rule
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 compressor/file/CMakeFiles/fileCompressor.dir/rule
 .PHONY : compressor/file/CMakeFiles/fileCompressor.dir/rule
 
 # Convenience name for target.
@@ -126,7 +126,7 @@ fileCompressor: compressor/file/CMakeFiles/fileCompressor.dir/rule
 
 # fast build rule for target.
 fileCompressor/fast:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f compressor\file\CMakeFiles\fileCompressor.dir\build.make compressor/file/CMakeFiles/fileCompressor.dir/build
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f compressor\file\CMakeFiles\fileCompressor.dir\build.make compressor/file/CMakeFiles/fileCompressor.dir/build
 .PHONY : fileCompressor/fast
 
 FileCompressor.obj: FileCompressor.cpp.obj
@@ -134,7 +134,7 @@ FileCompressor.obj: FileCompressor.cpp.obj
 
 # target to build an object file
 FileCompressor.cpp.obj:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f compressor\file\CMakeFiles\fileCompressor.dir\build.make compressor/file/CMakeFiles/fileCompressor.dir/FileCompressor.cpp.obj
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f compressor\file\CMakeFiles\fileCompressor.dir\build.make compressor/file/CMakeFiles/fileCompressor.dir/FileCompressor.cpp.obj
 .PHONY : FileCompressor.cpp.obj
 
 FileCompressor.i: FileCompressor.cpp.i
@@ -142,7 +142,7 @@ FileCompressor.i: FileCompressor.cpp.i
 
 # target to preprocess a source file
 FileCompressor.cpp.i:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f compressor\file\CMakeFiles\fileCompressor.dir\build.make compressor/file/CMakeFiles/fileCompressor.dir/FileCompressor.cpp.i
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f compressor\file\CMakeFiles\fileCompressor.dir\build.make compressor/file/CMakeFiles/fileCompressor.dir/FileCompressor.cpp.i
 .PHONY : FileCompressor.cpp.i
 
 FileCompressor.s: FileCompressor.cpp.s
@@ -150,7 +150,7 @@ FileCompressor.s: FileCompressor.cpp.s
 
 # target to generate assembly for a file
 FileCompressor.cpp.s:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f compressor\file\CMakeFiles\fileCompressor.dir\build.make compressor/file/CMakeFiles/fileCompressor.dir/FileCompressor.cpp.s
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f compressor\file\CMakeFiles\fileCompressor.dir\build.make compressor/file/CMakeFiles/fileCompressor.dir/FileCompressor.cpp.s
 .PHONY : FileCompressor.cpp.s
 
 # Help Target
@@ -176,6 +176,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

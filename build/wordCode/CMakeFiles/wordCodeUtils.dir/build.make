@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src"
+CMAKE_SOURCE_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build"
+CMAKE_BINARY_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build"
 
 # Include any dependencies generated for this target.
 include wordCode/CMakeFiles/wordCodeUtils.dir/depend.make
@@ -69,18 +69,18 @@ include wordCode/CMakeFiles/wordCodeUtils.dir/progress.make
 include wordCode/CMakeFiles/wordCodeUtils.dir/flags.make
 
 wordCode/CMakeFiles/wordCodeUtils.dir/WordCodeUtils.cpp.obj: wordCode/CMakeFiles/wordCodeUtils.dir/flags.make
-wordCode/CMakeFiles/wordCodeUtils.dir/WordCodeUtils.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwCompression/ConsoleApp/src/wordCode/WordCodeUtils.cpp
+wordCode/CMakeFiles/wordCodeUtils.dir/WordCodeUtils.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCodeUtils.cpp
 wordCode/CMakeFiles/wordCodeUtils.dir/WordCodeUtils.cpp.obj: wordCode/CMakeFiles/wordCodeUtils.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object wordCode/CMakeFiles/wordCodeUtils.dir/WordCodeUtils.cpp.obj"
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\wordCode && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\X86_64~2.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT wordCode/CMakeFiles/wordCodeUtils.dir/WordCodeUtils.cpp.obj -MF CMakeFiles\wordCodeUtils.dir\WordCodeUtils.cpp.obj.d -o CMakeFiles\wordCodeUtils.dir\WordCodeUtils.cpp.obj -c "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src\wordCode\WordCodeUtils.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object wordCode/CMakeFiles/wordCodeUtils.dir/WordCodeUtils.cpp.obj"
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\wordCode && C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT wordCode/CMakeFiles/wordCodeUtils.dir/WordCodeUtils.cpp.obj -MF CMakeFiles\wordCodeUtils.dir\WordCodeUtils.cpp.obj.d -o CMakeFiles\wordCodeUtils.dir\WordCodeUtils.cpp.obj -c "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\wordCode\WordCodeUtils.cpp"
 
 wordCode/CMakeFiles/wordCodeUtils.dir/WordCodeUtils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/wordCodeUtils.dir/WordCodeUtils.cpp.i"
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\wordCode && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\X86_64~2.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src\wordCode\WordCodeUtils.cpp" > CMakeFiles\wordCodeUtils.dir\WordCodeUtils.cpp.i
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\wordCode && C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\wordCode\WordCodeUtils.cpp" > CMakeFiles\wordCodeUtils.dir\WordCodeUtils.cpp.i
 
 wordCode/CMakeFiles/wordCodeUtils.dir/WordCodeUtils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/wordCodeUtils.dir/WordCodeUtils.cpp.s"
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\wordCode && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\X86_64~2.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src\wordCode\WordCodeUtils.cpp" -o CMakeFiles\wordCodeUtils.dir\WordCodeUtils.cpp.s
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\wordCode && C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\wordCode\WordCodeUtils.cpp" -o CMakeFiles\wordCodeUtils.dir\WordCodeUtils.cpp.s
 
 # Object files for target wordCodeUtils
 wordCodeUtils_OBJECTS = \
@@ -92,19 +92,19 @@ wordCodeUtils_EXTERNAL_OBJECTS =
 wordCode/libwordCodeUtils.a: wordCode/CMakeFiles/wordCodeUtils.dir/WordCodeUtils.cpp.obj
 wordCode/libwordCodeUtils.a: wordCode/CMakeFiles/wordCodeUtils.dir/build.make
 wordCode/libwordCodeUtils.a: wordCode/CMakeFiles/wordCodeUtils.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libwordCodeUtils.a"
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\wordCode && $(CMAKE_COMMAND) -P CMakeFiles\wordCodeUtils.dir\cmake_clean_target.cmake
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\wordCode && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\wordCodeUtils.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libwordCodeUtils.a"
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\wordCode && $(CMAKE_COMMAND) -P CMakeFiles\wordCodeUtils.dir\cmake_clean_target.cmake
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\wordCode && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\wordCodeUtils.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 wordCode/CMakeFiles/wordCodeUtils.dir/build: wordCode/libwordCodeUtils.a
 .PHONY : wordCode/CMakeFiles/wordCodeUtils.dir/build
 
 wordCode/CMakeFiles/wordCodeUtils.dir/clean:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\wordCode && $(CMAKE_COMMAND) -P CMakeFiles\wordCodeUtils.dir\cmake_clean.cmake
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\wordCode && $(CMAKE_COMMAND) -P CMakeFiles\wordCodeUtils.dir\cmake_clean.cmake
 .PHONY : wordCode/CMakeFiles/wordCodeUtils.dir/clean
 
 wordCode/CMakeFiles/wordCodeUtils.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src\wordCode" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\wordCode" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\wordCode\CMakeFiles\wordCodeUtils.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\wordCode" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\wordCode" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\wordCode\CMakeFiles\wordCodeUtils.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : wordCode/CMakeFiles/wordCodeUtils.dir/depend
 

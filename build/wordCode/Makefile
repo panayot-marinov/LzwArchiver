@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src"
+CMAKE_SOURCE_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build"
+CMAKE_BINARY_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,14 +86,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\CMakeFiles" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\wordCode\\CMakeFiles\progress.marks"
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 wordCode/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\CMakeFiles" 0
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\wordCode\\CMakeFiles\progress.marks"
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 wordCode/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 wordCode/clean
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 wordCode/clean
 .PHONY : clean
 
 # The main clean target
@@ -102,22 +102,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 wordCode/preinstall
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 wordCode/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 wordCode/preinstall
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 wordCode/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 wordCode/CMakeFiles/wordCodeUtils.dir/rule:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 wordCode/CMakeFiles/wordCodeUtils.dir/rule
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 wordCode/CMakeFiles/wordCodeUtils.dir/rule
 .PHONY : wordCode/CMakeFiles/wordCodeUtils.dir/rule
 
 # Convenience name for target.
@@ -126,7 +126,7 @@ wordCodeUtils: wordCode/CMakeFiles/wordCodeUtils.dir/rule
 
 # fast build rule for target.
 wordCodeUtils/fast:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f wordCode\CMakeFiles\wordCodeUtils.dir\build.make wordCode/CMakeFiles/wordCodeUtils.dir/build
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f wordCode\CMakeFiles\wordCodeUtils.dir\build.make wordCode/CMakeFiles/wordCodeUtils.dir/build
 .PHONY : wordCodeUtils/fast
 
 WordCodeUtils.obj: WordCodeUtils.cpp.obj
@@ -134,7 +134,7 @@ WordCodeUtils.obj: WordCodeUtils.cpp.obj
 
 # target to build an object file
 WordCodeUtils.cpp.obj:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f wordCode\CMakeFiles\wordCodeUtils.dir\build.make wordCode/CMakeFiles/wordCodeUtils.dir/WordCodeUtils.cpp.obj
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f wordCode\CMakeFiles\wordCodeUtils.dir\build.make wordCode/CMakeFiles/wordCodeUtils.dir/WordCodeUtils.cpp.obj
 .PHONY : WordCodeUtils.cpp.obj
 
 WordCodeUtils.i: WordCodeUtils.cpp.i
@@ -142,7 +142,7 @@ WordCodeUtils.i: WordCodeUtils.cpp.i
 
 # target to preprocess a source file
 WordCodeUtils.cpp.i:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f wordCode\CMakeFiles\wordCodeUtils.dir\build.make wordCode/CMakeFiles/wordCodeUtils.dir/WordCodeUtils.cpp.i
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f wordCode\CMakeFiles\wordCodeUtils.dir\build.make wordCode/CMakeFiles/wordCodeUtils.dir/WordCodeUtils.cpp.i
 .PHONY : WordCodeUtils.cpp.i
 
 WordCodeUtils.s: WordCodeUtils.cpp.s
@@ -150,7 +150,7 @@ WordCodeUtils.s: WordCodeUtils.cpp.s
 
 # target to generate assembly for a file
 WordCodeUtils.cpp.s:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(MAKE) $(MAKESILENT) -f wordCode\CMakeFiles\wordCodeUtils.dir\build.make wordCode/CMakeFiles/wordCodeUtils.dir/WordCodeUtils.cpp.s
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(MAKE) $(MAKESILENT) -f wordCode\CMakeFiles\wordCodeUtils.dir\build.make wordCode/CMakeFiles/wordCodeUtils.dir/WordCodeUtils.cpp.s
 .PHONY : WordCodeUtils.cpp.s
 
 # Help Target
@@ -176,6 +176,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -2,15 +2,16 @@
 #ifndef FILE_COMPRESSOR_HEADER_HPP
 #define FILE_COMPRESSOR_HEADER_HPP
 
+#include "../../file/File.hpp"
+
 class FileCompressor
 {
 public:
-    void archive(const char* inputPath, const char* outputPath);
-    void unarchive(const char* inputPath, const char* outputPath);
-};
+    int archive(const char* inputPath, const char *inputArchivePath, File& outputFile, bool isRegularFile);
+    void unarchive(File& inputFile, const char* outputPath);
 
-const static char REGTYPE = '0';
-const static char LNKTYPE = '1';
-const static char DIRTYPE = '2';
+private:
+    void createDirectoryIfDoesNotExist(const string& path);
+};
 
 #endif

@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/src
+# Install script for directory: C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/TestProject")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/LzwCompression")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,37 +34,47 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/mingw64/bin/objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/build/compressor/byte/cmake_install.cmake")
+  include("C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/compressor/byte/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/build/compressor/file/cmake_install.cmake")
+  include("C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/compressor/directory/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/build/file/cmake_install.cmake")
+  include("C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/compressor/file/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/build/wordCode/reader/cmake_install.cmake")
+  include("C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/file/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/build/wordCode/writer/cmake_install.cmake")
+  include("C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/path/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/build/wordCode/cmake_install.cmake")
+  include("C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/wordCode/reader/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/wordCode/writer/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/wordCode/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -75,5 +85,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

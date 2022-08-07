@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src"
+CMAKE_SOURCE_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build"
+CMAKE_BINARY_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build"
 
 # Include any dependencies generated for this target.
 include wordCode/writer/CMakeFiles/wordCodeWriter.dir/depend.make
@@ -69,18 +69,18 @@ include wordCode/writer/CMakeFiles/wordCodeWriter.dir/progress.make
 include wordCode/writer/CMakeFiles/wordCodeWriter.dir/flags.make
 
 wordCode/writer/CMakeFiles/wordCodeWriter.dir/WordCodeWriter.cpp.obj: wordCode/writer/CMakeFiles/wordCodeWriter.dir/flags.make
-wordCode/writer/CMakeFiles/wordCodeWriter.dir/WordCodeWriter.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwCompression/ConsoleApp/src/wordCode/writer/WordCodeWriter.cpp
+wordCode/writer/CMakeFiles/wordCodeWriter.dir/WordCodeWriter.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/writer/WordCodeWriter.cpp
 wordCode/writer/CMakeFiles/wordCodeWriter.dir/WordCodeWriter.cpp.obj: wordCode/writer/CMakeFiles/wordCodeWriter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object wordCode/writer/CMakeFiles/wordCodeWriter.dir/WordCodeWriter.cpp.obj"
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\wordCode\writer && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\X86_64~2.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT wordCode/writer/CMakeFiles/wordCodeWriter.dir/WordCodeWriter.cpp.obj -MF CMakeFiles\wordCodeWriter.dir\WordCodeWriter.cpp.obj.d -o CMakeFiles\wordCodeWriter.dir\WordCodeWriter.cpp.obj -c "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src\wordCode\writer\WordCodeWriter.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object wordCode/writer/CMakeFiles/wordCodeWriter.dir/WordCodeWriter.cpp.obj"
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\wordCode\writer && C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT wordCode/writer/CMakeFiles/wordCodeWriter.dir/WordCodeWriter.cpp.obj -MF CMakeFiles\wordCodeWriter.dir\WordCodeWriter.cpp.obj.d -o CMakeFiles\wordCodeWriter.dir\WordCodeWriter.cpp.obj -c "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\wordCode\writer\WordCodeWriter.cpp"
 
 wordCode/writer/CMakeFiles/wordCodeWriter.dir/WordCodeWriter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/wordCodeWriter.dir/WordCodeWriter.cpp.i"
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\wordCode\writer && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\X86_64~2.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src\wordCode\writer\WordCodeWriter.cpp" > CMakeFiles\wordCodeWriter.dir\WordCodeWriter.cpp.i
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\wordCode\writer && C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\wordCode\writer\WordCodeWriter.cpp" > CMakeFiles\wordCodeWriter.dir\WordCodeWriter.cpp.i
 
 wordCode/writer/CMakeFiles/wordCodeWriter.dir/WordCodeWriter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/wordCodeWriter.dir/WordCodeWriter.cpp.s"
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\wordCode\writer && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\X86_64~2.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src\wordCode\writer\WordCodeWriter.cpp" -o CMakeFiles\wordCodeWriter.dir\WordCodeWriter.cpp.s
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\wordCode\writer && C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\wordCode\writer\WordCodeWriter.cpp" -o CMakeFiles\wordCodeWriter.dir\WordCodeWriter.cpp.s
 
 # Object files for target wordCodeWriter
 wordCodeWriter_OBJECTS = \
@@ -92,19 +92,19 @@ wordCodeWriter_EXTERNAL_OBJECTS =
 wordCode/writer/libwordCodeWriter.a: wordCode/writer/CMakeFiles/wordCodeWriter.dir/WordCodeWriter.cpp.obj
 wordCode/writer/libwordCodeWriter.a: wordCode/writer/CMakeFiles/wordCodeWriter.dir/build.make
 wordCode/writer/libwordCodeWriter.a: wordCode/writer/CMakeFiles/wordCodeWriter.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libwordCodeWriter.a"
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\wordCode\writer && $(CMAKE_COMMAND) -P CMakeFiles\wordCodeWriter.dir\cmake_clean_target.cmake
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\wordCode\writer && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\wordCodeWriter.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libwordCodeWriter.a"
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\wordCode\writer && $(CMAKE_COMMAND) -P CMakeFiles\wordCodeWriter.dir\cmake_clean_target.cmake
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\wordCode\writer && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\wordCodeWriter.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 wordCode/writer/CMakeFiles/wordCodeWriter.dir/build: wordCode/writer/libwordCodeWriter.a
 .PHONY : wordCode/writer/CMakeFiles/wordCodeWriter.dir/build
 
 wordCode/writer/CMakeFiles/wordCodeWriter.dir/clean:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\wordCode\writer && $(CMAKE_COMMAND) -P CMakeFiles\wordCodeWriter.dir\cmake_clean.cmake
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\wordCode\writer && $(CMAKE_COMMAND) -P CMakeFiles\wordCodeWriter.dir\cmake_clean.cmake
 .PHONY : wordCode/writer/CMakeFiles/wordCodeWriter.dir/clean
 
 wordCode/writer/CMakeFiles/wordCodeWriter.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src\wordCode\writer" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\wordCode\writer" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\wordCode\writer\CMakeFiles\wordCodeWriter.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\wordCode\writer" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\wordCode\writer" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\wordCode\writer\CMakeFiles\wordCodeWriter.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : wordCode/writer/CMakeFiles/wordCodeWriter.dir/depend
 

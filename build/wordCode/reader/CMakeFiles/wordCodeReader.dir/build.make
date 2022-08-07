@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src"
+CMAKE_SOURCE_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build"
+CMAKE_BINARY_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build"
 
 # Include any dependencies generated for this target.
 include wordCode/reader/CMakeFiles/wordCodeReader.dir/depend.make
@@ -69,18 +69,18 @@ include wordCode/reader/CMakeFiles/wordCodeReader.dir/progress.make
 include wordCode/reader/CMakeFiles/wordCodeReader.dir/flags.make
 
 wordCode/reader/CMakeFiles/wordCodeReader.dir/WordCodeReader.cpp.obj: wordCode/reader/CMakeFiles/wordCodeReader.dir/flags.make
-wordCode/reader/CMakeFiles/wordCodeReader.dir/WordCodeReader.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwCompression/ConsoleApp/src/wordCode/reader/WordCodeReader.cpp
+wordCode/reader/CMakeFiles/wordCodeReader.dir/WordCodeReader.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/reader/WordCodeReader.cpp
 wordCode/reader/CMakeFiles/wordCodeReader.dir/WordCodeReader.cpp.obj: wordCode/reader/CMakeFiles/wordCodeReader.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object wordCode/reader/CMakeFiles/wordCodeReader.dir/WordCodeReader.cpp.obj"
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\wordCode\reader && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\X86_64~2.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT wordCode/reader/CMakeFiles/wordCodeReader.dir/WordCodeReader.cpp.obj -MF CMakeFiles\wordCodeReader.dir\WordCodeReader.cpp.obj.d -o CMakeFiles\wordCodeReader.dir\WordCodeReader.cpp.obj -c "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src\wordCode\reader\WordCodeReader.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object wordCode/reader/CMakeFiles/wordCodeReader.dir/WordCodeReader.cpp.obj"
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\wordCode\reader && C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT wordCode/reader/CMakeFiles/wordCodeReader.dir/WordCodeReader.cpp.obj -MF CMakeFiles\wordCodeReader.dir\WordCodeReader.cpp.obj.d -o CMakeFiles\wordCodeReader.dir\WordCodeReader.cpp.obj -c "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\wordCode\reader\WordCodeReader.cpp"
 
 wordCode/reader/CMakeFiles/wordCodeReader.dir/WordCodeReader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/wordCodeReader.dir/WordCodeReader.cpp.i"
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\wordCode\reader && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\X86_64~2.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src\wordCode\reader\WordCodeReader.cpp" > CMakeFiles\wordCodeReader.dir\WordCodeReader.cpp.i
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\wordCode\reader && C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\wordCode\reader\WordCodeReader.cpp" > CMakeFiles\wordCodeReader.dir\WordCodeReader.cpp.i
 
 wordCode/reader/CMakeFiles/wordCodeReader.dir/WordCodeReader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/wordCodeReader.dir/WordCodeReader.cpp.s"
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\wordCode\reader && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\X86_64~2.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src\wordCode\reader\WordCodeReader.cpp" -o CMakeFiles\wordCodeReader.dir\WordCodeReader.cpp.s
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\wordCode\reader && C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\wordCode\reader\WordCodeReader.cpp" -o CMakeFiles\wordCodeReader.dir\WordCodeReader.cpp.s
 
 # Object files for target wordCodeReader
 wordCodeReader_OBJECTS = \
@@ -92,19 +92,19 @@ wordCodeReader_EXTERNAL_OBJECTS =
 wordCode/reader/libwordCodeReader.a: wordCode/reader/CMakeFiles/wordCodeReader.dir/WordCodeReader.cpp.obj
 wordCode/reader/libwordCodeReader.a: wordCode/reader/CMakeFiles/wordCodeReader.dir/build.make
 wordCode/reader/libwordCodeReader.a: wordCode/reader/CMakeFiles/wordCodeReader.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libwordCodeReader.a"
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\wordCode\reader && $(CMAKE_COMMAND) -P CMakeFiles\wordCodeReader.dir\cmake_clean_target.cmake
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\wordCode\reader && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\wordCodeReader.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libwordCodeReader.a"
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\wordCode\reader && $(CMAKE_COMMAND) -P CMakeFiles\wordCodeReader.dir\cmake_clean_target.cmake
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\wordCode\reader && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\wordCodeReader.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 wordCode/reader/CMakeFiles/wordCodeReader.dir/build: wordCode/reader/libwordCodeReader.a
 .PHONY : wordCode/reader/CMakeFiles/wordCodeReader.dir/build
 
 wordCode/reader/CMakeFiles/wordCodeReader.dir/clean:
-	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWCOM~1\build\wordCode\reader && $(CMAKE_COMMAND) -P CMakeFiles\wordCodeReader.dir\cmake_clean.cmake
+	cd /d C:\Users\PANAYO~1\Desktop\FMI202~1\SDP\Project\LZWARC~1\build\wordCode\reader && $(CMAKE_COMMAND) -P CMakeFiles\wordCodeReader.dir\cmake_clean.cmake
 .PHONY : wordCode/reader/CMakeFiles/wordCodeReader.dir/clean
 
 wordCode/reader/CMakeFiles/wordCodeReader.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src\wordCode\reader" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\wordCode\reader" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\wordCode\reader\CMakeFiles\wordCodeReader.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src\wordCode\reader" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\wordCode\reader" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\wordCode\reader\CMakeFiles\wordCodeReader.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : wordCode/reader/CMakeFiles/wordCodeReader.dir/depend
 

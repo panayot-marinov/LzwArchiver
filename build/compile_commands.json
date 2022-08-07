@@ -1,67 +1,87 @@
 [
 {
-  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/build",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE   -g -o CMakeFiles\\LzwCompression.dir\\main.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwCompression\\ConsoleApp\\src\\main.cpp\"",
-  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/src/main.cpp"
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\LzwCompression.dir\\main.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\main.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/main.cpp"
 },
 {
-  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/build",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE   -g -o CMakeFiles\\LzwCompression.dir\\compressor\\byte\\ByteCompressor.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwCompression\\ConsoleApp\\src\\compressor\\byte\\ByteCompressor.cpp\"",
-  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/src/compressor/byte/ByteCompressor.cpp"
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\LzwCompression.dir\\compressor\\byte\\ByteCompressor.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\compressor\\byte\\ByteCompressor.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/byte/ByteCompressor.cpp"
 },
 {
-  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/build",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE   -g -o CMakeFiles\\LzwCompression.dir\\compressor\\file\\FileCompressor.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwCompression\\ConsoleApp\\src\\compressor\\file\\FileCompressor.cpp\"",
-  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/src/compressor/file/FileCompressor.cpp"
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\LzwCompression.dir\\compressor\\directory\\DirectoryCompressor.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\compressor\\directory\\DirectoryCompressor.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/directory/DirectoryCompressor.cpp"
 },
 {
-  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/build",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE   -g -o CMakeFiles\\LzwCompression.dir\\file\\File.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwCompression\\ConsoleApp\\src\\file\\File.cpp\"",
-  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/src/file/File.cpp"
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\LzwCompression.dir\\compressor\\file\\FileCompressor.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\compressor\\file\\FileCompressor.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/FileCompressor.cpp"
 },
 {
-  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/build",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE   -g -o CMakeFiles\\LzwCompression.dir\\wordCode\\reader\\WordCodeReader.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwCompression\\ConsoleApp\\src\\wordCode\\reader\\WordCodeReader.cpp\"",
-  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/src/wordCode/reader/WordCodeReader.cpp"
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\LzwCompression.dir\\file\\File.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\file\\File.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/file/File.cpp"
 },
 {
-  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/build",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE   -g -o CMakeFiles\\LzwCompression.dir\\wordCode\\writer\\WordCodeWriter.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwCompression\\ConsoleApp\\src\\wordCode\\writer\\WordCodeWriter.cpp\"",
-  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/src/wordCode/writer/WordCodeWriter.cpp"
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\LzwCompression.dir\\path\\PathUtils.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\path\\PathUtils.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/path/PathUtils.cpp"
 },
 {
-  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/build",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE   -g -o CMakeFiles\\LzwCompression.dir\\wordCode\\WordCodeUtils.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwCompression\\ConsoleApp\\src\\wordCode\\WordCodeUtils.cpp\"",
-  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/src/wordCode/WordCodeUtils.cpp"
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\LzwCompression.dir\\wordCode\\reader\\WordCodeReader.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\wordCode\\reader\\WordCodeReader.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/reader/WordCodeReader.cpp"
 },
 {
-  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/build/compressor/byte",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE   -g -o CMakeFiles\\byteCompressor.dir\\ByteCompressor.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwCompression\\ConsoleApp\\src\\compressor\\byte\\ByteCompressor.cpp\"",
-  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/src/compressor/byte/ByteCompressor.cpp"
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\LzwCompression.dir\\wordCode\\writer\\WordCodeWriter.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\wordCode\\writer\\WordCodeWriter.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/writer/WordCodeWriter.cpp"
 },
 {
-  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/build/compressor/file",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE   -g -o CMakeFiles\\fileCompressor.dir\\FileCompressor.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwCompression\\ConsoleApp\\src\\compressor\\file\\FileCompressor.cpp\"",
-  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/src/compressor/file/FileCompressor.cpp"
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\LzwCompression.dir\\wordCode\\WordCodeUtils.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\wordCode\\WordCodeUtils.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCodeUtils.cpp"
 },
 {
-  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/build/file",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE   -g -o CMakeFiles\\file.dir\\File.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwCompression\\ConsoleApp\\src\\file\\File.cpp\"",
-  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/src/file/File.cpp"
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/compressor/byte",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\byteCompressor.dir\\ByteCompressor.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\compressor\\byte\\ByteCompressor.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/byte/ByteCompressor.cpp"
 },
 {
-  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/build/wordCode/reader",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE   -g -o CMakeFiles\\wordCodeReader.dir\\WordCodeReader.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwCompression\\ConsoleApp\\src\\wordCode\\reader\\WordCodeReader.cpp\"",
-  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/src/wordCode/reader/WordCodeReader.cpp"
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/compressor/directory",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\directoryCompressor.dir\\DirectoryCompressor.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\compressor\\directory\\DirectoryCompressor.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/directory/DirectoryCompressor.cpp"
 },
 {
-  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/build/wordCode/writer",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE   -g -o CMakeFiles\\wordCodeWriter.dir\\WordCodeWriter.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwCompression\\ConsoleApp\\src\\wordCode\\writer\\WordCodeWriter.cpp\"",
-  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/src/wordCode/writer/WordCodeWriter.cpp"
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/compressor/file",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\fileCompressor.dir\\FileCompressor.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\compressor\\file\\FileCompressor.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/FileCompressor.cpp"
 },
 {
-  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/build/wordCode",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE   -g -o CMakeFiles\\wordCodeUtils.dir\\WordCodeUtils.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwCompression\\ConsoleApp\\src\\wordCode\\WordCodeUtils.cpp\"",
-  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/src/wordCode/WordCodeUtils.cpp"
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/file",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\file.dir\\File.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\file\\File.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/file/File.cpp"
+},
+{
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/path",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\pathUtils.dir\\PathUtils.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\path\\PathUtils.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/path/PathUtils.cpp"
+},
+{
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/wordCode/reader",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\wordCodeReader.dir\\WordCodeReader.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\wordCode\\reader\\WordCodeReader.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/reader/WordCodeReader.cpp"
+},
+{
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/wordCode/writer",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\wordCodeWriter.dir\\WordCodeWriter.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\wordCode\\writer\\WordCodeWriter.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/writer/WordCodeWriter.cpp"
+},
+{
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/wordCode",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\wordCodeUtils.dir\\WordCodeUtils.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\wordCode\\WordCodeUtils.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCodeUtils.cpp"
 }
 ]

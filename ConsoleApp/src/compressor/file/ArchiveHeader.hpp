@@ -4,6 +4,9 @@
 
 struct ArchiveHeader
 {
+    static constexpr char TYPE_REGULAR_FILE[2] = "1";
+    static constexpr char TYPE_DIRECTORY[2] = "2";
+
     unsigned int chksum;
     char name[100];
     unsigned int size;
@@ -22,21 +25,21 @@ struct ArchiveHeader
         this->chksum = 5;
     }
 
-// private:
-//     unsigned int checksumOfCharArray(char arr[])
-//     {
-//         for (size_t i = 0; i < sizeof(arr) / sizeof(char); i++)
-//         {
-//             for (size_t j = 0; j < 8; j++)
-//             {
-                
-//             }
-//         }
-//     }
-    
-//     unsigned int checksumOfUnsignedInt(int num)
-//     {
-//     }
+    // private:
+    //     unsigned int checksumOfCharArray(char arr[])
+    //     {
+    //         for (size_t i = 0; i < sizeof(arr) / sizeof(char); i++)
+    //         {
+    //             for (size_t j = 0; j < 8; j++)
+    //             {
+
+    //             }
+    //         }
+    //     }
+
+    //     unsigned int checksumOfUnsignedInt(int num)
+    //     {
+    //     }
 };
 
 #endif

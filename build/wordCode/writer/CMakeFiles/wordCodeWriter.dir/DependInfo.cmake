@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwCompression/ConsoleApp/src/wordCode/writer/WordCodeWriter.cpp" "wordCode/writer/CMakeFiles/wordCodeWriter.dir/WordCodeWriter.cpp.obj" "gcc" "wordCode/writer/CMakeFiles/wordCodeWriter.dir/WordCodeWriter.cpp.obj.d"
+  "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/writer/WordCodeWriter.cpp" "wordCode/writer/CMakeFiles/wordCodeWriter.dir/WordCodeWriter.cpp.obj" "gcc" "wordCode/writer/CMakeFiles/wordCodeWriter.dir/WordCodeWriter.cpp.obj.d"
   )
 
 # Targets to which this target links.

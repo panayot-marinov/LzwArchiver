@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\ConsoleApp\src"
+CMAKE_SOURCE_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\ConsoleApp\src"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build"
+CMAKE_BINARY_DIR = "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\CMakeFiles" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwCompression\build\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Panayot Marinov\Desktop\FMI 2021\SDP\Project\LzwArchiver\build\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -142,6 +142,19 @@ byteCompressor/fast:
 .PHONY : byteCompressor/fast
 
 #=============================================================================
+# Target rules for targets named directoryCompressor
+
+# Build rule for target.
+directoryCompressor: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 directoryCompressor
+.PHONY : directoryCompressor
+
+# fast build rule for target.
+directoryCompressor/fast:
+	$(MAKE) $(MAKESILENT) -f compressor\directory\CMakeFiles\directoryCompressor.dir\build.make compressor/directory/CMakeFiles/directoryCompressor.dir/build
+.PHONY : directoryCompressor/fast
+
+#=============================================================================
 # Target rules for targets named fileCompressor
 
 # Build rule for target.
@@ -166,6 +179,19 @@ file: cmake_check_build_system
 file/fast:
 	$(MAKE) $(MAKESILENT) -f file\CMakeFiles\file.dir\build.make file/CMakeFiles/file.dir/build
 .PHONY : file/fast
+
+#=============================================================================
+# Target rules for targets named pathUtils
+
+# Build rule for target.
+pathUtils: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 pathUtils
+.PHONY : pathUtils
+
+# fast build rule for target.
+pathUtils/fast:
+	$(MAKE) $(MAKESILENT) -f path\CMakeFiles\pathUtils.dir\build.make path/CMakeFiles/pathUtils.dir/build
+.PHONY : pathUtils/fast
 
 #=============================================================================
 # Target rules for targets named wordCodeReader
@@ -229,6 +255,30 @@ compressor/byte/ByteCompressor.s: compressor/byte/ByteCompressor.cpp.s
 compressor/byte/ByteCompressor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/compressor/byte/ByteCompressor.cpp.s
 .PHONY : compressor/byte/ByteCompressor.cpp.s
+
+compressor/directory/DirectoryCompressor.obj: compressor/directory/DirectoryCompressor.cpp.obj
+.PHONY : compressor/directory/DirectoryCompressor.obj
+
+# target to build an object file
+compressor/directory/DirectoryCompressor.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/compressor/directory/DirectoryCompressor.cpp.obj
+.PHONY : compressor/directory/DirectoryCompressor.cpp.obj
+
+compressor/directory/DirectoryCompressor.i: compressor/directory/DirectoryCompressor.cpp.i
+.PHONY : compressor/directory/DirectoryCompressor.i
+
+# target to preprocess a source file
+compressor/directory/DirectoryCompressor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/compressor/directory/DirectoryCompressor.cpp.i
+.PHONY : compressor/directory/DirectoryCompressor.cpp.i
+
+compressor/directory/DirectoryCompressor.s: compressor/directory/DirectoryCompressor.cpp.s
+.PHONY : compressor/directory/DirectoryCompressor.s
+
+# target to generate assembly for a file
+compressor/directory/DirectoryCompressor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/compressor/directory/DirectoryCompressor.cpp.s
+.PHONY : compressor/directory/DirectoryCompressor.cpp.s
 
 compressor/file/FileCompressor.obj: compressor/file/FileCompressor.cpp.obj
 .PHONY : compressor/file/FileCompressor.obj
@@ -301,6 +351,30 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+path/PathUtils.obj: path/PathUtils.cpp.obj
+.PHONY : path/PathUtils.obj
+
+# target to build an object file
+path/PathUtils.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/path/PathUtils.cpp.obj
+.PHONY : path/PathUtils.cpp.obj
+
+path/PathUtils.i: path/PathUtils.cpp.i
+.PHONY : path/PathUtils.i
+
+# target to preprocess a source file
+path/PathUtils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/path/PathUtils.cpp.i
+.PHONY : path/PathUtils.cpp.i
+
+path/PathUtils.s: path/PathUtils.cpp.s
+.PHONY : path/PathUtils.s
+
+# target to generate assembly for a file
+path/PathUtils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/path/PathUtils.cpp.s
+.PHONY : path/PathUtils.cpp.s
 
 wordCode/WordCodeUtils.obj: wordCode/WordCodeUtils.cpp.obj
 .PHONY : wordCode/WordCodeUtils.obj
@@ -384,14 +458,19 @@ help:
 	@echo ... rebuild_cache
 	@echo ... LzwCompression
 	@echo ... byteCompressor
+	@echo ... directoryCompressor
 	@echo ... file
 	@echo ... fileCompressor
+	@echo ... pathUtils
 	@echo ... wordCodeReader
 	@echo ... wordCodeUtils
 	@echo ... wordCodeWriter
 	@echo ... compressor/byte/ByteCompressor.obj
 	@echo ... compressor/byte/ByteCompressor.i
 	@echo ... compressor/byte/ByteCompressor.s
+	@echo ... compressor/directory/DirectoryCompressor.obj
+	@echo ... compressor/directory/DirectoryCompressor.i
+	@echo ... compressor/directory/DirectoryCompressor.s
 	@echo ... compressor/file/FileCompressor.obj
 	@echo ... compressor/file/FileCompressor.i
 	@echo ... compressor/file/FileCompressor.s
@@ -401,6 +480,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... path/PathUtils.obj
+	@echo ... path/PathUtils.i
+	@echo ... path/PathUtils.s
 	@echo ... wordCode/WordCodeUtils.obj
 	@echo ... wordCode/WordCodeUtils.i
 	@echo ... wordCode/WordCodeUtils.s
