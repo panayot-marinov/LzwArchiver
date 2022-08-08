@@ -17,14 +17,14 @@ using std::unordered_map;
 void DirectoryCompressor::archive(vector<const char *> inputPaths, const char *outputPath,
                                   const char *outputFilename, const char *outputFileExtension)
 {
-    std::string tempArchiveFilePath = outputPath;
-    tempArchiveFilePath += "/";
-    tempArchiveFilePath += outputFilename;
-    tempArchiveFilePath += "Temp.";
-    tempArchiveFilePath += outputFileExtension;
+    // std::string tempArchiveFilePath = outputPath;
+    // tempArchiveFilePath += "/";
+    // tempArchiveFilePath += outputFilename;
+    // tempArchiveFilePath += "Temp.";
+    // tempArchiveFilePath += outputFileExtension;
 
-    File tempArchiveFile(tempArchiveFilePath.c_str());
-    tempArchiveFile.clear();
+    // File tempArchiveFile(tempArchiveFilePath.c_str());
+    // tempArchiveFile.clear();
 
     std::string bigArchiveFilePath = outputPath;
     bigArchiveFilePath += "/";
@@ -34,14 +34,14 @@ void DirectoryCompressor::archive(vector<const char *> inputPaths, const char *o
 
     File archiveFile(bigArchiveFilePath);
     archiveFile.clear();
+
+    vector<pair<string, int>> tableOfContents;
     for (size_t i = 0; i < inputPaths.size(); i++)
     {
         const std::filesystem::path sandbox{inputPaths[i]};
         std::string lastDirectoryName = sandbox.filename().u8string();
 
         FileCompressor fileCompressor;
-        vector<pair<string, int>> tableOfContents;
-        int tableOfContentsBytes = 0;
         int firstBytePos = 0;
         for (auto const &dir_entry : std::filesystem::recursive_directory_iterator{sandbox})
         {
@@ -64,39 +64,35 @@ void DirectoryCompressor::archive(vector<const char *> inputPaths, const char *o
                       << currentFileArchivePath.length() << std::endl
                       << strlen(std::to_string(firstBytePos).c_str()) << std::endl;
 
-            tableOfContentsBytes += (sizeof(' ') + currentFileArchivePath.length() + sizeof(' ') + strlen(std::to_string(firstBytePos).c_str()));
             firstBytePos +=
-                fileCompressor.archive(currentFileInputPath.c_str(), currentFileArchivePath.c_str(), tempArchiveFile, isRegularFile);
+                fileCompressor.archive(currentFileInputPath.c_str(), currentFileArchivePath.c_str(), archiveFile, isRegularFile);
         }
-        tableOfContentsBytes += strlen(std::to_string(tableOfContents.size()).c_str());
 
         std::cout << "tableOfContents\n";
         for (size_t i = 0; i < tableOfContents.size(); i++)
         {
-            int oldValue = strlen(std::to_string(tableOfContents[i].second).c_str());
-            tableOfContents[i].second += tableOfContentsBytes;
-            int newValue = strlen(std::to_string(tableOfContents[i].second).c_str());
-            tableOfContents[i].second -= tableOfContentsBytes;
-            tableOfContentsBytes += (newValue - oldValue);
+            // tableOfContents[i].second += sizeof(uint16_t);
 
             std::cout << tableOfContents[i].first << " " << tableOfContents[i].second << "\n";
         }
 
-        tableOfContentsBytes += (strlen(std::to_string(tableOfContentsBytes).c_str()) + sizeof(' '));
-        for (size_t i = 0; i < tableOfContents.size(); i++)
-        {
-            tableOfContents[i].second += (tableOfContentsBytes + 1); // TODO: why + 2
+        // tableOfContentsBytes += (strlen(std::to_string(tableOfContentsBytes).c_str()) + sizeof(' '));
+        // for (size_t i = 0; i < tableOfContents.size(); i++)
+        // {
+        //     tableOfContents[i].second += (tableOfContentsBytes + 1); // TODO: why + 2
 
-            std::cout << tableOfContents[i].first << " " << tableOfContents[i].second << "\n";
-        }
-        std::cout << std::endl;
+        //     std::cout << tableOfContents[i].first << " " << tableOfContents[i].second << "\n";
+        // }
+        // std::cout << std::endl;
 
-        string tableOfContentsStr = std::to_string(tableOfContentsBytes);
-        tableOfContentsStr += ' ';
-        archiveFile.appendBytes(tableOfContentsStr.c_str(), tableOfContentsStr.length());
-        archiveFile.appendTableOfContents(tableOfContents);
-        archiveFile.appendFile(tempArchiveFile);
+        // string tableOfContentsStr = std::to_string(tableOfContentsBytes);
+        // tableOfContentsStr += ' ';
+        // archiveFile.appendBytes(tableOfContentsStr.c_str(), tableOfContentsStr.length());
+        // archiveFile.appendTableOfContents(tableOfContents);
+        // archiveFile.appendFile(tempArchiveFile);
     }
+    archiveFile.insertTableOfContentsBytePointer();
+    archiveFile.appendTableOfContents(tableOfContents);
 }
 
 void DirectoryCompressor::unarchive(const char *inputPath, const char *outputPath)
@@ -105,10 +101,11 @@ void DirectoryCompressor::unarchive(const char *inputPath, const char *outputPat
 
     File fileToUnarchive(inputPath);
     size_t fileSize = fileToUnarchive.getSize();
+    uint64_t tableOfContentsBytePointer = fileToUnarchive.readTableOfContentsBytePointer();
+    std::cout << "tbp:" << tableOfContentsBytePointer << std::endl;
 
-    size_t tableOfContentsByteSize = fileToUnarchive.readTableOfContentsByteSize();
-    std::cout << "tbs:" << tableOfContentsByteSize << std::endl;
-    fileToUnarchive.setReadingPosition(tableOfContentsByteSize + 1);
+    fileToUnarchive.setReadingPosition(sizeof(uint64_t) + sizeof(' '));
+
     // unordered_map<pair<string, int>> *result;
     // try
     // {
@@ -123,7 +120,7 @@ void DirectoryCompressor::unarchive(const char *inputPath, const char *outputPat
     int readingPosition = fileToUnarchive.getReadingPosition();
 
     FileCompressor fileCompressor;
-    while (readingPosition < fileSize)
+    while (readingPosition < tableOfContentsBytePointer)
     {
         std::cout << "readingPos= " << readingPosition << std::endl;
         fileCompressor.unarchive(fileToUnarchive, outputPath);
@@ -137,6 +134,10 @@ void DirectoryCompressor::unarchiveFile(const char *inputPath, const char *outpu
 
     File fileToUnarchive(inputPath);
     size_t fileSize = fileToUnarchive.getSize();
+
+    uint64_t tableOfContentsBytePointer = fileToUnarchive.readTableOfContentsBytePointer();
+    std::cout << "tbp:" << tableOfContentsBytePointer << std::endl;
+    fileToUnarchive.setReadingPosition(tableOfContentsBytePointer);
 
     unordered_map<string, int> *tableOfContents;
     try
@@ -166,7 +167,7 @@ void DirectoryCompressor::unarchiveFile(const char *inputPath, const char *outpu
     readingPosition = fileToUnarchive.getReadingPosition();
 }
 
-void DirectoryCompressor::printArchiveInfo(const char* inputPath) const
+void DirectoryCompressor::printArchiveInfo(const char *inputPath) const
 {
     File fileToGetInfo(inputPath);
 
@@ -182,11 +183,10 @@ void DirectoryCompressor::printArchiveInfo(const char* inputPath) const
 
     fileToGetInfo.readTableOfContents(*tableOfContents);
 
-    std::cout<<"----------- Archive info: -----------\n";
+    std::cout << "----------- Archive info: -----------\n";
     for (size_t i = 0; i < tableOfContents->size(); i++)
     {
-        std::cout<<(*tableOfContents)[i]<<'\n';
+        std::cout << (*tableOfContents)[i] << '\n';
     }
-    std::cout<<"-------------------------------------"<<std::endl;
-    
+    std::cout << "-------------------------------------" << std::endl;
 }

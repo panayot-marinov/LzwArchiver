@@ -21,21 +21,23 @@ private:
     const size_t APPEND_FILE_TRANSFER_BYTES = 100;
     string path;
     fstream readStream;
+    //fstream writeStream;
 
 public:
     File(const string &path);
     ~File();
 
-    size_t getSize() const;
+    uint64_t getSize() const;
     const char *getLastModifiedTime() const;
     char readByte();
     char *readBytes(const int bytesCount, int &bytesRead);
     pair<ArchiveHeader, vector<WordCode> *> readArchive();
     void readTableOfContents(vector<string>& result);
     void readTableOfContents(unordered_map<string, int>& result);
-    size_t readTableOfContentsByteSize();
+    uint64_t readTableOfContentsBytePointer();
     void appendBytes(const char *bytes, const int bytesCount);
     void writeBytes(const char *bytes, const int bytesCount);
+    void insertTableOfContentsBytePointer();
     void clear();
     int appendCodes(const vector<WordCode> &codes);
     void appendTableOfContents(const vector<pair<string, int>> tableOfContents);

@@ -103,6 +103,10 @@
 		},
 		{
 			"backtrace" : 2,
+			"id" : "pathUtils::@2536f7ff02733c738055"
+		},
+		{
+			"backtrace" : 2,
 			"id" : "fileCompressor::@3fe750034c355533c1c5"
 		},
 		{
@@ -111,19 +115,15 @@
 		},
 		{
 			"backtrace" : 2,
-			"id" : "pathUtils::@2536f7ff02733c738055"
-		},
-		{
-			"backtrace" : 2,
 			"id" : "wordCodeReader::@a167429e31e0678e5d95"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "wordCodeUtils::@c3ffd6a84c8fd3a3ccca"
+			"id" : "wordCodeWriter::@48309f3e85fbb4b00d71"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "wordCodeWriter::@48309f3e85fbb4b00d71"
+			"id" : "wordCodeUtils::@c3ffd6a84c8fd3a3ccca"
 		}
 	],
 	"id" : "LzwCompression::@6890427a1f51a3e7e1df",

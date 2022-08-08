@@ -28,7 +28,7 @@ int main()
     vector<const char *> inputPaths{"../InputFiles/fold1", "../InputFiles/fold2"};
     directoryCompressor.archive(inputPaths, "../OutputFiles/Archived", "archive", "lzw");
     directoryCompressor.unarchive("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived");
-    directoryCompressor.printArchiveInfo("../OutputFiles/Archived/archive.lzw");
+    //directoryCompressor.printArchiveInfo("../OutputFiles/Archived/archive.lzw");
 
     // CommandParser commandParser;
     // commandParser.parseCommand(std::cin);

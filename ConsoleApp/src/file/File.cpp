@@ -6,6 +6,7 @@
 #include <cmath>
 #include <cstring>
 #include <iostream>
+#include <limits.h>
 //#include <filesystem>
 #include <sys/stat.h>
 #include <string>
@@ -23,14 +24,14 @@ File::~File()
     close();
 }
 
-size_t File::getSize() const
+uint64_t File::getSize() const
 {
     // std::ifstream in(path, std::ifstream::ate | std::ifstream::binary);
     // return in.tellg();
 
     struct stat stat_buf;
-    int rc = stat(path.c_str(), &stat_buf);
-    return rc == 0 ? stat_buf.st_size : -1;
+    uint64_t rc = stat(path.c_str(), &stat_buf);
+    return rc == 0 ? stat_buf.st_size : 0;
 }
 
 const char *File::getLastModifiedTime() const
@@ -167,7 +168,7 @@ void File::readTableOfContents(unordered_map<string, int> &result)
     }
 }
 
-size_t File::readTableOfContentsByteSize()
+uint64_t File::readTableOfContentsBytePointer()
 {
     if (!readStream.is_open())
     {
@@ -178,21 +179,24 @@ size_t File::readTableOfContentsByteSize()
         }
     }
 
-    int tableOfContentsByteSize;
-    readStream >> tableOfContentsByteSize;
+    uint64_t tableOfContentsBytePointer;
+    readStream >> tableOfContentsBytePointer;
 
-    return tableOfContentsByteSize;
+    return tableOfContentsBytePointer;
 }
 
 void File::appendBytes(const char *bytes, const int bytesCount)
 {
     fstream writeStream;
 
-    writeStream.open(path, std::ios::out | std::ios::app);
+    // if (!writeStream.is_open())
+    //{
+    writeStream.open(path, std::ios::out | std::ios::ate | std::ios::app);
     if (!writeStream.good())
     {
         throw std::invalid_argument("Write stream cannot be opened");
     }
+    //}
 
     writeStream.write(bytes, bytesCount);
 
@@ -203,14 +207,37 @@ void File::writeBytes(const char *bytes, const int bytesCount)
 {
     fstream writeStream;
 
+    // if (!writeStream.is_open())
+    //{
     writeStream.open(path, std::ios::out);
     if (!writeStream.good())
     {
         throw std::invalid_argument("Write stream cannot be opened");
     }
+    //}
 
     writeStream.write(bytes, bytesCount);
 
+    writeStream.close();
+}
+
+void File::insertTableOfContentsBytePointer()
+{
+    fstream writeStream;
+
+    // if (!writeStream.is_open())
+    //{
+    writeStream.open(path, std::ios::in | std::ios::out | std::ios::binary);
+    if (!writeStream.good())
+    {
+        throw std::invalid_argument("Write stream cannot be opened");
+    }
+    //}
+    writeStream.seekp(0);
+
+    uint64_t bytePointer = this->getSize() + 1;
+    writeStream << bytePointer;
+    // writeStream.flush();
     writeStream.close();
 }
 
@@ -218,11 +245,13 @@ void File::clear()
 {
     fstream writeStream;
 
-    writeStream.open(path, std::ios::out);
+    writeStream.open(path, std::ios::out | std::ios::binary);
     if (!writeStream.good())
     {
         throw std::invalid_argument("Write stream cannot be opened");
     }
+
+    writeStream.write("         ", sizeof(uint64_t) + 1);
 
     writeStream.close();
 }
@@ -231,11 +260,14 @@ int File::appendCodes(const vector<WordCode> &wordCodes)
 {
     fstream writeStream;
 
-    writeStream.open(path, std::ios::out | std::ios::app | std::ios::binary);
+    // if (!writeStream.is_open())
+    //{
+    writeStream.open(path, std::ios::out | std::ios::ate | std::ios::app | std::ios::binary);
     if (!writeStream.good())
     {
         throw std::invalid_argument("Write stream cannot be opened");
     }
+    //}
 
     WordCodeWriter wordCodeWriter;
     wordCodeWriter.writeCodes(writeStream, wordCodes);
@@ -250,28 +282,36 @@ void File::appendTableOfContents(const vector<pair<string, int>> tableOfContents
 {
     fstream writeStream;
 
-    writeStream.open(path, std::ios::out | std::ios::app);
+    // if (!writeStream.is_open())
+    //{
+    writeStream.open(path, std::ios::out | std::ios::ate | std::ios::app);
     if (!writeStream.good())
     {
         throw std::invalid_argument("Write stream cannot be opened");
     }
+    //}
 
     writeStream << tableOfContents.size() << ' ';
     for (size_t i = 0; i < tableOfContents.size(); i++)
     {
         writeStream << tableOfContents[i].first << ' ' << tableOfContents[i].second << ' ';
     }
+
+    writeStream.close();
 }
 
 void File::appendFile(File &file)
 {
     fstream writeStream;
 
-    writeStream.open(path, std::ios::out | std::ios::app | std::ios::binary);
+    // if (!writeStream.is_open())
+    //{
+    writeStream.open(path, std::ios::out | std::ios::ate | std::ios::app | std::ios::binary);
     if (!writeStream.good())
     {
         throw std::invalid_argument("Write stream cannot be opened");
     }
+    //}
 
     int bytesRead = 0;
     char *bytes = nullptr;
@@ -293,6 +333,8 @@ void File::appendFile(File &file)
         bytes = file.readBytes(APPEND_FILE_TRANSFER_BYTES, bytesRead);
         std::cout << "bytesRead:" << bytes << std::endl;
     }
+
+    writeStream.close();
 }
 
 // void File::writeCodes(const vector<WordCode> &wordCodes)
@@ -341,11 +383,16 @@ int File::appendHeader(const ArchiveHeader &archiveHeader)
 {
     fstream writeStream;
 
-    writeStream.open(path, std::ios::out | std::ios::app);
+    // if (!writeStream.is_open())
+    //{
+    writeStream.open(path, std::ios::out | std::ios::ate | std::ios::app);
     if (!writeStream.good())
     {
         throw std::invalid_argument("Write stream cannot be opened");
     }
+    //}
+    std::cout << "FILESIZE =" << this->getSize() << std::endl;
+    writeStream.seekp(this->getSize());
 
     writeStream << archiveHeader.chksum << ' ' << archiveHeader.name << ' ' << archiveHeader.size << ' '
                 << archiveHeader.mtime << ' ' << archiveHeader.type;
@@ -371,10 +418,20 @@ int File::getReadingPosition()
 
 void File::setReadingPosition(size_t position)
 {
+    if (!readStream.is_open())
+    {
+        readStream.open(path, std::ios::in);
+        if (!readStream.good())
+        {
+            throw std::invalid_argument("Read stream cannot be opened");
+        }
+    }
+
     readStream.seekg(position);
 }
 
 void File::close()
 {
     readStream.close();
+    // writeStream.close();
 }
