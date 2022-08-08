@@ -7,7 +7,7 @@
 class FileCompressor
 {
 public:
-    int archive(const char* inputPath, const char *inputArchivePath, File& outputFile, bool isRegularFile);
+    uint64_t archive(const char* inputPath, const char *inputArchivePath, File& outputFile, bool isRegularFile);
     void unarchive(File& inputFile, const char* outputPath);
 
 private:

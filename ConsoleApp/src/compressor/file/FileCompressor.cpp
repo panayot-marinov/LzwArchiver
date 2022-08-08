@@ -13,7 +13,7 @@
 
 using std::pair;
 
-int FileCompressor::archive(const char *inputPath, const char *inputArchivePath,
+uint64_t FileCompressor::archive(const char *inputPath, const char *inputArchivePath,
                             File &outputFile, bool isRegularFile)
 {
     std::cout << "inputPath = " << inputPath << std::endl;
@@ -24,7 +24,7 @@ int FileCompressor::archive(const char *inputPath, const char *inputArchivePath,
     strcpy(archiveHeader.name, inputArchivePath);
     strcpy(archiveHeader.mtime, inputFile.getLastModifiedTime());
 
-    int lastBytePosition = -1;
+    uint64_t byteSize = 0;
     if (isRegularFile)
     {
         strcpy(archiveHeader.type, ArchiveHeader::TYPE_REGULAR_FILE);
@@ -56,7 +56,7 @@ int FileCompressor::archive(const char *inputPath, const char *inputArchivePath,
         std::cout << archiveHeader.chksum << " " << archiveHeader.name << " " << archiveHeader.size << " " << archiveHeader.mtime << " " << archiveHeader.type << '\n';
         int lastHeaderBytePosition = outputFile.appendHeader(archiveHeader);
         int lastCodeBytePosition = outputFile.appendCodes(*result);
-        lastBytePosition = lastHeaderBytePosition + lastCodeBytePosition;
+        byteSize = lastCodeBytePosition - sizeof(' ');
 
         delete result;
     }
@@ -65,10 +65,10 @@ int FileCompressor::archive(const char *inputPath, const char *inputArchivePath,
         strcpy(archiveHeader.type, ArchiveHeader::TYPE_DIRECTORY);
         archiveHeader.calculateChecksum();
         archiveHeader.size = 0;
-        lastBytePosition = outputFile.appendHeader(archiveHeader);
+        byteSize = outputFile.appendHeader(archiveHeader) - sizeof(' ');
     }
 
-    return lastBytePosition;
+    return byteSize;
 }
 
 void FileCompressor::unarchive(File &inputFile, const char *outputPath)

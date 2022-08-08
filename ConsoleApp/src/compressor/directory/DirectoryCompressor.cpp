@@ -36,13 +36,14 @@ void DirectoryCompressor::archive(vector<const char *> inputPaths, const char *o
     archiveFile.clear();
 
     vector<pair<string, int>> tableOfContents;
+    uint64_t firstBytePos = sizeof(uint64_t) + sizeof(' ');
+    FileCompressor fileCompressor;
+
     for (size_t i = 0; i < inputPaths.size(); i++)
     {
         const std::filesystem::path sandbox{inputPaths[i]};
         std::string lastDirectoryName = sandbox.filename().u8string();
 
-        FileCompressor fileCompressor;
-        int firstBytePos = 0;
         for (auto const &dir_entry : std::filesystem::recursive_directory_iterator{sandbox})
         {
             std::cout << dir_entry.path() << '\n';
@@ -64,7 +65,7 @@ void DirectoryCompressor::archive(vector<const char *> inputPaths, const char *o
                       << currentFileArchivePath.length() << std::endl
                       << strlen(std::to_string(firstBytePos).c_str()) << std::endl;
 
-            firstBytePos +=
+            firstBytePos =
                 fileCompressor.archive(currentFileInputPath.c_str(), currentFileArchivePath.c_str(), archiveFile, isRegularFile);
         }
 
@@ -100,11 +101,10 @@ void DirectoryCompressor::unarchive(const char *inputPath, const char *outputPat
     const std::filesystem::path sandbox{"../OutputFiles/Archived"};
 
     File fileToUnarchive(inputPath);
-    size_t fileSize = fileToUnarchive.getSize();
     uint64_t tableOfContentsBytePointer = fileToUnarchive.readTableOfContentsBytePointer();
     std::cout << "tbp:" << tableOfContentsBytePointer << std::endl;
 
-    fileToUnarchive.setReadingPosition(sizeof(uint64_t) + sizeof(' '));
+    fileToUnarchive.setReadingPosition(sizeof(uint64_t));
 
     // unordered_map<pair<string, int>> *result;
     // try
@@ -133,7 +133,6 @@ void DirectoryCompressor::unarchiveFile(const char *inputPath, const char *outpu
     const std::filesystem::path sandbox{"../OutputFiles/Archived"};
 
     File fileToUnarchive(inputPath);
-    size_t fileSize = fileToUnarchive.getSize();
 
     uint64_t tableOfContentsBytePointer = fileToUnarchive.readTableOfContentsBytePointer();
     std::cout << "tbp:" << tableOfContentsBytePointer << std::endl;

@@ -151,9 +151,6 @@ void File::readTableOfContents(unordered_map<string, int> &result)
         }
     }
 
-    int tableOfContentsByteSize;
-    readStream >> tableOfContentsByteSize;
-
     int tableOfContentsSize;
     readStream >> tableOfContentsSize;
 
@@ -235,7 +232,7 @@ void File::insertTableOfContentsBytePointer()
     //}
     writeStream.seekp(0);
 
-    uint64_t bytePointer = this->getSize() + 1;
+    uint64_t bytePointer = this->getSize();
     writeStream << bytePointer;
     // writeStream.flush();
     writeStream.close();
