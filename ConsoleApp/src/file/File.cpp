@@ -123,9 +123,6 @@ void File::readTableOfContents(vector<string> &result)
         }
     }
 
-    int tableOfContentsByteSize;
-    readStream >> tableOfContentsByteSize;
-
     int tableOfContentsSize;
     readStream >> tableOfContentsSize;
 
@@ -137,6 +134,31 @@ void File::readTableOfContents(vector<string> &result)
         readStream >> entryName;
         readStream >> entryFirstBytePos;
         result.push_back(entryName);
+    }
+}
+
+void File::readTableOfContents(vector<pair<string, int>> &result)
+{
+    if (!readStream.is_open())
+    {
+        readStream.open(path, std::ios::in);
+        if (!readStream.good())
+        {
+            throw std::invalid_argument("Read stream cannot be opened");
+        }
+    }
+
+    int tableOfContentsSize;
+    readStream >> tableOfContentsSize;
+
+    for (size_t i = 0; i < tableOfContentsSize; i++)
+    {
+        string entryName;
+        int entryFirstBytePos;
+
+        readStream >> entryName;
+        readStream >> entryFirstBytePos;
+        result.push_back(std::make_pair(entryName, entryFirstBytePos));
     }
 }
 
@@ -247,8 +269,6 @@ void File::clear()
     {
         throw std::invalid_argument("Write stream cannot be opened");
     }
-
-    writeStream.write("         ", sizeof(uint64_t) + 1);
 
     writeStream.close();
 }

@@ -34,6 +34,7 @@ void DirectoryCompressor::archive(vector<const char *> inputPaths, const char *o
 
     File archiveFile(bigArchiveFilePath);
     archiveFile.clear();
+    archiveFile.writeBytes("         ", sizeof(uint64_t) + 1);
 
     vector<pair<string, int>> tableOfContents;
     uint64_t firstBytePos = sizeof(uint64_t) + sizeof(' ');
@@ -68,29 +69,68 @@ void DirectoryCompressor::archive(vector<const char *> inputPaths, const char *o
             firstBytePos =
                 fileCompressor.archive(currentFileInputPath.c_str(), currentFileArchivePath.c_str(), archiveFile, isRegularFile);
         }
+    }
+    std::cout << "tableOfContents\n";
+    for (size_t i = 0; i < tableOfContents.size(); i++)
+    {
+        std::cout << tableOfContents[i].first << " " << tableOfContents[i].second << "\n";
+    }
 
-        std::cout << "tableOfContents\n";
-        for (size_t i = 0; i < tableOfContents.size(); i++)
+    archiveFile.insertTableOfContentsBytePointer();
+    archiveFile.appendTableOfContents(tableOfContents);
+}
+
+void DirectoryCompressor::addFilesToArchive(vector<const char *> inputPaths, const char *archivePath)
+{
+    File archiveFile(archivePath);
+
+    vector<pair<string, int>> tableOfContents;
+    uint64_t tableOfContentsBytePointer = archiveFile.readTableOfContentsBytePointer();
+    std::cout << "tbp:" << tableOfContentsBytePointer << std::endl;
+    archiveFile.setReadingPosition(tableOfContentsBytePointer);
+
+    archiveFile.readTableOfContents(tableOfContents);
+    const std::filesystem::path archiveFileSandbox{archivePath};
+    std::filesystem::resize_file(archiveFileSandbox, tableOfContentsBytePointer);
+    std::cout << "tableOfContents*\n";
+    for (size_t i = 0; i < tableOfContents.size(); i++)
+    {
+        std::cout << tableOfContents[i].first << " " << tableOfContents[i].second << "\n";
+    }
+
+    uint64_t firstBytePos;
+    FileCompressor fileCompressor;
+    for (size_t i = 0; i < inputPaths.size(); i++)
+    {
+        const std::filesystem::path sandbox{inputPaths[i]};
+        std::string lastDirectoryName = sandbox.filename().u8string();
+
+        for (auto const &dir_entry : std::filesystem::recursive_directory_iterator{sandbox})
         {
-            // tableOfContents[i].second += sizeof(uint16_t);
+            std::cout << dir_entry.path() << '\n';
+            bool isRegularFile = true;
+            if (std::filesystem::is_directory(dir_entry))
+            {
+                isRegularFile = false;
+            }
 
-            std::cout << tableOfContents[i].first << " " << tableOfContents[i].second << "\n";
+            std::string currentFileInputPath = dir_entry.path().u8string().c_str();
+            std::string currentFileArchivePath = "/" + lastDirectoryName +
+                                                 currentFileInputPath.substr(strlen(inputPaths[i]));
+
+            firstBytePos =
+                fileCompressor.archive(currentFileInputPath.c_str(), currentFileArchivePath.c_str(), archiveFile, isRegularFile);
+            std::cout << sizeof(' ') << std::endl
+                      << currentFileArchivePath.length() << std::endl
+                      << strlen(std::to_string(firstBytePos).c_str()) << std::endl;
+            tableOfContents.push_back(std::make_pair(currentFileArchivePath, firstBytePos));
         }
+    }
 
-        // tableOfContentsBytes += (strlen(std::to_string(tableOfContentsBytes).c_str()) + sizeof(' '));
-        // for (size_t i = 0; i < tableOfContents.size(); i++)
-        // {
-        //     tableOfContents[i].second += (tableOfContentsBytes + 1); // TODO: why + 2
-
-        //     std::cout << tableOfContents[i].first << " " << tableOfContents[i].second << "\n";
-        // }
-        // std::cout << std::endl;
-
-        // string tableOfContentsStr = std::to_string(tableOfContentsBytes);
-        // tableOfContentsStr += ' ';
-        // archiveFile.appendBytes(tableOfContentsStr.c_str(), tableOfContentsStr.length());
-        // archiveFile.appendTableOfContents(tableOfContents);
-        // archiveFile.appendFile(tempArchiveFile);
+    std::cout << "tableOfContents\n";
+    for (size_t i = 0; i < tableOfContents.size(); i++)
+    {
+        std::cout << tableOfContents[i].first << " " << tableOfContents[i].second << "\n";
     }
     archiveFile.insertTableOfContentsBytePointer();
     archiveFile.appendTableOfContents(tableOfContents);
@@ -138,24 +178,16 @@ void DirectoryCompressor::unarchiveFile(const char *inputPath, const char *outpu
     std::cout << "tbp:" << tableOfContentsBytePointer << std::endl;
     fileToUnarchive.setReadingPosition(tableOfContentsBytePointer);
 
-    unordered_map<string, int> *tableOfContents;
-    try
-    {
-        tableOfContents = new unordered_map<string, int>;
-    }
-    catch (std::bad_alloc e)
-    {
-        throw std::runtime_error("Memory for table of contents cannot be initialized.");
-    }
+    unordered_map<string, int> tableOfContents;
 
-    fileToUnarchive.readTableOfContents(*tableOfContents);
+    fileToUnarchive.readTableOfContents(tableOfContents);
 
-    for (auto it = tableOfContents->cbegin(); it != tableOfContents->cend(); ++it)
+    for (auto it = tableOfContents.cbegin(); it != tableOfContents.cend(); ++it)
     {
         std::cout << "{" << (*it).first << ": " << (*it).second << "}\n";
     }
 
-    int resultFileFirstByte = tableOfContents->find(string(filename))->second;
+    int resultFileFirstByte = tableOfContents.find(string(filename))->second;
     fileToUnarchive.setReadingPosition(resultFileFirstByte);
     int readingPosition = fileToUnarchive.getReadingPosition();
 
@@ -169,6 +201,10 @@ void DirectoryCompressor::unarchiveFile(const char *inputPath, const char *outpu
 void DirectoryCompressor::printArchiveInfo(const char *inputPath) const
 {
     File fileToGetInfo(inputPath);
+
+    uint64_t tableOfContentsBytePointer = fileToGetInfo.readTableOfContentsBytePointer();
+    std::cout << "tbp:" << tableOfContentsBytePointer << std::endl;
+    fileToGetInfo.setReadingPosition(tableOfContentsBytePointer);
 
     vector<string> *tableOfContents;
     try

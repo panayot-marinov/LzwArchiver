@@ -27,8 +27,11 @@ int main()
 
     vector<const char *> inputPaths{"../InputFiles/fold1", "../InputFiles/fold2"};
     directoryCompressor.archive(inputPaths, "../OutputFiles/Archived", "archive", "lzw");
-    //directoryCompressor.unarchive("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived");
-    //directoryCompressor.printArchiveInfo("../OutputFiles/Archived/archive.lzw");
+    vector<const char *> inputPaths2{"../InputFiles/fold3"};
+
+    directoryCompressor.addFilesToArchive(inputPaths2, "../OutputFiles/Archived/archive.lzw");
+    directoryCompressor.unarchive("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived");
+    // directoryCompressor.printArchiveInfo("../OutputFiles/Archived/archive.lzw");
 
     // CommandParser commandParser;
     // commandParser.parseCommand(std::cin);
@@ -36,12 +39,12 @@ int main()
     // std::cout<<commandParser.getNumberOfArguments()<<" ";
     // std::cout<<commandParser.getArgument(0)<<" \n";
 
-    directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "/fold1\\a.txt");
-    directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "/fold1\\b.txt");
-    directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "/fold1\\c.txt");
+    // directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "/fold1\\a.txt");
+    // directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "/fold1\\b.txt");
+    // directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "/fold1\\c.txt");
 
-    directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "/fold1\\fold\\d.txt");
-    directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "/fold1\\fold\\e.txt");
-    directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "/fold1\\fold\\foldInt\\f.txt");
-    directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "/fold1\\foldd");
+    // directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "/fold1\\fold\\d.txt");
+    // directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "/fold1\\fold\\e.txt");
+    // directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "/fold1\\fold\\foldInt\\f.txt");
+    // directoryCompressor.unarchiveFile("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived", "/fold1\\foldd");
 }

@@ -33,6 +33,7 @@ public:
     char *readBytes(const int bytesCount, int &bytesRead);
     pair<ArchiveHeader, vector<WordCode> *> readArchive();
     void readTableOfContents(vector<string>& result);
+    void readTableOfContents(vector<pair<string, int>>& result);
     void readTableOfContents(unordered_map<string, int>& result);
     uint64_t readTableOfContentsBytePointer();
     void appendBytes(const char *bytes, const int bytesCount);

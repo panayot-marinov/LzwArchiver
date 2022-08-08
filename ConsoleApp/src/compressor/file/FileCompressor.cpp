@@ -56,7 +56,7 @@ uint64_t FileCompressor::archive(const char *inputPath, const char *inputArchive
         std::cout << archiveHeader.chksum << " " << archiveHeader.name << " " << archiveHeader.size << " " << archiveHeader.mtime << " " << archiveHeader.type << '\n';
         int lastHeaderBytePosition = outputFile.appendHeader(archiveHeader);
         int lastCodeBytePosition = outputFile.appendCodes(*result);
-        byteSize = lastCodeBytePosition - sizeof(' ');
+        byteSize = lastCodeBytePosition;
 
         delete result;
     }
@@ -65,7 +65,7 @@ uint64_t FileCompressor::archive(const char *inputPath, const char *inputArchive
         strcpy(archiveHeader.type, ArchiveHeader::TYPE_DIRECTORY);
         archiveHeader.calculateChecksum();
         archiveHeader.size = 0;
-        byteSize = outputFile.appendHeader(archiveHeader) - sizeof(' ');
+        byteSize = outputFile.appendHeader(archiveHeader);
     }
 
     return byteSize;

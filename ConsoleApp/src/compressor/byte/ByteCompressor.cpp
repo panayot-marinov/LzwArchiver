@@ -54,9 +54,7 @@ void ByteCompressor::decompressAndWriteBytes(vector<WordCode> &wordCodes, File &
         WordCode current = wordCodes[i];
         WordCode next = wordCodes[i + 1];
 
-        std::cout << "find current value:" << current.value << std::endl;
         string currentValue = dictionary.find(current.value)->second;
-        std::cout << "find next value:" << next.value << std::endl;
         string nextValue;
         if (dictionary.find(next.value) != dictionary.end())
         {
