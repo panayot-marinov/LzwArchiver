@@ -17,15 +17,6 @@ using std::unordered_map;
 void DirectoryCompressor::archive(vector<const char *> inputPaths, const char *outputPath,
                                   const char *outputFilename, const char *outputFileExtension)
 {
-    // std::string tempArchiveFilePath = outputPath;
-    // tempArchiveFilePath += "/";
-    // tempArchiveFilePath += outputFilename;
-    // tempArchiveFilePath += "Temp.";
-    // tempArchiveFilePath += outputFileExtension;
-
-    // File tempArchiveFile(tempArchiveFilePath.c_str());
-    // tempArchiveFile.clear();
-
     std::string bigArchiveFilePath = outputPath;
     bigArchiveFilePath += "/";
     bigArchiveFilePath += outputFilename;
@@ -62,9 +53,6 @@ void DirectoryCompressor::archive(vector<const char *> inputPaths, const char *o
             currentFileOutputPath += currentFileArchivePath.substr(0, currentFileArchivePath.find_last_of('.')) + ".lzw";
 
             tableOfContents.push_back(std::make_pair(currentFileArchivePath, firstBytePos));
-            std::cout << sizeof(' ') << std::endl
-                      << currentFileArchivePath.length() << std::endl
-                      << strlen(std::to_string(firstBytePos).c_str()) << std::endl;
 
             firstBytePos =
                 fileCompressor.archive(currentFileInputPath.c_str(), currentFileArchivePath.c_str(), archiveFile, isRegularFile);
@@ -98,7 +86,7 @@ void DirectoryCompressor::addFilesToArchive(vector<const char *> inputPaths, con
         std::cout << tableOfContents[i].first << " " << tableOfContents[i].second << "\n";
     }
 
-    uint64_t firstBytePos;
+    uint64_t firstBytePos = tableOfContentsBytePointer;
     FileCompressor fileCompressor;
     for (size_t i = 0; i < inputPaths.size(); i++)
     {
@@ -118,12 +106,9 @@ void DirectoryCompressor::addFilesToArchive(vector<const char *> inputPaths, con
             std::string currentFileArchivePath = "/" + lastDirectoryName +
                                                  currentFileInputPath.substr(strlen(inputPaths[i]));
 
+            tableOfContents.push_back(std::make_pair(currentFileArchivePath, firstBytePos));
             firstBytePos =
                 fileCompressor.archive(currentFileInputPath.c_str(), currentFileArchivePath.c_str(), archiveFile, isRegularFile);
-            std::cout << sizeof(' ') << std::endl
-                      << currentFileArchivePath.length() << std::endl
-                      << strlen(std::to_string(firstBytePos).c_str()) << std::endl;
-            tableOfContents.push_back(std::make_pair(currentFileArchivePath, firstBytePos));
         }
     }
 
@@ -132,6 +117,79 @@ void DirectoryCompressor::addFilesToArchive(vector<const char *> inputPaths, con
     {
         std::cout << tableOfContents[i].first << " " << tableOfContents[i].second << "\n";
     }
+    archiveFile.insertTableOfContentsBytePointer();
+    archiveFile.appendTableOfContents(tableOfContents);
+    // TODO: if table of contents contains file
+}
+
+void DirectoryCompressor::removeFilesFromArchive(vector<const char *> inputPaths, const char *archivePath)
+{
+    File archiveFile(archivePath);
+
+    uint64_t tableOfContentsBytePointer = archiveFile.readTableOfContentsBytePointer();
+    std::cout << "tbp:" << tableOfContentsBytePointer << std::endl;
+    archiveFile.setReadingPosition(tableOfContentsBytePointer);
+
+    map<string, int> tableOfContents;
+    archiveFile.readTableOfContents(tableOfContents);
+
+    const std::filesystem::path archiveFileSandbox{archivePath};
+
+    uint64_t firstBytePos;
+    for (size_t i = 0; i < inputPaths.size(); i++)
+    {
+        const std::filesystem::path sandbox{inputPaths[i]};
+        std::string lastDirectoryName = sandbox.filename().u8string();
+
+        for (auto const &dir_entry : std::filesystem::recursive_directory_iterator{sandbox})
+        {
+            std::cout << dir_entry.path() << '\n';
+            bool isRegularFile = true;
+            if (std::filesystem::is_directory(dir_entry))
+            {
+                isRegularFile = false;
+            }
+
+            std::string currentFileInputPath = dir_entry.path().u8string().c_str();
+            std::string currentFileArchivePath = "/" + lastDirectoryName +
+                                                 currentFileInputPath.substr(strlen(inputPaths[i]));
+
+            std::cout << "inputPaths[i] = " << inputPaths[i] << std::endl;
+            std::string filePath = string(PathUtils::leftTrim(dir_entry.path().u8string().c_str()));
+
+            while (tableOfContents.count("/" + filePath) == 0 && filePath.length() > 0)
+            {
+                size_t slashIndex = filePath.find_first_of("/\\");
+                if (slashIndex == string::npos)
+                {
+                    break;
+                }
+                filePath = filePath.substr(slashIndex + 1);
+                std::cout << "edited filepath = " << filePath << std::endl;
+            }
+
+            auto tableOfContentsEntry = tableOfContents.find("/" + filePath);
+            if (tableOfContentsEntry == tableOfContents.end()) //entry not found
+            {
+                continue;
+            }
+            int resultFileFirstByte = tableOfContentsEntry->second;
+            archiveFile.setReadingPosition(resultFileFirstByte);
+            int readingPosition = archiveFile.getReadingPosition();
+
+            FileCompressor fileCompressor;
+
+            std::cout << "readingPos= " << readingPosition << std::endl;
+            std::pair<size_t, ArchiveHeader> archiveHeaderPair = archiveFile.readHeader();
+            unsigned int headerSize = archiveHeaderPair.first - resultFileFirstByte;
+            unsigned int fileSize = archiveHeaderPair.second.size + headerSize;
+            archiveFile.shiftLeftBytes(resultFileFirstByte, tableOfContentsBytePointer, fileSize);
+
+            std::filesystem::resize_file(archiveFileSandbox, tableOfContentsBytePointer - fileSize);
+            tableOfContents.erase(currentFileArchivePath);
+        }
+    }
+
     archiveFile.insertTableOfContentsBytePointer();
     archiveFile.appendTableOfContents(tableOfContents);
 }

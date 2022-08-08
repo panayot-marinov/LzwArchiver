@@ -162,6 +162,31 @@ void File::readTableOfContents(vector<pair<string, int>> &result)
     }
 }
 
+void File::readTableOfContents(map<string, int> &result)
+{
+    if (!readStream.is_open())
+    {
+        readStream.open(path, std::ios::in);
+        if (!readStream.good())
+        {
+            throw std::invalid_argument("Read stream cannot be opened");
+        }
+    }
+
+    int tableOfContentsSize;
+    readStream >> tableOfContentsSize;
+
+    for (size_t i = 0; i < tableOfContentsSize; i++)
+    {
+        string entryName;
+        int entryFirstBytePos;
+
+        readStream >> entryName;
+        readStream >> entryFirstBytePos;
+        result[entryName] = entryFirstBytePos;
+    }
+}
+
 void File::readTableOfContents(unordered_map<string, int> &result)
 {
     if (!readStream.is_open())
@@ -295,6 +320,28 @@ int File::appendCodes(const vector<WordCode> &wordCodes)
     return lastWrittenBytePos;
 }
 
+void File::appendTableOfContents(const map<string, int> tableOfContents)
+{
+    fstream writeStream;
+
+    // if (!writeStream.is_open())
+    //{
+    writeStream.open(path, std::ios::out | std::ios::ate | std::ios::app);
+    if (!writeStream.good())
+    {
+        throw std::invalid_argument("Write stream cannot be opened");
+    }
+    //}
+
+    writeStream << tableOfContents.size() << ' ';
+    for (auto it = tableOfContents.begin(); it != tableOfContents.end(); it++)
+    {
+        writeStream << (*it).first << ' ' << (*it).second << ' ';
+    }
+
+    writeStream.close();
+}
+
 void File::appendTableOfContents(const vector<pair<string, int>> tableOfContents)
 {
     fstream writeStream;
@@ -417,6 +464,56 @@ int File::appendHeader(const ArchiveHeader &archiveHeader)
     int lastWrittenBytePos = writeStream.tellp();
     writeStream.close();
     return lastWrittenBytePos;
+}
+
+void File::shiftLeftBytes(unsigned int from, unsigned int to, unsigned int count)
+{
+    fstream writeStream;
+
+    writeStream.open(path, std::ios::in | std::ios::out | std::ios::binary);
+    if (!writeStream.good())
+    {
+        throw std::invalid_argument("Write stream cannot be opened");
+    }
+
+    fstream readStream;
+    readStream.open(path, std::ios::in | std::ios::binary);
+    if (!readStream.good())
+    {
+        throw std::invalid_argument("Read stream cannot be opened");
+    }
+
+    char *buffer = nullptr;
+    try
+    {
+        buffer = new char[BYTES_TO_SHIFT_STEP];
+    }
+    catch (std::bad_alloc e)
+    {
+        throw std::runtime_error("Memory for compressed data cannot be initialized.");
+    }
+
+    writeStream.seekp(from);
+    readStream.seekg(from + count);
+
+    uint32_t currentReadPosition = readStream.tellg();
+    uint32_t bytesToShift = std::min(BYTES_TO_SHIFT_STEP, to - currentReadPosition);
+    uint32_t bytesRead = 1;
+    while (bytesRead > 0 && bytesToShift != 0)
+    {
+        readStream.read(buffer, bytesToShift);
+        bytesRead = readStream.gcount();
+        std::cout << "buffer\n"
+                  << buffer << std::endl;
+        uint32_t currentWritePosition = writeStream.tellp();
+
+        writeStream.write(buffer, bytesToShift);
+        currentReadPosition = readStream.tellg();
+        bytesToShift = std::min(BYTES_TO_SHIFT_STEP, to - currentReadPosition);
+    }
+
+    writeStream.close();
+    readStream.close();
 }
 
 int File::getReadingPosition()

@@ -28,8 +28,10 @@ int main()
     vector<const char *> inputPaths{"../InputFiles/fold1", "../InputFiles/fold2"};
     directoryCompressor.archive(inputPaths, "../OutputFiles/Archived", "archive", "lzw");
     vector<const char *> inputPaths2{"../InputFiles/fold3"};
+    vector<const char* > inputPaths3{"../InputFiles/fold2"};
 
     directoryCompressor.addFilesToArchive(inputPaths2, "../OutputFiles/Archived/archive.lzw");
+    directoryCompressor.removeFilesFromArchive(inputPaths3, "../OutputFiles/Archived/archive.lzw");
     directoryCompressor.unarchive("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived");
     // directoryCompressor.printArchiveInfo("../OutputFiles/Archived/archive.lzw");
 

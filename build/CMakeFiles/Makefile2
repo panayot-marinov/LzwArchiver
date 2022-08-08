@@ -277,14 +277,14 @@ wordCode/writer/clean: wordCode/writer/CMakeFiles/wordCodeWriter.dir/clean
 
 # All Build rule for target.
 CMakeFiles/LzwCompression.dir/all: command/executor/CMakeFiles/commandExecutor.dir/all
-CMakeFiles/LzwCompression.dir/all: command/parser/CMakeFiles/commandParser.dir/all
 CMakeFiles/LzwCompression.dir/all: command/utils/CMakeFiles/arrayUtils.dir/all
 CMakeFiles/LzwCompression.dir/all: command/utils/CMakeFiles/charArrUtils.dir/all
+CMakeFiles/LzwCompression.dir/all: command/parser/CMakeFiles/commandParser.dir/all
 CMakeFiles/LzwCompression.dir/all: compressor/byte/CMakeFiles/byteCompressor.dir/all
 CMakeFiles/LzwCompression.dir/all: compressor/directory/CMakeFiles/directoryCompressor.dir/all
+CMakeFiles/LzwCompression.dir/all: file/CMakeFiles/file.dir/all
 CMakeFiles/LzwCompression.dir/all: path/CMakeFiles/pathUtils.dir/all
 CMakeFiles/LzwCompression.dir/all: compressor/file/CMakeFiles/fileCompressor.dir/all
-CMakeFiles/LzwCompression.dir/all: file/CMakeFiles/file.dir/all
 CMakeFiles/LzwCompression.dir/all: wordCode/reader/CMakeFiles/wordCodeReader.dir/all
 CMakeFiles/LzwCompression.dir/all: wordCode/writer/CMakeFiles/wordCodeWriter.dir/all
 CMakeFiles/LzwCompression.dir/all: wordCode/CMakeFiles/wordCodeUtils.dir/all
