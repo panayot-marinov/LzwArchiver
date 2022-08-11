@@ -171,6 +171,9 @@ compressor/directory/CMakeFiles/directoryCompressor.dir/DirectoryCompressor.cpp.
   C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/ArchiveHeader.hpp \
   C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCode.hpp \
   C:/mingw64/include/c++/12.1.0/bitset \
+  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/file/hasher/FileHasher.hpp \
+  C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/file/File.hpp \
+  C:/mingw64/include/c++/12.1.0/cstddef \
   C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/file/File.hpp \
   C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/path/PathUtils.hpp \
   C:/mingw64/include/c++/12.1.0/filesystem \
@@ -216,6 +219,8 @@ C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/s
 C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/c++locale.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/vadefs.h:
+
+C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/file/hasher/FileHasher.hpp:
 
 C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/cpu_defines.h:
 
@@ -554,6 +559,8 @@ C:/mingw64/include/c++/12.1.0/bits/unordered_map.h:
 C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/ArchiveHeader.hpp:
 
 C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCode.hpp:
+
+C:/mingw64/include/c++/12.1.0/cstddef:
 
 C:/Users/Panayot\ Marinov/Desktop/FMI\ 2021/SDP/Project/LzwArchiver/ConsoleApp/src/path/PathUtils.hpp:
 

@@ -178,6 +178,7 @@ CMakeFiles/LzwCompression.dir/main.cpp.obj: \
  C:\Users\Panayot\ Marinov\Desktop\FMI\ 2021\SDP\Project\LzwArchiver\ConsoleApp\src\compressor/directory/DirectoryCompressor.hpp \
  C:\Users\Panayot\ Marinov\Desktop\FMI\ 2021\SDP\Project\LzwArchiver\ConsoleApp\src\compressor/file/FileCompressor.hpp \
  c:\users\panayot\ marinov\desktop\fmi\ 2021\sdp\project\lzwarchiver\consoleapp\src\file\file.hpp \
+ c:\users\panayot\ marinov\desktop\fmi\ 2021\sdp\project\lzwarchiver\consoleapp\src\file\hasher\filehasher.hpp \
  C:\Users\Panayot\ Marinov\Desktop\FMI\ 2021\SDP\Project\LzwArchiver\ConsoleApp\src\command/executor/CommandExecutor.hpp \
  c:\mingw64\include\c++\12.1.0\filesystem \
  c:\mingw64\include\c++\12.1.0\bits\fs_fwd.h \

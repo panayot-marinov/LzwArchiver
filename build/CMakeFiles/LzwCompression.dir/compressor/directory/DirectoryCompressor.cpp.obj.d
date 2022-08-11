@@ -168,6 +168,9 @@ CMakeFiles/LzwCompression.dir/compressor/directory/DirectoryCompressor.cpp.obj: 
  c:\users\panayot\ marinov\desktop\fmi\ 2021\sdp\project\lzwarchiver\consoleapp\src\compressor\file\archiveheader.hpp \
  c:\users\panayot\ marinov\desktop\fmi\ 2021\sdp\project\lzwarchiver\consoleapp\src\wordcode\wordcode.hpp \
  c:\mingw64\include\c++\12.1.0\bitset \
+ c:\users\panayot\ marinov\desktop\fmi\ 2021\sdp\project\lzwarchiver\consoleapp\src\file\hasher\filehasher.hpp \
+ c:\users\panayot\ marinov\desktop\fmi\ 2021\sdp\project\lzwarchiver\consoleapp\src\file\file.hpp \
+ c:\mingw64\include\c++\12.1.0\cstddef \
  c:\users\panayot\ marinov\desktop\fmi\ 2021\sdp\project\lzwarchiver\consoleapp\src\file\file.hpp \
  c:\users\panayot\ marinov\desktop\fmi\ 2021\sdp\project\lzwarchiver\consoleapp\src\path\pathutils.hpp \
  c:\mingw64\include\c++\12.1.0\filesystem \

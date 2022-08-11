@@ -1,25 +1,31 @@
 CMakeFiles/LzwCompression.dir/compressor/file/FileCompressor.cpp.obj: \
  C:\Users\Panayot\ Marinov\Desktop\FMI\ 2021\SDP\Project\LzwArchiver\ConsoleApp\src\compressor\file\FileCompressor.cpp \
  C:\Users\Panayot\ Marinov\Desktop\FMI\ 2021\SDP\Project\LzwArchiver\ConsoleApp\src\compressor\file\ArchiveHeader.hpp \
- C:\Users\Panayot\ Marinov\Desktop\FMI\ 2021\SDP\Project\LzwArchiver\ConsoleApp\src\compressor\file\FileCompressor.hpp \
- c:\users\panayot\ marinov\desktop\fmi\ 2021\sdp\project\lzwarchiver\consoleapp\src\file\file.hpp \
- c:\mingw64\include\c++\12.1.0\string \
+ c:\mingw64\include\c++\12.1.0\cstdint \
  c:\mingw64\include\c++\12.1.0\x86_64-w64-mingw32\bits\c++config.h \
  c:\mingw64\include\c++\12.1.0\x86_64-w64-mingw32\bits\os_defines.h \
  c:\mingw64\include\c++\12.1.0\x86_64-w64-mingw32\bits\cpu_defines.h \
  c:\mingw64\include\c++\12.1.0\pstl\pstl_config.h \
- c:\mingw64\include\c++\12.1.0\bits\stringfwd.h \
- c:\mingw64\include\c++\12.1.0\bits\memoryfwd.h \
- c:\mingw64\include\c++\12.1.0\bits\char_traits.h \
- c:\mingw64\include\c++\12.1.0\bits\postypes.h \
- c:\mingw64\include\c++\12.1.0\cwchar \
- c:\mingw64\x86_64-w64-mingw32\include\wchar.h \
+ c:\mingw64\lib\gcc\x86_64-w64-mingw32\12.1.0\include\stdint.h \
+ c:\mingw64\x86_64-w64-mingw32\include\stdint.h \
+ c:\mingw64\x86_64-w64-mingw32\include\crtdefs.h \
  c:\mingw64\x86_64-w64-mingw32\include\corecrt.h \
  c:\mingw64\x86_64-w64-mingw32\include\_mingw.h \
  c:\mingw64\x86_64-w64-mingw32\include\_mingw_mac.h \
  c:\mingw64\x86_64-w64-mingw32\include\_mingw_secapi.h \
  c:\mingw64\x86_64-w64-mingw32\include\vadefs.h \
  c:\mingw64\x86_64-w64-mingw32\include\sdks/_mingw_ddk.h \
+ c:\mingw64\lib\gcc\x86_64-w64-mingw32\12.1.0\include\stddef.h \
+ c:\mingw64\x86_64-w64-mingw32\include\stddef.h \
+ C:\Users\Panayot\ Marinov\Desktop\FMI\ 2021\SDP\Project\LzwArchiver\ConsoleApp\src\compressor\file\FileCompressor.hpp \
+ c:\users\panayot\ marinov\desktop\fmi\ 2021\sdp\project\lzwarchiver\consoleapp\src\file\file.hpp \
+ c:\mingw64\include\c++\12.1.0\string \
+ c:\mingw64\include\c++\12.1.0\bits\stringfwd.h \
+ c:\mingw64\include\c++\12.1.0\bits\memoryfwd.h \
+ c:\mingw64\include\c++\12.1.0\bits\char_traits.h \
+ c:\mingw64\include\c++\12.1.0\bits\postypes.h \
+ c:\mingw64\include\c++\12.1.0\cwchar \
+ c:\mingw64\x86_64-w64-mingw32\include\wchar.h \
  c:\mingw64\x86_64-w64-mingw32\include\corecrt_stdio_config.h \
  c:\mingw64\x86_64-w64-mingw32\include\corecrt_wstdlib.h \
  c:\mingw64\x86_64-w64-mingw32\include\_mingw_off_t.h \
@@ -27,12 +33,6 @@ CMakeFiles/LzwCompression.dir/compressor/file/FileCompressor.cpp.obj: \
  c:\mingw64\x86_64-w64-mingw32\include\swprintf.inl \
  c:\mingw64\x86_64-w64-mingw32\include\sec_api\wchar_s.h \
  c:\mingw64\include\c++\12.1.0\type_traits \
- c:\mingw64\include\c++\12.1.0\cstdint \
- c:\mingw64\lib\gcc\x86_64-w64-mingw32\12.1.0\include\stdint.h \
- c:\mingw64\x86_64-w64-mingw32\include\stdint.h \
- c:\mingw64\x86_64-w64-mingw32\include\crtdefs.h \
- c:\mingw64\lib\gcc\x86_64-w64-mingw32\12.1.0\include\stddef.h \
- c:\mingw64\x86_64-w64-mingw32\include\stddef.h \
  c:\mingw64\include\c++\12.1.0\bits\allocator.h \
  c:\mingw64\include\c++\12.1.0\x86_64-w64-mingw32\bits\c++allocator.h \
  c:\mingw64\include\c++\12.1.0\bits\new_allocator.h \
@@ -167,6 +167,9 @@ CMakeFiles/LzwCompression.dir/compressor/file/FileCompressor.cpp.obj: \
  c:\mingw64\include\c++\12.1.0\bits\unordered_map.h \
  c:\users\panayot\ marinov\desktop\fmi\ 2021\sdp\project\lzwarchiver\consoleapp\src\wordcode\wordcode.hpp \
  c:\mingw64\include\c++\12.1.0\bitset \
+ c:\users\panayot\ marinov\desktop\fmi\ 2021\sdp\project\lzwarchiver\consoleapp\src\file\hasher\filehasher.hpp \
+ c:\users\panayot\ marinov\desktop\fmi\ 2021\sdp\project\lzwarchiver\consoleapp\src\file\file.hpp \
+ c:\mingw64\include\c++\12.1.0\cstddef \
  c:\users\panayot\ marinov\desktop\fmi\ 2021\sdp\project\lzwarchiver\consoleapp\src\compressor\byte\bytecompressor.hpp \
  c:\users\panayot\ marinov\desktop\fmi\ 2021\sdp\project\lzwarchiver\consoleapp\src\file\file.hpp \
  c:\users\panayot\ marinov\desktop\fmi\ 2021\sdp\project\lzwarchiver\consoleapp\src\wordcode\wordcode.hpp \

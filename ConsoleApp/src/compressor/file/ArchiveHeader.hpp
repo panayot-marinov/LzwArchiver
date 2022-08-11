@@ -2,12 +2,14 @@
 #ifndef ARCHIVE_HEADER_HPP
 #define ARCHIVE_HEADER_HPP
 
+#include <cstdint>
+
 struct ArchiveHeader
 {
     static constexpr char TYPE_REGULAR_FILE[2] = "1";
     static constexpr char TYPE_DIRECTORY[2] = "2";
 
-    unsigned int chksum;
+    uint64_t chksum;
     char name[100];
     unsigned int size;
     char mtime[12];

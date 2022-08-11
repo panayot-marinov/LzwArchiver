@@ -287,7 +287,7 @@ void DirectoryCompressor::unarchive(const char *inputPath, const char *outputPat
     uint64_t tableOfContentsBytePointer = fileToUnarchive.readTableOfContentsBytePointer();
     std::cout << "tbp:" << tableOfContentsBytePointer << std::endl;
 
-    fileToUnarchive.setReadingPosition(sizeof(uint64_t));
+    fileToUnarchive.setReadingPosition(sizeof(uint64_t) + 1);
 
     // unordered_map<pair<string, int>> *result;
     // try
@@ -306,6 +306,12 @@ void DirectoryCompressor::unarchive(const char *inputPath, const char *outputPat
     while (readingPosition < tableOfContentsBytePointer)
     {
         std::cout << "readingPos= " << readingPosition << std::endl;
+        int savedReadingPosition = fileToUnarchive.getReadingPosition();
+        fileToUnarchive.setReadingPosition(savedReadingPosition);
+        bool corrupted = fileCompressor.isArchivedFileCorrupted(fileToUnarchive);
+        std::cout<<"corrupted = "<<corrupted<<std::endl;
+        fileToUnarchive.setReadingPosition(savedReadingPosition);
+
         fileCompressor.unarchive(fileToUnarchive, outputPath);
         readingPosition = fileToUnarchive.getReadingPosition();
     }

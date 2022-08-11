@@ -16,6 +16,7 @@ uint64_t FileHasher::hashFile(File &file, int bytesStep, int totalBytesToRead)
     while (bytesToRead > 0 && currentIterationBytesRead > 0)
     {
         char *bytes = file.readBytes(bytesToRead, currentIterationBytesRead);
+        bytes[bytesToRead] = '\0';
         std::string stringToHash = std::to_string(hash) + string(bytes);
         hash = std::hash<string>{}(stringToHash);
 

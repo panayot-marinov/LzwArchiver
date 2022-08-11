@@ -172,6 +172,9 @@ compressor/directory/CMakeFiles/directoryCompressor.dir/DirectoryCompressor.cpp.
  C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/compressor/file/ArchiveHeader.hpp
  C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/wordCode/WordCode.hpp
  C:/mingw64/include/c++/12.1.0/bitset
+ C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/file/hasher/FileHasher.hpp
+ C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/file/File.hpp
+ C:/mingw64/include/c++/12.1.0/cstddef
  C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/file/File.hpp
  C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/path/PathUtils.hpp
  C:/mingw64/include/c++/12.1.0/filesystem

@@ -3,6 +3,7 @@
 #include "FileCompressor.hpp"
 #include "../byte/ByteCompressor.hpp"
 #include "../../file/File.hpp"
+#include "../../file/hasher/FileHasher.hpp"
 #include "../../path/PathUtils.hpp"
 #include <iostream>
 #include <cmath>
@@ -14,7 +15,7 @@
 using std::pair;
 
 uint64_t FileCompressor::archive(const char *inputPath, const char *inputArchivePath,
-                            File &outputFile, bool isRegularFile)
+                                 File &outputFile, bool isRegularFile)
 {
     std::cout << "inputPath = " << inputPath << std::endl;
     File inputFile(inputPath);
@@ -54,8 +55,15 @@ uint64_t FileCompressor::archive(const char *inputPath, const char *inputArchive
         }
 
         std::cout << archiveHeader.chksum << " " << archiveHeader.name << " " << archiveHeader.size << " " << archiveHeader.mtime << " " << archiveHeader.type << '\n';
+        int firstHeaderBytePosition = outputFile.getSize();
         int lastHeaderBytePosition = outputFile.appendHeader(archiveHeader);
         int lastCodeBytePosition = outputFile.appendCodes(*result);
+
+        outputFile.setReadingPosition(lastHeaderBytePosition);
+        int totalBytesToHash = lastCodeBytePosition - lastHeaderBytePosition;
+        uint64_t fileHash = fileHasher.hashFile(outputFile, 100, totalBytesToHash);
+        outputFile.insertHashValue(fileHash, firstHeaderBytePosition);
+
         byteSize = lastCodeBytePosition;
 
         delete result;
@@ -63,9 +71,11 @@ uint64_t FileCompressor::archive(const char *inputPath, const char *inputArchive
     else
     {
         strcpy(archiveHeader.type, ArchiveHeader::TYPE_DIRECTORY);
-        archiveHeader.calculateChecksum();
         archiveHeader.size = 0;
+        int firstHeaderBytePosition = outputFile.getSize();
         byteSize = outputFile.appendHeader(archiveHeader);
+        uint64_t filehash = 0;
+        outputFile.insertHashValue(filehash, firstHeaderBytePosition);
     }
 
     return byteSize;
@@ -106,6 +116,17 @@ void FileCompressor::unarchive(File &inputFile, const char *outputPath)
         ByteCompressor byteCompressor;
         byteCompressor.decompressAndWriteBytes(*archivePair.second, outputFile);
     }
+}
+
+bool FileCompressor::isArchivedFileCorrupted(File &inputFile)
+{
+    pair<size_t, ArchiveHeader> headerPair = inputFile.readHeader();
+    ArchiveHeader header = headerPair.second;
+    uint64_t chksum = header.chksum;
+    unsigned int contentSize = header.size;
+
+    uint64_t currentChksum = fileHasher.hashFile(inputFile, 100, contentSize);
+    return chksum != currentChksum;
 }
 
 void FileCompressor::createDirectoryIfDoesNotExist(const string &path)

@@ -224,7 +224,8 @@ uint64_t File::readTableOfContentsBytePointer()
     }
 
     uint64_t tableOfContentsBytePointer;
-    readStream >> tableOfContentsBytePointer;
+    readStream.read(reinterpret_cast<char *>(&tableOfContentsBytePointer), sizeof(tableOfContentsBytePointer));
+    // readStream >> tableOfContentsBytePointer;
 
     return tableOfContentsBytePointer;
 }
@@ -265,6 +266,22 @@ void File::writeBytes(const char *bytes, const int bytesCount)
     writeStream.close();
 }
 
+void File::insertHashValue(uint64_t fileHash, int firstHeaderBytePosition)
+{
+    fstream writeStream;
+
+    writeStream.open(path, std::ios::in | std::ios::out | std::ios::binary);
+    if (!writeStream.good())
+    {
+        throw std::invalid_argument("Write stream cannot be opened");
+    }
+
+    writeStream.seekp(firstHeaderBytePosition);
+    const char *fileHashStr = reinterpret_cast<const char *>(&fileHash);
+    writeStream.write(fileHashStr, sizeof(fileHash));
+    writeStream.close();
+}
+
 void File::insertTableOfContentsBytePointer()
 {
     fstream writeStream;
@@ -280,7 +297,10 @@ void File::insertTableOfContentsBytePointer()
     writeStream.seekp(0);
 
     uint64_t bytePointer = this->getSize();
-    writeStream << bytePointer;
+    writeStream.write(reinterpret_cast<const char *>(&bytePointer), sizeof(bytePointer));
+
+    // writeStream << bytePointer;
+
     // writeStream.flush();
     writeStream.close();
 }
@@ -423,7 +443,7 @@ pair<size_t, ArchiveHeader> File::readHeader()
 {
     if (!readStream.is_open())
     {
-        readStream.open(path, std::ios::in);
+        readStream.open(path, std::ios::in | std::ios::binary);
         if (!readStream.good())
         {
             throw std::invalid_argument("Read stream cannot be opened");
@@ -431,7 +451,11 @@ pair<size_t, ArchiveHeader> File::readHeader()
     }
 
     ArchiveHeader archiveHeader;
-    readStream >> archiveHeader.chksum;
+    uint64_t chksum;
+    std::cout<<"reading Position = "<<readStream.tellg()<<std::endl;
+    readStream.read(reinterpret_cast<char *>(&chksum), sizeof(chksum));
+    archiveHeader.chksum = chksum;
+    readStream.ignore(1);
     readStream >> archiveHeader.name;
     readStream >> archiveHeader.size;
     readStream >> archiveHeader.mtime;
@@ -455,11 +479,15 @@ int File::appendHeader(const ArchiveHeader &archiveHeader)
         throw std::invalid_argument("Write stream cannot be opened");
     }
     //}
-    std::cout << "FILESIZE =" << this->getSize() << std::endl;
+    //std::cout << "FILESIZE =" << this->getSize() << std::endl;
     writeStream.seekp(this->getSize());
 
-    writeStream << archiveHeader.chksum << ' ' << archiveHeader.name << ' ' << archiveHeader.size << ' '
+    writeStream.write("         ", sizeof(uint64_t) + 1);
+    // writeStream.write("123      ", sizeof(uint64_t) + 1);
+    writeStream << archiveHeader.name << ' ' << archiveHeader.size << ' '
                 << archiveHeader.mtime << ' ' << archiveHeader.type;
+    // writeStream <<archiveHeader.chksum<<' '<< archiveHeader.name << ' ' << archiveHeader.size << ' '
+    //              << archiveHeader.mtime << ' ' << archiveHeader.type;
 
     int lastWrittenBytePos = writeStream.tellp();
     writeStream.close();
