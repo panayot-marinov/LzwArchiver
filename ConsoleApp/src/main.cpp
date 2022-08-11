@@ -24,14 +24,32 @@ const string path = "";
 
 int main()
 {
-    // CommandExecutor commandExecutor;
-    // CommandParser commandParser;
+    CommandExecutor commandExecutor;
+    CommandParser commandParser;
 
-    // do
-    // {
-    //     commandParser.parseCommand(std::cin);
-    //     commandExecutor.executeCommand(commandParser.getCommandType(), commandParser.getCopyOfArguments());
-    // } while (!commandExecutor.isExitCommand());
+    do
+    {
+        try
+        {
+            commandParser.parseCommand(std::cin);
+        }
+        catch (std::invalid_argument &e)
+        {
+            std::cout << e.what() << std::endl;
+        }
+        catch (std::out_of_range &e)
+        {
+            std::cout << e.what() << std::endl;
+        }
+        try
+        {
+            commandExecutor.executeCommand(commandParser.getCommandType(), commandParser.getCopyOfArguments());
+        }
+        catch (std::logic_error &e)
+        {
+            std::cout << e.what() << std::endl;
+        }
+    } while (!commandExecutor.isExitCommand());
 
     // FileHasher hasher;
     // File file("../OutputFiles/Archived/archive.lzw");
@@ -39,21 +57,21 @@ int main()
 
     // std::cout<<hashedValue<<std::endl;
 
-    DirectoryCompressor directoryCompressor;
+    // DirectoryCompressor directoryCompressor;
 
-    //vector<const char *> inputPaths{"../InputFiles/fold1", "../InputFiles/fold2"};
-    vector<const char *> inputPaths{"../InputFiles/fold1/a.txt"};
+    // //vector<const char *> inputPaths{"../InputFiles/fold1", "../InputFiles/fold2"};
+    // vector<const char *> inputPaths{"../InputFiles/fold1/a.txt"};
 
-    directoryCompressor.archive(inputPaths, "../OutputFiles/Archived", "archive", "lzw");
-    vector<const char *> inputPaths2{"../InputFiles/fold3"};
-    vector<const char *> inputPaths3{"../InputFiles/fold2"};
+    // directoryCompressor.archive(inputPaths, "../OutputFiles/Archived", "archive", "lzw");
+    // vector<const char *> inputPaths2{"../InputFiles/fold3"};
+    // vector<const char *> inputPaths3{"../InputFiles/fold2"};
 
-    // directoryCompressor.addFilesToArchive(inputPaths2, "../OutputFiles/Archived/archive.lzw");
-    // directoryCompressor.addFilesToArchive(inputPaths2, "../OutputFiles/Archived/archive.lzw");
+    // // directoryCompressor.addFilesToArchive(inputPaths2, "../OutputFiles/Archived/archive.lzw");
+    // // directoryCompressor.addFilesToArchive(inputPaths2, "../OutputFiles/Archived/archive.lzw");
 
-    // directoryCompressor.removeFilesFromArchive(inputPaths3, "../OutputFiles/Archived/archive.lzw");
+    // // directoryCompressor.removeFilesFromArchive(inputPaths3, "../OutputFiles/Archived/archive.lzw");
 
-    directoryCompressor.unarchive("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived");
+    // directoryCompressor.unarchive("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived");
     // directoryCompressor.printArchiveInfo("../OutputFiles/Archived/archive.lzw");
 
     //-----------------------

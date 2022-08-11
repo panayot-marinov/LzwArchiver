@@ -83,7 +83,7 @@ uint64_t FileCompressor::archive(const char *inputPath, const char *inputArchive
         byteSize = outputFile.appendHeader(archiveHeader);
 
         outputFile.setReadingPosition(firstHeaderBytePosition);
-        float levelOfCompression = 0;
+        float levelOfCompression = 1;
         outputFile.insertLevelOfCompression(levelOfCompression);
 
         outputFile.setReadingPosition(firstHeaderBytePosition);

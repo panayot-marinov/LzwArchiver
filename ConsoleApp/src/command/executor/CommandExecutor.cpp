@@ -21,7 +21,7 @@ void CommandExecutor::executeCommand(
     if (commandType == "zip")
     {
         vector<const char *> inputPaths;
-        for (size_t i = 2; i < arguments.size(); i++)
+        for (size_t i = 3; i < arguments.size(); i++)
         {
             inputPaths.push_back(arguments[i].c_str());
         }
