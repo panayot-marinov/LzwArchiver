@@ -6,6 +6,7 @@
 #include <cmath>
 #include <cstring>
 #include <iostream>
+#include <iomanip>
 #include <limits.h>
 //#include <filesystem>
 #include <sys/stat.h>
@@ -54,7 +55,7 @@ char File::readByte()
 {
     if (!readStream.is_open())
     {
-        readStream.open(path, std::ios::in);
+        readStream.open(path, std::ios::in | std::ios::binary);
         if (!readStream.good())
         {
             throw std::invalid_argument("Read stream cannot be opened");
@@ -71,7 +72,7 @@ char *File::readBytes(const int bytesCount, int &bytesRead)
 {
     if (!readStream.is_open())
     {
-        readStream.open(path, std::ios::in);
+        readStream.open(path, std::ios::in | std::ios::binary);
         if (!readStream.good())
         {
             throw std::invalid_argument("Read stream cannot be opened");
@@ -116,7 +117,7 @@ void File::readTableOfContents(vector<string> &result)
 {
     if (!readStream.is_open())
     {
-        readStream.open(path, std::ios::in);
+        readStream.open(path, std::ios::in | std::ios::binary);
         if (!readStream.good())
         {
             throw std::invalid_argument("Read stream cannot be opened");
@@ -141,7 +142,7 @@ void File::readTableOfContents(vector<pair<string, int>> &result)
 {
     if (!readStream.is_open())
     {
-        readStream.open(path, std::ios::in);
+        readStream.open(path, std::ios::in | std::ios::binary);
         if (!readStream.good())
         {
             throw std::invalid_argument("Read stream cannot be opened");
@@ -166,7 +167,7 @@ void File::readTableOfContents(map<string, int> &result)
 {
     if (!readStream.is_open())
     {
-        readStream.open(path, std::ios::in);
+        readStream.open(path, std::ios::in | std::ios::binary);
         if (!readStream.good())
         {
             throw std::invalid_argument("Read stream cannot be opened");
@@ -191,7 +192,7 @@ void File::readTableOfContents(unordered_map<string, int> &result)
 {
     if (!readStream.is_open())
     {
-        readStream.open(path, std::ios::in);
+        readStream.open(path, std::ios::in | std::ios::binary);
         if (!readStream.good())
         {
             throw std::invalid_argument("Read stream cannot be opened");
@@ -216,7 +217,7 @@ uint64_t File::readTableOfContentsBytePointer()
 {
     if (!readStream.is_open())
     {
-        readStream.open(path, std::ios::in);
+        readStream.open(path, std::ios::in | std::ios::binary);
         if (!readStream.good())
         {
             throw std::invalid_argument("Read stream cannot be opened");
@@ -263,6 +264,42 @@ void File::writeBytes(const char *bytes, const int bytesCount)
 
     writeStream.write(bytes, bytesCount);
 
+    writeStream.close();
+}
+
+void File::insertLevelOfCompression(float levelOfCompression)
+{
+    if (!readStream.is_open())
+    {
+        readStream.open(path, std::ios::in | std::ios::binary);
+        if (!readStream.good())
+        {
+            throw std::invalid_argument("Read stream cannot be opened");
+        }
+    }
+    int oldPos = readStream.tellg();
+
+    ArchiveHeader archiveHeader;
+    uint64_t chksum = 0;
+    char * result = new char[15]; //reinterpret_cast<char *>(&chksum)
+    readStream.read(result, sizeof(chksum));
+    archiveHeader.chksum = chksum;
+    readStream.ignore(1);
+    readStream >> archiveHeader.name;
+    readStream >> archiveHeader.size;
+
+    int currentReadingPosition = readStream.tellg();
+
+    fstream writeStream;
+
+    writeStream.open(path, std::ios::in | std::ios::out | std::ios::binary);
+    if (!writeStream.good())
+    {
+        throw std::invalid_argument("Write stream cannot be opened");
+    }
+    writeStream.seekp(currentReadingPosition + 1);
+
+    writeStream << levelOfCompression;
     writeStream.close();
 }
 
@@ -410,12 +447,10 @@ void File::appendFile(File &file)
 
     file.setReadingPosition(0);
     bytes = file.readBytes(APPEND_FILE_TRANSFER_BYTES, bytesRead);
-    std::cout << "bytesRead:" << bytes << std::endl;
     while (bytesRead != 0)
     {
         this->appendBytes(bytes, bytesRead);
         bytes = file.readBytes(APPEND_FILE_TRANSFER_BYTES, bytesRead);
-        std::cout << "bytesRead:" << bytes << std::endl;
     }
 
     writeStream.close();
@@ -449,18 +484,24 @@ pair<size_t, ArchiveHeader> File::readHeader()
             throw std::invalid_argument("Read stream cannot be opened");
         }
     }
-
+    std::cout << "readingPos = " << readStream.tellg() << '\n';
     ArchiveHeader archiveHeader;
     uint64_t chksum;
-    std::cout << "reading Position = " << readStream.tellg() << std::endl;
     readStream.read(reinterpret_cast<char *>(&chksum), sizeof(chksum));
     archiveHeader.chksum = chksum;
     readStream.ignore(1);
     readStream >> archiveHeader.name;
     readStream >> archiveHeader.size;
+    readStream >> archiveHeader.levelOfCompression;
     // readStream >> archiveHeader.mtime;
-    readStream.ignore(1); // Ignore whitespace
-    readStream.read(archiveHeader.type, 1);
+    char currentSymbol;
+    readStream.read(&currentSymbol, 1);
+    while (currentSymbol == ' ')
+    {
+        readStream.read(&currentSymbol, 1);
+    }
+    archiveHeader.type[0] = currentSymbol;
+    // readStream.read(archiveHeader.type, 1);
     archiveHeader.type[1] = '\0';
     int streamPos = readStream.tellg();
 
@@ -479,13 +520,14 @@ int File::appendHeader(const ArchiveHeader &archiveHeader)
         throw std::invalid_argument("Write stream cannot be opened");
     }
     //}
-    // std::cout << "FILESIZE =" << this->getSize() << std::endl;
     writeStream.seekp(this->getSize());
 
     writeStream.write("         ", sizeof(uint64_t) + 1);
     // writeStream.write("123      ", sizeof(uint64_t) + 1);
-    writeStream << archiveHeader.name << ' ' << archiveHeader.size << ' '
-                << archiveHeader.type;
+    writeStream << archiveHeader.name << ' ' << archiveHeader.size << ' ';
+    writeStream.write("    ", 4);
+    // writeStream << archiveHeader.levelOfCompression;
+    writeStream << ' ' << archiveHeader.type;
     // writeStream <<archiveHeader.chksum<<' '<< archiveHeader.name << ' ' << archiveHeader.size << ' '
     //              << archiveHeader.mtime << ' ' << archiveHeader.type;
 
@@ -531,8 +573,6 @@ void File::shiftLeftBytes(unsigned int from, unsigned int to, unsigned int count
     {
         readStream.read(buffer, bytesToShift);
         bytesRead = readStream.gcount();
-        std::cout << "buffer\n"
-                  << buffer << std::endl;
         uint32_t currentWritePosition = writeStream.tellp();
 
         writeStream.write(buffer, bytesToShift);
@@ -548,7 +588,7 @@ int File::getReadingPosition()
 {
     if (!readStream.is_open())
     {
-        readStream.open(path, std::ios::in);
+        readStream.open(path, std::ios::in | std::ios::binary);
         if (!readStream.good())
         {
             throw std::invalid_argument("Read stream cannot be opened");
@@ -560,16 +600,22 @@ int File::getReadingPosition()
 
 void File::setReadingPosition(size_t position)
 {
+    if (readStream.tellg() == -1)
+    {
+        readStream.close();
+    }
     if (!readStream.is_open())
     {
-        readStream.open(path, std::ios::in);
+        readStream.open(path, std::ios::in | std::ios::binary);
         if (!readStream.good())
         {
             throw std::invalid_argument("Read stream cannot be opened");
         }
     }
 
+    std::cout << readStream.tellg() << '\n';
     readStream.seekg(position);
+    std::cout << readStream.tellg() << '\n';
 }
 
 void File::close()

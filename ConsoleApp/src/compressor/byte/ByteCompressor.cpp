@@ -64,9 +64,9 @@ void ByteCompressor::decompressAndWriteBytes(vector<WordCode> &wordCodes, File &
         {
             nextValue = currentValue;
         }
-        string newValue = currentValue + nextValue;
+        string newDictValue = currentValue + nextValue[0];
 
-        dictionary[(std::bitset<WordCode::BITS>)dictionary.size()] = newValue;
+        dictionary[(std::bitset<WordCode::BITS>)dictionary.size()] = newDictValue;
 
         string valueToWrite = dictionary.find(current.value)->second;
         file.appendBytes(valueToWrite.c_str(), valueToWrite.length());

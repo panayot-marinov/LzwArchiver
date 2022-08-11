@@ -207,6 +207,16 @@ file/CMakeFiles/File.dir/File.cpp.obj: C:/Users/Panayot\ Marinov/Desktop/FMI\ 20
   C:/mingw64/x86_64-w64-mingw32/include/string.h \
   C:/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h \
   C:/mingw64/include/c++/12.1.0/iostream \
+  C:/mingw64/include/c++/12.1.0/iomanip \
+  C:/mingw64/include/c++/12.1.0/locale \
+  C:/mingw64/include/c++/12.1.0/bits/locale_facets_nonio.h \
+  C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/time_members.h \
+  C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/messages_members.h \
+  C:/mingw64/include/c++/12.1.0/bits/locale_facets_nonio.tcc \
+  C:/mingw64/include/c++/12.1.0/bits/locale_conv.h \
+  C:/mingw64/include/c++/12.1.0/bits/quoted_string.h \
+  C:/mingw64/include/c++/12.1.0/sstream \
+  C:/mingw64/include/c++/12.1.0/bits/sstream.tcc \
   C:/mingw64/x86_64-w64-mingw32/include/sys/stat.h \
   C:/mingw64/x86_64-w64-mingw32/include/io.h
 
@@ -605,6 +615,8 @@ C:/mingw64/include/c++/12.1.0/bits/specfun.h:
 
 C:/mingw64/include/c++/12.1.0/tr1/gamma.tcc:
 
+C:/mingw64/include/c++/12.1.0/iomanip:
+
 C:/mingw64/include/c++/12.1.0/tr1/special_function_util.h:
 
 C:/mingw64/include/c++/12.1.0/tr1/ell_integral.tcc:
@@ -618,5 +630,23 @@ C:/mingw64/include/c++/12.1.0/tr1/riemann_zeta.tcc:
 C:/mingw64/include/c++/12.1.0/cstring:
 
 C:/mingw64/include/c++/12.1.0/iostream:
+
+C:/mingw64/include/c++/12.1.0/locale:
+
+C:/mingw64/include/c++/12.1.0/bits/locale_facets_nonio.h:
+
+C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/time_members.h:
+
+C:/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/messages_members.h:
+
+C:/mingw64/include/c++/12.1.0/bits/locale_facets_nonio.tcc:
+
+C:/mingw64/include/c++/12.1.0/bits/locale_conv.h:
+
+C:/mingw64/include/c++/12.1.0/bits/quoted_string.h:
+
+C:/mingw64/include/c++/12.1.0/sstream:
+
+C:/mingw64/include/c++/12.1.0/bits/sstream.tcc:
 
 C:/mingw64/x86_64-w64-mingw32/include/io.h:

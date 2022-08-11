@@ -12,9 +12,9 @@ struct ArchiveHeader
     uint64_t chksum;
     char name[100];
     unsigned int size;
-    //char mtime[12];
+    // char mtime[12];
+    float levelOfCompression;
     char type[2];
-    
 
     void calculateChecksum()
     {

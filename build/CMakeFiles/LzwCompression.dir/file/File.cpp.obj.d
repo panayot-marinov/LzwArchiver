@@ -203,5 +203,15 @@ CMakeFiles/LzwCompression.dir/file/File.cpp.obj: \
  c:\mingw64\x86_64-w64-mingw32\include\string.h \
  c:\mingw64\x86_64-w64-mingw32\include\sec_api\string_s.h \
  c:\mingw64\include\c++\12.1.0\iostream \
+ c:\mingw64\include\c++\12.1.0\iomanip \
+ c:\mingw64\include\c++\12.1.0\locale \
+ c:\mingw64\include\c++\12.1.0\bits\locale_facets_nonio.h \
+ c:\mingw64\include\c++\12.1.0\x86_64-w64-mingw32\bits\time_members.h \
+ c:\mingw64\include\c++\12.1.0\x86_64-w64-mingw32\bits\messages_members.h \
+ c:\mingw64\include\c++\12.1.0\bits\locale_facets_nonio.tcc \
+ c:\mingw64\include\c++\12.1.0\bits\locale_conv.h \
+ c:\mingw64\include\c++\12.1.0\bits\quoted_string.h \
+ c:\mingw64\include\c++\12.1.0\sstream \
+ c:\mingw64\include\c++\12.1.0\bits\sstream.tcc \
  c:\mingw64\x86_64-w64-mingw32\include\sys\stat.h \
  c:\mingw64\x86_64-w64-mingw32\include\io.h

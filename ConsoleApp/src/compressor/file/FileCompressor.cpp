@@ -19,17 +19,18 @@ uint64_t FileCompressor::archive(const char *inputPath, const char *inputArchive
 {
     std::cout << "inputPath = " << inputPath << std::endl;
     File inputFile(inputPath);
+    uint64_t inputFileSize = inputFile.getSize();
 
     // header
     ArchiveHeader archiveHeader;
     strcpy(archiveHeader.name, inputArchivePath);
-    //strcpy(archiveHeader.mtime, inputFile.getLastModifiedTime());
+    // strcpy(archiveHeader.mtime, inputFile.getLastModifiedTime());
 
     uint64_t byteSize = 0;
     if (isRegularFile)
     {
         strcpy(archiveHeader.type, ArchiveHeader::TYPE_REGULAR_FILE);
-        archiveHeader.calculateChecksum();
+        // archiveHeader.calculateChecksum();
 
         // data
         int bytesRead = 0;
@@ -63,6 +64,13 @@ uint64_t FileCompressor::archive(const char *inputPath, const char *inputArchive
         uint64_t fileHash = fileHasher.hashFile(outputFile, 100, totalBytesToHash);
         outputFile.insertHashValue(fileHash, firstHeaderBytePosition);
 
+        outputFile.setReadingPosition(firstHeaderBytePosition);
+        std::cout<<outputFile.getReadingPosition()<<'\n';
+        float archivedFileSize = lastCodeBytePosition - firstHeaderBytePosition;
+        std::cout<<"input file size = "<<inputFileSize<<'\n'<<"archived file size ="<<archivedFileSize<<std::endl;
+        float levelOfCompression = std::floor((archivedFileSize / inputFileSize) * 10.0) / 10.0;
+        outputFile.insertLevelOfCompression(levelOfCompression);
+
         byteSize = lastCodeBytePosition;
 
         delete result;
@@ -73,6 +81,12 @@ uint64_t FileCompressor::archive(const char *inputPath, const char *inputArchive
         archiveHeader.size = 0;
         int firstHeaderBytePosition = outputFile.getSize();
         byteSize = outputFile.appendHeader(archiveHeader);
+
+        outputFile.setReadingPosition(firstHeaderBytePosition);
+        float levelOfCompression = 0;
+        outputFile.insertLevelOfCompression(levelOfCompression);
+
+        outputFile.setReadingPosition(firstHeaderBytePosition);
         uint64_t filehash = 0;
         outputFile.insertHashValue(filehash, firstHeaderBytePosition);
     }
@@ -124,6 +138,7 @@ bool FileCompressor::isArchivedFileCorrupted(File &inputFile)
     uint64_t chksum = header.chksum;
     unsigned int contentSize = header.size;
 
+    std::cout << "rpos=" << inputFile.getReadingPosition() << std::endl;
     uint64_t currentChksum = fileHasher.hashFile(inputFile, 100, contentSize);
     return chksum != currentChksum;
 }

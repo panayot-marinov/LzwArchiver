@@ -307,9 +307,8 @@ void DirectoryCompressor::unarchive(const char *inputPath, const char *outputPat
     {
         std::cout << "readingPos= " << readingPosition << std::endl;
         int savedReadingPosition = fileToUnarchive.getReadingPosition();
-        fileToUnarchive.setReadingPosition(savedReadingPosition);
         bool corrupted = fileCompressor.isArchivedFileCorrupted(fileToUnarchive);
-        std::cout<<"corrupted = "<<corrupted<<std::endl;
+        std::cout << "corrupted = " << corrupted << std::endl;
         fileToUnarchive.setReadingPosition(savedReadingPosition);
 
         fileCompressor.unarchive(fileToUnarchive, outputPath);
@@ -355,10 +354,10 @@ void DirectoryCompressor::printArchiveInfo(const char *inputPath) const
     std::cout << "tbp:" << tableOfContentsBytePointer << std::endl;
     fileToGetInfo.setReadingPosition(tableOfContentsBytePointer);
 
-    vector<string> *tableOfContents;
+    map<string, int> *tableOfContents;
     try
     {
-        tableOfContents = new vector<string>;
+        tableOfContents = new map<string, int>;
     }
     catch (std::bad_alloc e)
     {
@@ -368,9 +367,12 @@ void DirectoryCompressor::printArchiveInfo(const char *inputPath) const
     fileToGetInfo.readTableOfContents(*tableOfContents);
 
     std::cout << "----------- Archive info: -----------\n";
-    for (size_t i = 0; i < tableOfContents->size(); i++)
+    for (auto it = tableOfContents->begin(); it != tableOfContents->end(); it++)
     {
-        std::cout << (*tableOfContents)[i] << '\n';
+        fileToGetInfo.setReadingPosition((*it).second);
+        ArchiveHeader archiveHeader = fileToGetInfo.readHeader().second;
+
+        std::cout << (*it).first << " ; Level of compression: " << archiveHeader.levelOfCompression << '\n';
     }
     std::cout << "-------------------------------------" << std::endl;
 }

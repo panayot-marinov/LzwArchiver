@@ -43,6 +43,7 @@ public:
     uint64_t readTableOfContentsBytePointer();
     void appendBytes(const char *bytes, const int bytesCount);
     void writeBytes(const char *bytes, const int bytesCount);
+    void insertLevelOfCompression(float levelOfCompression);
     void insertHashValue(uint64_t fileHash, int firstHeaderBytePosition);
     void insertTableOfContentsBytePointer();
     void clear();

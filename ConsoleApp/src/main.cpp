@@ -36,21 +36,25 @@ int main()
     // FileHasher hasher;
     // File file("../OutputFiles/Archived/archive.lzw");
     // uint64_t hashedValue = hasher.hashFile(file, 100, 812);
-    
+
     // std::cout<<hashedValue<<std::endl;
 
-        DirectoryCompressor directoryCompressor;
+    DirectoryCompressor directoryCompressor;
 
-        vector<const char *> inputPaths{"../InputFiles/fold1", "../InputFiles/fold2"};
-        directoryCompressor.archive(inputPaths, "../OutputFiles/Archived", "archive", "lzw");
-        vector<const char *> inputPaths2{"../InputFiles/fold3"};
-        vector<const char *> inputPaths3{"../InputFiles/fold2"};
+    //vector<const char *> inputPaths{"../InputFiles/fold1", "../InputFiles/fold2"};
+    vector<const char *> inputPaths{"../InputFiles/fold1/a.txt"};
 
-        //directoryCompressor.addFilesToArchive(inputPaths2, "../OutputFiles/Archived/archive.lzw");
-       // directoryCompressor.addFilesToArchive(inputPaths2, "../OutputFiles/Archived/archive.lzw");
+    directoryCompressor.archive(inputPaths, "../OutputFiles/Archived", "archive", "lzw");
+    vector<const char *> inputPaths2{"../InputFiles/fold3"};
+    vector<const char *> inputPaths3{"../InputFiles/fold2"};
 
-        //directoryCompressor.removeFilesFromArchive(inputPaths3, "../OutputFiles/Archived/archive.lzw");
-        directoryCompressor.unarchive("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived");
+    // directoryCompressor.addFilesToArchive(inputPaths2, "../OutputFiles/Archived/archive.lzw");
+    // directoryCompressor.addFilesToArchive(inputPaths2, "../OutputFiles/Archived/archive.lzw");
+
+    // directoryCompressor.removeFilesFromArchive(inputPaths3, "../OutputFiles/Archived/archive.lzw");
+
+    directoryCompressor.unarchive("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived");
+    // directoryCompressor.printArchiveInfo("../OutputFiles/Archived/archive.lzw");
 
     //-----------------------
 
