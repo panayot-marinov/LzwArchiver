@@ -1,0 +1,347 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "command/executor",
+					"jsonFile" : "directory-command.executor-Debug-61badc02ab956bed7a40.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "command/executor",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "command/parser",
+					"jsonFile" : "directory-command.parser-Debug-f26307a98d35207d0eee.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "command/parser",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "command/utils",
+					"jsonFile" : "directory-command.utils-Debug-69a9d6e7d58ec6829861.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "command/utils",
+					"targetIndexes" : 
+					[
+						1,
+						3
+					]
+				},
+				{
+					"build" : "compressor/byte",
+					"jsonFile" : "directory-compressor.byte-Debug-00c5f794e250e443805c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "compressor/byte",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "compressor/directory",
+					"jsonFile" : "directory-compressor.directory-Debug-033a40e99a41c520025d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "compressor/directory",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "compressor/file",
+					"jsonFile" : "directory-compressor.file-Debug-09bddb409761af030c39.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "compressor/file",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "file",
+					"jsonFile" : "directory-file-Debug-a8d5e769b55757ffcd8d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "file",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "path",
+					"jsonFile" : "directory-path-Debug-6e2de2bb9462fee2528c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "path",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "wordCode/reader",
+					"jsonFile" : "directory-wordCode.reader-Debug-782a3999fd00bd0afa42.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "wordCode/reader",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "wordCode/writer",
+					"jsonFile" : "directory-wordCode.writer-Debug-325d423e7b5b9eced7f3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "wordCode/writer",
+					"targetIndexes" : 
+					[
+						12
+					]
+				},
+				{
+					"build" : "wordCode",
+					"jsonFile" : "directory-wordCode-Debug-dcf124371b67b4126ed0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "wordCode",
+					"targetIndexes" : 
+					[
+						11
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					],
+					"name" : "LzwCompression",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "LzwCompression::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LzwCompression-Debug-24303ed02f7ca23be2b4.json",
+					"name" : "LzwCompression",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "arrayUtils::@666a61b35ffd66e14868",
+					"jsonFile" : "target-arrayUtils-Debug-506198d2053b7b35686b.json",
+					"name" : "arrayUtils",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "byteCompressor::@74d505cadb3906956bfa",
+					"jsonFile" : "target-byteCompressor-Debug-16ad37c81164225845ea.json",
+					"name" : "byteCompressor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "charArrUtils::@666a61b35ffd66e14868",
+					"jsonFile" : "target-charArrUtils-Debug-14d1240d375769a747ba.json",
+					"name" : "charArrUtils",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "commandExecutor::@ebed50cce52006298a3e",
+					"jsonFile" : "target-commandExecutor-Debug-fee1aa21b4e08323fce0.json",
+					"name" : "commandExecutor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "commandParser::@881cc2a023a6d1fb4047",
+					"jsonFile" : "target-commandParser-Debug-81c7caa7ce4ebeaa1043.json",
+					"name" : "commandParser",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "directoryCompressor::@0d0b64587ba7ea4749f7",
+					"jsonFile" : "target-directoryCompressor-Debug-4f3e614a50542780a07f.json",
+					"name" : "directoryCompressor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "file::@31351f546dc73cfc2229",
+					"jsonFile" : "target-file-Debug-e8ddd4810a2567d7ef7e.json",
+					"name" : "file",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "fileCompressor::@3fe750034c355533c1c5",
+					"jsonFile" : "target-fileCompressor-Debug-56af172ee25733db140d.json",
+					"name" : "fileCompressor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "pathUtils::@2536f7ff02733c738055",
+					"jsonFile" : "target-pathUtils-Debug-ba865c753386b1594311.json",
+					"name" : "pathUtils",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "wordCodeReader::@a167429e31e0678e5d95",
+					"jsonFile" : "target-wordCodeReader-Debug-5808afbba0027564c55c.json",
+					"name" : "wordCodeReader",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "wordCodeUtils::@c3ffd6a84c8fd3a3ccca",
+					"jsonFile" : "target-wordCodeUtils-Debug-c48030c3ea0420b901e6.json",
+					"name" : "wordCodeUtils",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "wordCodeWriter::@48309f3e85fbb4b00d71",
+					"jsonFile" : "target-wordCodeWriter-Debug-f1fea7e54603d560cfb6.json",
+					"name" : "wordCodeWriter",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build",
+		"source" : "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

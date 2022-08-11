@@ -1,215 +1,133 @@
-// #include "../parser/CommandParser.hpp"
-// #include "../utils/ArrayUtils.hpp"
-// #include "../utils/CharArrUtils.hpp"
-// #include "../utils/Constants.hpp"
-// #include <iostream>
-// #include <cstring>
-// #include <cstddef>
+#include "CommandExecutor.hpp"
+#include "../utils/ArrayUtils.hpp"
+#include "../utils/CharArrUtils.hpp"
+#include <fstream>
+#include <cstring>
+#include <stdexcept>
 
-// const char* CommandParser::getCommandType() const {
-//     return commandType.c_str();
-// }
+CommandExecutor::CommandExecutor()
+{
+    exitCommand = false;
+}
 
-// const char* CommandParser::getArgument(const size_t at) const {
-//     if(at >= getNumberOfArguments() || at < 0)
-//         throw std::out_of_range("index out of range");
-    
-//     return arguments[at].c_str();
-// }
+void CommandExecutor::executeCommand(
+    const string &commandType,
+    const vector<string> &arguments)
+{
+    if (exitCommand)
+    {
+        throw std::logic_error("Cannot execute a command after 'exit'");
+    }
+    if (commandType == "zip")
+    {
+        vector<const char *> inputPaths;
+        for (size_t i = 2; i < arguments.size(); i++)
+        {
+            inputPaths.push_back(arguments[i].c_str());
+        }
 
-// vector<string> CommandParser::getCopyOfArguments() const {
-//     return arguments;
-// }
+        directoryCompressor.archive(inputPaths, arguments[0].c_str(), arguments[1].c_str(), arguments[2].c_str());
+    }
+    else if (commandType == "unzip")
+    {
+        directoryCompressor.unarchive(arguments[0].c_str(), arguments[1].c_str());
+    }
+    else if (commandType == "add")
+    {
+        vector<const char *> inputPaths;
+        for (size_t i = 1; i < arguments.size(); i++)
+        {
+            inputPaths.push_back(arguments[i].c_str());
+        }
 
-// void CommandParser::parseCommand(std::istream& in) {
-//     commandType = "unknown";
-//     arguments.clear();
-//     char* commandArr = ArrayUtils<char>::assignArray(MAX_ROW_LENGTH);
-//     readCommand(in, commandArr);
-//     splitCommand(commandArr);
+        try
+        {
+            directoryCompressor.addFilesToArchive(inputPaths, arguments[0].c_str());
+        }
+        catch (std::logic_error e)
+        {
+            std::cout << e.what() << std::endl;
+        }
+    }
+    else if (commandType == "remove")
+    {
+        vector<const char *> inputPaths;
+        for (size_t i = 1; i < arguments.size(); i++)
+        {
+            inputPaths.push_back(arguments[i].c_str());
+        }
 
-//     bool commandRecognized = false, numberOfArgumentsCorrect = true;
-//     size_t* argumentsMaxLengths = 
-//         ArrayUtils<size_t>::assignArray(getNumberOfArguments());
-//     if(commandType == "vehicle") {
-//         argumentsMaxLengths[0] = MAX_REGISTRATION_LENGTH;
-//         argumentsMaxLengths[1] = MAX_DESCRIPTION_LENGTH;
+        try
+        {
+            directoryCompressor.removeFilesFromArchive(inputPaths, arguments[0].c_str());
+        }
+        catch (std::logic_error e)
+        {
+            std::cout << e.what() << std::endl;
+        }
+    }
+    else if (commandType == "refresh")
+    {
+        try
+        {
+            vector<const char *> inputPaths{arguments[1].c_str()};
+            directoryCompressor.removeFilesFromArchive(inputPaths, arguments[0].c_str());
+            directoryCompressor.addFilesToArchive(inputPaths, arguments[0].c_str());
+        }
+        catch (std::invalid_argument e)
+        {
+            std::cerr << e.what() << std::endl;
+        }
+    }
+    else if (commandType == "info")
+    {
+        directoryCompressor.printArchiveInfo(arguments[0].c_str());
+    }
+    else if (commandType == "ec")
+    {
+        // TODO:
+    }
+    else if (commandType == "help")
+    {
+        printHelp();
+    }
+    else if (commandType == "exit")
+    {
+        exitCommand = true;
+    }
+}
 
-//         commandRecognized = true;
-//         numberOfArgumentsCorrect = 
-//             (getNumberOfArguments() == 2);
-//     }
-//     else if(commandType == "person") {
-//         argumentsMaxLengths[0] = MAX_PERSON_NAME_LENGTH;
-//         argumentsMaxLengths[1] = MAX_ID_LENGTH;
+bool CommandExecutor::fileExists(const string &path)
+{
+    std::ifstream file(path);
+    return file.is_open();
+}
 
-//         commandRecognized = true;
-//         numberOfArgumentsCorrect = 
-//             (getNumberOfArguments() == 2);
-//     }
-//     else if(commandType =="acquire") {
-//         argumentsMaxLengths[0] = MAX_ID_LENGTH;
-//         argumentsMaxLengths[1] = MAX_REGISTRATION_LENGTH;
+bool CommandExecutor::isExitCommand()
+{
+    return exitCommand;
+}
 
-//         commandRecognized = true;
-//         numberOfArgumentsCorrect = 
-//             (getNumberOfArguments() == 2);
-//     }
-//     else if(commandType == "release") {
-//         argumentsMaxLengths[0] = MAX_ID_LENGTH;
-//         argumentsMaxLengths[1] = MAX_REGISTRATION_LENGTH;
+void CommandExecutor::readAnswer(std::istream &in, string &answer, const char *userMessage) const
+{
+    while (answer != "Y" && answer != "N")
+    {
+        std::cout << userMessage << std::endl;
+        in >> answer;
+    }
+    in.get();
+}
 
-//         commandRecognized = true;
-//         numberOfArgumentsCorrect = 
-//             (getNumberOfArguments() == 2);
-//     }
-//     else if(commandType == "remove") {
-//         argumentsMaxLengths[0] = MAX_REGISTRATION_LENGTH;
-
-//         commandRecognized = true;
-//         numberOfArgumentsCorrect = 
-//             (getNumberOfArguments() == 1);
-//     }
-//     else if(commandType == "save") {
-//         argumentsMaxLengths[0] = MAX_PATH_LENGTH;
-
-//         commandRecognized = true;
-//         numberOfArgumentsCorrect = 
-//             (getNumberOfArguments() == 1);
-//     }
-//     else if(commandType == "show") {
-//         argumentsMaxLengths[0] = MAX_SHOW_COMMAND_ARGUMENT_LENGTH;
-
-//         commandRecognized = true;
-//         numberOfArgumentsCorrect = 
-//          (getNumberOfArguments() == 1);
-//     }
-//     else if(commandType == "exit") {
-//         commandRecognized = true;
-//         numberOfArgumentsCorrect = 
-//          (getNumberOfArguments() == 0);
-//     }
-//      bool correctArgumentLengths = 
-//         checkArgumentsLengths(argumentsMaxLengths);
-
-//     bool validCommand = 
-//         commandRecognized && 
-//         correctArgumentLengths && 
-//         numberOfArgumentsCorrect;
-
-//     if(!validCommand) {
-//         throw std::invalid_argument("Invalid command!");
-//     }
-        
-// }
-
-// void CommandParser::readCommand(std::istream& in, char* commandArr) const {
-//     in.getline(commandArr, MAX_ROW_LENGTH+1);
-//     std::cout<<"COMMAND: "<<commandArr<<"\n"<<std::endl;
-//     if(in.eof()) {
-//         throw std::out_of_range("end of file");
-//     } 
-//     else if(in.fail()) {
-//         in.clear();
-//         throw std::invalid_argument("Invalid command!");
-//     }
-// }
-
-// void CommandParser::splitCommand(const char* command) {
-//     size_t length = strlen(command);
-
-//     size_t endOfCommandType = extractCommandType(command, length);
-//     extractArguments(command, endOfCommandType, length);
-// }
-
-// size_t CommandParser::extractCommandType(const char* command, const size_t length) {
-//     size_t startPos = 0;
-//     size_t endPos = findNextDelimeterInd(command, startPos);
-//     if(endPos == MAX_ROW_LENGTH)
-//         endPos = length;
-
-//     try{
-//         char* commandTypeArr = CharArrUtils::subArr(command, startPos, endPos);
-//         CharArrUtils::toLowerCharArr(commandTypeArr);
-
-//         commandType = commandTypeArr;
-//         delete[] commandTypeArr;
-//     }
-//     catch(std::bad_alloc e) {
-//         std::cerr<<"Command type is not extracted successfully."<<std::endl;
-//     }
-//     catch(std::exception e) {
-//         std::cerr<<e.what()<<std::endl;
-//     }
-//     return endPos;
-// }
-
-// void CommandParser::extractArguments(const char* command, size_t endOfCommandType, size_t length) {
-//     size_t startPos = endOfCommandType+1;
-//     size_t endPos = startPos;
-//     bool isQuoted = false;
-
-//     while(startPos < length) {
-//         if(command[startPos] == '"') {
-//             isQuoted = true;
-//             startPos++;
-//         }
-        
-//         endPos = findNextDelimeterInd(command, startPos, isQuoted);
-
-//         if(endPos == MAX_ROW_LENGTH) 
-//             endPos = length;
-            
-//         const char* argumentArr = CharArrUtils::subArr(command, startPos, endPos);
-//         arguments.push_back(argumentArr);
-
-//         startPos = (!isQuoted) ? (endPos+1) : (endPos+2);
-//         isQuoted = false;
-//     }
-    
-// }
-
-// size_t CommandParser::getNumberOfArguments() const {
-//     return arguments.size();
-// }
-
-// size_t CommandParser::findNextDelimeterInd(
-//     const char* command, size_t startInd, bool isQuoted) const {
-//     //In case there are no delimeters
-//     size_t index = MAX_ROW_LENGTH; 
-//     size_t i = startInd;
-//     char delimeter =
-//         (isQuoted) ? '"' : COMMAND_DELIMETER;
-    
-//     while(command[i] != '\0'){
-//         if(command[i] == delimeter) {
-//             index = i;
-//             break;
-//         }
-//         i++;
-//     }
-//     return index;
-// }
-
-// bool CommandParser::checkArgumentsLengths(size_t* argumentsMaxLengths) {
-//     bool valid = true;
-
-//     for (size_t i = 0; i < getNumberOfArguments(); i++) {
-//         if(arguments[i].length() > argumentsMaxLengths[i]) {
-//             valid = false;
-//             break;
-//         }
-//     }
-    
-//     return valid;
-// }
-
-//  size_t CommandParser::maxArgumentLength(
-//      size_t argumentLengths[], size_t arrLength) const {
-//      size_t maxLength = 0;
-//      for (size_t i = 0; i < arrLength; i++) {
-//          if(argumentLengths[i] > maxLength)
-//             maxLength = argumentLengths[i];
-//      } 
-//     return maxLength;
-//  }
+void CommandExecutor::printHelp()
+{
+    std::cout << "ZIP <output_path> <output_filename> <output_file_extension> <input_path1> <input_path2> ...\n";
+    std::cout << "UNZIP <archive_path> <output_path>\n";
+    std::cout << "ADD <archive_path> <input_path1> <input_path2> ...\n";
+    std::cout << "REMOVE <archive_path> <input_path1> <input_path2> ...\n";
+    std::cout << "REFRESH <archive_path> <input_path> \n";
+    std::cout << "ADD <archive_path> <input_path1> <input_path2> ...\n";
+    std::cout << "INFO <archive_path>\n";
+    std::cout << "EC <archive_path> (to be implemented)\n";
+    std::cout << "EXIT";
+    std::cout<<std::endl;
+}

@@ -4,6 +4,7 @@
 #include "compressor/byte/ByteCompressor.hpp"
 #include "compressor/directory/DirectoryCompressor.hpp"
 #include "compressor/file/FileCompressor.hpp"
+#include "command/executor/CommandExecutor.hpp"
 #include <iostream>
 #include <vector>
 
@@ -18,21 +19,38 @@ const string path = "";
 
 int main()
 {
-    FileCompressor fileCompressor;
-    // fileCompressor.archive("../InputFiles/a.txt", "../OutputFiles/e.txt");
+    CommandExecutor commandExecutor;
+    CommandParser commandParser;
 
-    // fileCompressor.unarchive("../OutputFiles/Archived/a.lzw", "../OutputFiles/Unarchived/a.txt");
+    do
+    {
+        commandParser.parseCommand(std::cin);
+        commandExecutor.executeCommand(commandParser.getCommandType(), commandParser.getCopyOfArguments());
+    }
+    while(!commandExecutor.isExitCommand());
 
-    DirectoryCompressor directoryCompressor;
+    //     DirectoryCompressor directoryCompressor;
 
-    vector<const char *> inputPaths{"../InputFiles/fold1", "../InputFiles/fold2"};
-    directoryCompressor.archive(inputPaths, "../OutputFiles/Archived", "archive", "lzw");
-    vector<const char *> inputPaths2{"../InputFiles/fold3"};
-    vector<const char* > inputPaths3{"../InputFiles/fold2"};
+    //     vector<const char *> inputPaths{"../InputFiles/fold1", "../InputFiles/fold2"};
+    //     directoryCompressor.archive(inputPaths, "../OutputFiles/Archived", "archive", "lzw");
+    //     vector<const char *> inputPaths2{"../InputFiles/fold3"};
+    //     vector<const char *> inputPaths3{"../InputFiles/fold2"};
 
-    directoryCompressor.addFilesToArchive(inputPaths2, "../OutputFiles/Archived/archive.lzw");
-    directoryCompressor.removeFilesFromArchive(inputPaths3, "../OutputFiles/Archived/archive.lzw");
-    directoryCompressor.unarchive("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived");
+    //     directoryCompressor.addFilesToArchive(inputPaths2, "../OutputFiles/Archived/archive.lzw");
+    //    // directoryCompressor.addFilesToArchive(inputPaths2, "../OutputFiles/Archived/archive.lzw");
+
+    //     directoryCompressor.removeFilesFromArchive(inputPaths3, "../OutputFiles/Archived/archive.lzw");
+    //     directoryCompressor.unarchive("../OutputFiles/Archived/archive.lzw", "../OutputFiles/Unarchived");
+
+    //-----------------------
+
+    // vector<const char *> inputPaths4{"../InputFiles/fold2/a.txt"};
+    // directoryCompressor.archive(inputPaths4, "../OutputFiles/Archived", "archive2", "lzw");
+    // vector<const char *> inputPaths5{"../InputFiles/fold1/b.txt"};
+    // directoryCompressor.addFilesToArchive(inputPaths5, "../OutputFiles/Archived/archive2.lzw");
+    // directoryCompressor.removeFilesFromArchive(inputPaths4, "../OutputFiles/Archived/archive2.lzw");
+    // directoryCompressor.unarchive("../OutputFiles/Archived/archive2.lzw", "../OutputFiles/Unarchived");
+
     // directoryCompressor.printArchiveInfo("../OutputFiles/Archived/archive.lzw");
 
     // CommandParser commandParser;

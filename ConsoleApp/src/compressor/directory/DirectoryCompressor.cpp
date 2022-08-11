@@ -36,16 +36,34 @@ void DirectoryCompressor::archive(vector<const char *> inputPaths, const char *o
         const std::filesystem::path sandbox{inputPaths[i]};
         std::string lastDirectoryName = sandbox.filename().u8string();
 
-        for (auto const &dir_entry : std::filesystem::recursive_directory_iterator{sandbox})
+        if (std::filesystem::is_directory(inputPaths[i]))
         {
-            std::cout << dir_entry.path() << '\n';
-            bool isRegularFile = true;
-            if (std::filesystem::is_directory(dir_entry))
+            for (auto const &dir_entry : std::filesystem::recursive_directory_iterator{sandbox})
             {
-                isRegularFile = false;
-            }
+                std::cout << dir_entry.path() << '\n';
+                bool isRegularFile = true;
+                if (std::filesystem::is_directory(dir_entry))
+                {
+                    isRegularFile = false;
+                }
 
-            std::string currentFileInputPath = dir_entry.path().u8string().c_str();
+                std::string currentFileInputPath = dir_entry.path().u8string().c_str();
+                std::string currentFileArchivePath = "/" + lastDirectoryName +
+                                                     currentFileInputPath.substr(strlen(inputPaths[i]));
+                std::string currentFileOutputPath = outputPath;
+                currentFileOutputPath += "/";
+                currentFileOutputPath += currentFileArchivePath.substr(0, currentFileArchivePath.find_last_of('.')) + ".lzw";
+
+                tableOfContents.push_back(std::make_pair(currentFileArchivePath, firstBytePos));
+
+                firstBytePos =
+                    fileCompressor.archive(currentFileInputPath.c_str(), currentFileArchivePath.c_str(), archiveFile, isRegularFile);
+            }
+        }
+        else
+        {
+            bool isRegularFile = true;
+            std::string currentFileInputPath = inputPaths[i];
             std::string currentFileArchivePath = "/" + lastDirectoryName +
                                                  currentFileInputPath.substr(strlen(inputPaths[i]));
             std::string currentFileOutputPath = outputPath;
@@ -72,7 +90,7 @@ void DirectoryCompressor::addFilesToArchive(vector<const char *> inputPaths, con
 {
     File archiveFile(archivePath);
 
-    vector<pair<string, int>> tableOfContents;
+    map<string, int> tableOfContents;
     uint64_t tableOfContentsBytePointer = archiveFile.readTableOfContentsBytePointer();
     std::cout << "tbp:" << tableOfContentsBytePointer << std::endl;
     archiveFile.setReadingPosition(tableOfContentsBytePointer);
@@ -80,11 +98,6 @@ void DirectoryCompressor::addFilesToArchive(vector<const char *> inputPaths, con
     archiveFile.readTableOfContents(tableOfContents);
     const std::filesystem::path archiveFileSandbox{archivePath};
     std::filesystem::resize_file(archiveFileSandbox, tableOfContentsBytePointer);
-    std::cout << "tableOfContents*\n";
-    for (size_t i = 0; i < tableOfContents.size(); i++)
-    {
-        std::cout << tableOfContents[i].first << " " << tableOfContents[i].second << "\n";
-    }
 
     uint64_t firstBytePos = tableOfContentsBytePointer;
     FileCompressor fileCompressor;
@@ -93,30 +106,49 @@ void DirectoryCompressor::addFilesToArchive(vector<const char *> inputPaths, con
         const std::filesystem::path sandbox{inputPaths[i]};
         std::string lastDirectoryName = sandbox.filename().u8string();
 
-        for (auto const &dir_entry : std::filesystem::recursive_directory_iterator{sandbox})
+        if (std::filesystem::is_directory(inputPaths[i]))
         {
-            std::cout << dir_entry.path() << '\n';
-            bool isRegularFile = true;
-            if (std::filesystem::is_directory(dir_entry))
+            for (auto const &dir_entry : std::filesystem::recursive_directory_iterator{sandbox})
             {
-                isRegularFile = false;
-            }
+                std::cout << dir_entry.path() << '\n';
+                bool isRegularFile = true;
+                if (std::filesystem::is_directory(dir_entry))
+                {
+                    isRegularFile = false;
+                }
 
-            std::string currentFileInputPath = dir_entry.path().u8string().c_str();
+                std::string currentFileInputPath = dir_entry.path().u8string().c_str();
+                std::string currentFileArchivePath = "/" + lastDirectoryName +
+                                                     currentFileInputPath.substr(strlen(inputPaths[i]));
+
+                if (tableOfContents.find(currentFileArchivePath) != tableOfContents.end())
+                {
+                    throw std::logic_error("File already exists in archive.");
+                }
+
+                tableOfContents[currentFileArchivePath] = firstBytePos;
+                firstBytePos =
+                    fileCompressor.archive(currentFileInputPath.c_str(), currentFileArchivePath.c_str(), archiveFile, isRegularFile);
+            }
+        }
+        else
+        {
+            bool isRegularFile = true;
+            std::string currentFileInputPath = inputPaths[i];
             std::string currentFileArchivePath = "/" + lastDirectoryName +
                                                  currentFileInputPath.substr(strlen(inputPaths[i]));
 
-            tableOfContents.push_back(std::make_pair(currentFileArchivePath, firstBytePos));
+            if (tableOfContents.find(currentFileArchivePath) != tableOfContents.end())
+            {
+                throw std::logic_error("File already exists in archive.");
+            }
+
+            tableOfContents[currentFileArchivePath] = firstBytePos;
             firstBytePos =
                 fileCompressor.archive(currentFileInputPath.c_str(), currentFileArchivePath.c_str(), archiveFile, isRegularFile);
         }
     }
 
-    std::cout << "tableOfContents\n";
-    for (size_t i = 0; i < tableOfContents.size(); i++)
-    {
-        std::cout << tableOfContents[i].first << " " << tableOfContents[i].second << "\n";
-    }
     archiveFile.insertTableOfContentsBytePointer();
     archiveFile.appendTableOfContents(tableOfContents);
     // TODO: if table of contents contains file
@@ -141,21 +173,69 @@ void DirectoryCompressor::removeFilesFromArchive(vector<const char *> inputPaths
         const std::filesystem::path sandbox{inputPaths[i]};
         std::string lastDirectoryName = sandbox.filename().u8string();
 
-        for (auto const &dir_entry : std::filesystem::recursive_directory_iterator{sandbox})
+        if (std::filesystem::is_directory(inputPaths[i]))
         {
-            std::cout << dir_entry.path() << '\n';
-            bool isRegularFile = true;
-            if (std::filesystem::is_directory(dir_entry))
+            for (auto const &dir_entry : std::filesystem::recursive_directory_iterator{sandbox})
             {
-                isRegularFile = false;
-            }
+                std::cout << dir_entry.path() << '\n';
+                bool isRegularFile = true;
+                if (std::filesystem::is_directory(dir_entry))
+                {
+                    isRegularFile = false;
+                }
 
-            std::string currentFileInputPath = dir_entry.path().u8string().c_str();
+                std::string currentFileInputPath = dir_entry.path().u8string().c_str();
+                std::string currentFileArchivePath = "/" + lastDirectoryName +
+                                                     currentFileInputPath.substr(strlen(inputPaths[i]));
+
+                std::cout << "inputPaths[i] = " << inputPaths[i] << std::endl;
+                std::string filePath = string(PathUtils::leftTrim(dir_entry.path().u8string().c_str()));
+
+                while (tableOfContents.count("/" + filePath) == 0 && filePath.length() > 0)
+                {
+                    size_t slashIndex = filePath.find_first_of("/\\");
+                    if (slashIndex == string::npos)
+                    {
+                        break;
+                    }
+                    filePath = filePath.substr(slashIndex + 1);
+                    std::cout << "edited filepath = " << filePath << std::endl;
+                }
+
+                if (tableOfContents.find(currentFileArchivePath) == tableOfContents.end())
+                {
+                    throw std::logic_error("File does not exist in archive.");
+                }
+
+                auto tableOfContentsEntry = tableOfContents.find("/" + filePath);
+                if (tableOfContentsEntry == tableOfContents.end()) // entry not found
+                {
+                    continue;
+                }
+                int resultFileFirstByte = tableOfContentsEntry->second;
+                archiveFile.setReadingPosition(resultFileFirstByte);
+                int readingPosition = archiveFile.getReadingPosition();
+
+                FileCompressor fileCompressor;
+
+                std::cout << "readingPos= " << readingPosition << std::endl;
+                std::pair<size_t, ArchiveHeader> archiveHeaderPair = archiveFile.readHeader();
+                unsigned int headerSize = archiveHeaderPair.first - resultFileFirstByte;
+                unsigned int fileSize = archiveHeaderPair.second.size + headerSize;
+                archiveFile.shiftLeftBytes(resultFileFirstByte, tableOfContentsBytePointer, fileSize);
+
+                std::filesystem::resize_file(archiveFileSandbox, tableOfContentsBytePointer - fileSize);
+                tableOfContents.erase(currentFileArchivePath);
+            }
+        }
+        else
+        {
+            std::string currentFileInputPath = inputPaths[i];
             std::string currentFileArchivePath = "/" + lastDirectoryName +
                                                  currentFileInputPath.substr(strlen(inputPaths[i]));
 
             std::cout << "inputPaths[i] = " << inputPaths[i] << std::endl;
-            std::string filePath = string(PathUtils::leftTrim(dir_entry.path().u8string().c_str()));
+            std::string filePath = string(PathUtils::leftTrim(inputPaths[i]));
 
             while (tableOfContents.count("/" + filePath) == 0 && filePath.length() > 0)
             {
@@ -168,25 +248,30 @@ void DirectoryCompressor::removeFilesFromArchive(vector<const char *> inputPaths
                 std::cout << "edited filepath = " << filePath << std::endl;
             }
 
-            auto tableOfContentsEntry = tableOfContents.find("/" + filePath);
-            if (tableOfContentsEntry == tableOfContents.end()) //entry not found
+            if (tableOfContents.find(currentFileArchivePath) != tableOfContents.end())
             {
-                continue;
+                throw std::logic_error("File already exists in archive.");
             }
-            int resultFileFirstByte = tableOfContentsEntry->second;
-            archiveFile.setReadingPosition(resultFileFirstByte);
-            int readingPosition = archiveFile.getReadingPosition();
 
-            FileCompressor fileCompressor;
+            auto tableOfContentsEntry = tableOfContents.find("/" + filePath);
+            if (tableOfContentsEntry != tableOfContents.end()) // entry not found
+            {
 
-            std::cout << "readingPos= " << readingPosition << std::endl;
-            std::pair<size_t, ArchiveHeader> archiveHeaderPair = archiveFile.readHeader();
-            unsigned int headerSize = archiveHeaderPair.first - resultFileFirstByte;
-            unsigned int fileSize = archiveHeaderPair.second.size + headerSize;
-            archiveFile.shiftLeftBytes(resultFileFirstByte, tableOfContentsBytePointer, fileSize);
+                int resultFileFirstByte = tableOfContentsEntry->second;
+                archiveFile.setReadingPosition(resultFileFirstByte);
+                int readingPosition = archiveFile.getReadingPosition();
 
-            std::filesystem::resize_file(archiveFileSandbox, tableOfContentsBytePointer - fileSize);
-            tableOfContents.erase(currentFileArchivePath);
+                FileCompressor fileCompressor;
+
+                std::cout << "readingPos= " << readingPosition << std::endl;
+                std::pair<size_t, ArchiveHeader> archiveHeaderPair = archiveFile.readHeader();
+                unsigned int headerSize = archiveHeaderPair.first - resultFileFirstByte;
+                unsigned int fileSize = archiveHeaderPair.second.size + headerSize;
+                archiveFile.shiftLeftBytes(resultFileFirstByte, tableOfContentsBytePointer, fileSize);
+
+                std::filesystem::resize_file(archiveFileSandbox, tableOfContentsBytePointer - fileSize);
+                tableOfContents.erase(currentFileArchivePath);
+            }
         }
     }
 

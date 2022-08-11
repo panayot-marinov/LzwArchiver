@@ -37,46 +37,67 @@ void CommandParser::parseCommand(std::istream& in) {
 
         commandRecognized = true;
         numberOfArgumentsCorrect = 
-            (getNumberOfArguments() > 0);
+            (getNumberOfArguments() >= 4);
     }
     else if(commandType == "unzip") {
         //argumentsMaxLengths[0] = MAX_PERSON_NAME_LENGTH;
-        //argumentsMaxLengths[1] = MAX_ID_LENGTH;
+       // argumentsMaxLengths[1] = MAX_ID_LENGTH;
 
         commandRecognized = true;
         numberOfArgumentsCorrect = 
-            (getNumberOfArguments() > 0);
+            (getNumberOfArguments() == 2);
     }
     else if(commandType =="info") {
         //argumentsMaxLengths[0] = MAX_ID_LENGTH;
-        //argumentsMaxLengths[1] = MAX_REGISTRATION_LENGTH;
+       // argumentsMaxLengths[1] = MAX_REGISTRATION_LENGTH;
 
         commandRecognized = true;
         numberOfArgumentsCorrect = 
             (getNumberOfArguments() == 1);
     }
-    else if(commandType == "refresh") {
+    else if(commandType == "add") {
         //argumentsMaxLengths[0] = MAX_ID_LENGTH;
         //argumentsMaxLengths[1] = MAX_REGISTRATION_LENGTH;
 
         commandRecognized = true;
         numberOfArgumentsCorrect = 
-            (getNumberOfArguments() == 2); //TODO: ??
+            (getNumberOfArguments() >= 2);
     }
-    else if(commandType == "ec") {
+    else if(commandType == "remove") {
         //argumentsMaxLengths[0] = MAX_REGISTRATION_LENGTH;
 
         commandRecognized = true;
         numberOfArgumentsCorrect = 
-            (getNumberOfArguments() == 1);
+            (getNumberOfArguments() >= 2);
+    }
+    else if(commandType == "refresh") {
+        //argumentsMaxLengths[0] = MAX_PATH_LENGTH;
+
+        commandRecognized = true;
+        numberOfArgumentsCorrect = 
+            (getNumberOfArguments() == 2);
+    }
+    else if(commandType == "ec") {
+        //argumentsMaxLengths[0] = MAX_SHOW_COMMAND_ARGUMENT_LENGTH;
+
+        commandRecognized = true;
+        numberOfArgumentsCorrect = 
+         (getNumberOfArguments() == 1);
+    }
+    else if(commandType == "help") {
+       // argumentsMaxLengths[0] = MAX_SHOW_COMMAND_ARGUMENT_LENGTH;
+
+        commandRecognized = true;
+        numberOfArgumentsCorrect = 
+         (getNumberOfArguments() == 0);
     }
     else if(commandType == "exit") {
         commandRecognized = true;
         numberOfArgumentsCorrect = 
          (getNumberOfArguments() == 0);
     }
-     bool correctArgumentLengths = true; //TODO: think about argument lengths
-        //checkArgumentsLengths(argumentsMaxLengths);
+     bool correctArgumentLengths = 
+        checkArgumentsLengths(argumentsMaxLengths);
 
     bool validCommand = 
         commandRecognized && 
