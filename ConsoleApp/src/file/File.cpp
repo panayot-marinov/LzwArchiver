@@ -452,13 +452,13 @@ pair<size_t, ArchiveHeader> File::readHeader()
 
     ArchiveHeader archiveHeader;
     uint64_t chksum;
-    std::cout<<"reading Position = "<<readStream.tellg()<<std::endl;
+    std::cout << "reading Position = " << readStream.tellg() << std::endl;
     readStream.read(reinterpret_cast<char *>(&chksum), sizeof(chksum));
     archiveHeader.chksum = chksum;
     readStream.ignore(1);
     readStream >> archiveHeader.name;
     readStream >> archiveHeader.size;
-    readStream >> archiveHeader.mtime;
+    // readStream >> archiveHeader.mtime;
     readStream.ignore(1); // Ignore whitespace
     readStream.read(archiveHeader.type, 1);
     archiveHeader.type[1] = '\0';
@@ -479,13 +479,13 @@ int File::appendHeader(const ArchiveHeader &archiveHeader)
         throw std::invalid_argument("Write stream cannot be opened");
     }
     //}
-    //std::cout << "FILESIZE =" << this->getSize() << std::endl;
+    // std::cout << "FILESIZE =" << this->getSize() << std::endl;
     writeStream.seekp(this->getSize());
 
     writeStream.write("         ", sizeof(uint64_t) + 1);
     // writeStream.write("123      ", sizeof(uint64_t) + 1);
     writeStream << archiveHeader.name << ' ' << archiveHeader.size << ' '
-                << archiveHeader.mtime << ' ' << archiveHeader.type;
+                << archiveHeader.type;
     // writeStream <<archiveHeader.chksum<<' '<< archiveHeader.name << ' ' << archiveHeader.size << ' '
     //              << archiveHeader.mtime << ' ' << archiveHeader.type;
 

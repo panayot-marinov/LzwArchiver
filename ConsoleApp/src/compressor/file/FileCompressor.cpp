@@ -23,7 +23,7 @@ uint64_t FileCompressor::archive(const char *inputPath, const char *inputArchive
     // header
     ArchiveHeader archiveHeader;
     strcpy(archiveHeader.name, inputArchivePath);
-    strcpy(archiveHeader.mtime, inputFile.getLastModifiedTime());
+    //strcpy(archiveHeader.mtime, inputFile.getLastModifiedTime());
 
     uint64_t byteSize = 0;
     if (isRegularFile)
@@ -54,7 +54,6 @@ uint64_t FileCompressor::archive(const char *inputPath, const char *inputArchive
             bytes = inputFile.readBytes(100, bytesRead);
         }
 
-        std::cout << archiveHeader.chksum << " " << archiveHeader.name << " " << archiveHeader.size << " " << archiveHeader.mtime << " " << archiveHeader.type << '\n';
         int firstHeaderBytePosition = outputFile.getSize();
         int lastHeaderBytePosition = outputFile.appendHeader(archiveHeader);
         int lastCodeBytePosition = outputFile.appendCodes(*result);

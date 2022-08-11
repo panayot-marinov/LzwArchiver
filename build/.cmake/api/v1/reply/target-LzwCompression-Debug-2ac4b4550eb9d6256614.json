@@ -80,6 +80,14 @@
 	[
 		{
 			"backtrace" : 2,
+			"id" : "arrayUtils::@666a61b35ffd66e14868"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "byteCompressor::@74d505cadb3906956bfa"
+		},
+		{
+			"backtrace" : 2,
 			"id" : "commandExecutor::@ebed50cce52006298a3e"
 		},
 		{
@@ -88,15 +96,7 @@
 		},
 		{
 			"backtrace" : 2,
-			"id" : "arrayUtils::@666a61b35ffd66e14868"
-		},
-		{
-			"backtrace" : 2,
 			"id" : "charArrUtils::@666a61b35ffd66e14868"
-		},
-		{
-			"backtrace" : 2,
-			"id" : "byteCompressor::@74d505cadb3906956bfa"
 		},
 		{
 			"backtrace" : 2,
@@ -104,11 +104,7 @@
 		},
 		{
 			"backtrace" : 2,
-			"id" : "fileCompressor::@3fe750034c355533c1c5"
-		},
-		{
-			"backtrace" : 2,
-			"id" : "pathUtils::@2536f7ff02733c738055"
+			"id" : "file::@31351f546dc73cfc2229"
 		},
 		{
 			"backtrace" : 2,
@@ -116,7 +112,15 @@
 		},
 		{
 			"backtrace" : 2,
-			"id" : "file::@31351f546dc73cfc2229"
+			"id" : "pathUtils::@2536f7ff02733c738055"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "fileCompressor::@3fe750034c355533c1c5"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "wordCodeUtils::@c3ffd6a84c8fd3a3ccca"
 		},
 		{
 			"backtrace" : 2,
@@ -125,10 +129,6 @@
 		{
 			"backtrace" : 2,
 			"id" : "wordCodeReader::@a167429e31e0678e5d95"
-		},
-		{
-			"backtrace" : 2,
-			"id" : "wordCodeUtils::@c3ffd6a84c8fd3a3ccca"
 		}
 	],
 	"id" : "LzwCompression::@6890427a1f51a3e7e1df",
