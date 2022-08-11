@@ -46,6 +46,11 @@
 },
 {
   "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\LzwCompression.dir\\file\\hasher\\FileHasher.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\file\\hasher\\FileHasher.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/file/hasher/FileHasher.cpp"
+},
+{
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build",
   "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\LzwCompression.dir\\path\\PathUtils.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\path\\PathUtils.cpp\"",
   "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/path/PathUtils.cpp"
 },
@@ -103,6 +108,11 @@
   "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/file",
   "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\file.dir\\File.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\file\\File.cpp\"",
   "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/file/File.cpp"
+},
+{
+  "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/file/hasher",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\fileHasher.dir\\FileHasher.cpp.obj -c \"C:\\Users\\Panayot Marinov\\Desktop\\FMI 2021\\SDP\\Project\\LzwArchiver\\ConsoleApp\\src\\file\\hasher\\FileHasher.cpp\"",
+  "file": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/ConsoleApp/src/file/hasher/FileHasher.cpp"
 },
 {
   "directory": "C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/path",

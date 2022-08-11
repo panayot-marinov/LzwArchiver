@@ -1,4 +1,5 @@
 #include "file/File.hpp"
+#include "file/hasher/FileHasher.hpp"
 #include "wordCode/WordCode.hpp"
 #include "command/parser/CommandParser.hpp"
 #include "compressor/byte/ByteCompressor.hpp"
@@ -10,6 +11,10 @@
 
 #include <filesystem>
 
+// #include "boost/detail/workaround.hpp"
+// #include "boost/array.hpp"
+//#include "boost/crc.hpp"
+
 using std::cin;
 using std::cout;
 using std::endl;
@@ -19,15 +24,20 @@ const string path = "";
 
 int main()
 {
-    CommandExecutor commandExecutor;
-    CommandParser commandParser;
+    // CommandExecutor commandExecutor;
+    // CommandParser commandParser;
 
-    do
-    {
-        commandParser.parseCommand(std::cin);
-        commandExecutor.executeCommand(commandParser.getCommandType(), commandParser.getCopyOfArguments());
-    }
-    while(!commandExecutor.isExitCommand());
+    // do
+    // {
+    //     commandParser.parseCommand(std::cin);
+    //     commandExecutor.executeCommand(commandParser.getCommandType(), commandParser.getCopyOfArguments());
+    // } while (!commandExecutor.isExitCommand());
+
+    FileHasher hasher;
+    File file("../OutputFiles/Archived/archive.lzw");
+    uint64_t hashedValue = hasher.hashFile(file, 100, 812);
+    
+    std::cout<<hashedValue<<std::endl;
 
     //     DirectoryCompressor directoryCompressor;
 

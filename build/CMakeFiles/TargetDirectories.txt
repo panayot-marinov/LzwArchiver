@@ -23,6 +23,9 @@ C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/compress
 C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/file/CMakeFiles/file.dir
 C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/file/CMakeFiles/edit_cache.dir
 C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/file/CMakeFiles/rebuild_cache.dir
+C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/file/hasher/CMakeFiles/fileHasher.dir
+C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/file/hasher/CMakeFiles/edit_cache.dir
+C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/file/hasher/CMakeFiles/rebuild_cache.dir
 C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/path/CMakeFiles/pathUtils.dir
 C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/path/CMakeFiles/edit_cache.dir
 C:/Users/Panayot Marinov/Desktop/FMI 2021/SDP/Project/LzwArchiver/build/path/CMakeFiles/rebuild_cache.dir

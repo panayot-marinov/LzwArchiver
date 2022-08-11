@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/LzwCompression.dir/compressor/file/FileCompressor.cpp.obj.d"
   "CMakeFiles/LzwCompression.dir/file/File.cpp.obj"
   "CMakeFiles/LzwCompression.dir/file/File.cpp.obj.d"
+  "CMakeFiles/LzwCompression.dir/file/hasher/FileHasher.cpp.obj"
+  "CMakeFiles/LzwCompression.dir/file/hasher/FileHasher.cpp.obj.d"
   "CMakeFiles/LzwCompression.dir/main.cpp.obj"
   "CMakeFiles/LzwCompression.dir/main.cpp.obj.d"
   "CMakeFiles/LzwCompression.dir/path/PathUtils.cpp.obj"

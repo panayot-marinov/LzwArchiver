@@ -233,6 +233,19 @@ file/fast:
 .PHONY : file/fast
 
 #=============================================================================
+# Target rules for targets named fileHasher
+
+# Build rule for target.
+fileHasher: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 fileHasher
+.PHONY : fileHasher
+
+# fast build rule for target.
+fileHasher/fast:
+	$(MAKE) $(MAKESILENT) -f file\hasher\CMakeFiles\fileHasher.dir\build.make file/hasher/CMakeFiles/fileHasher.dir/build
+.PHONY : fileHasher/fast
+
+#=============================================================================
 # Target rules for targets named pathUtils
 
 # Build rule for target.
@@ -476,6 +489,30 @@ file/File.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/file/File.cpp.s
 .PHONY : file/File.cpp.s
 
+file/hasher/FileHasher.obj: file/hasher/FileHasher.cpp.obj
+.PHONY : file/hasher/FileHasher.obj
+
+# target to build an object file
+file/hasher/FileHasher.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/file/hasher/FileHasher.cpp.obj
+.PHONY : file/hasher/FileHasher.cpp.obj
+
+file/hasher/FileHasher.i: file/hasher/FileHasher.cpp.i
+.PHONY : file/hasher/FileHasher.i
+
+# target to preprocess a source file
+file/hasher/FileHasher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/file/hasher/FileHasher.cpp.i
+.PHONY : file/hasher/FileHasher.cpp.i
+
+file/hasher/FileHasher.s: file/hasher/FileHasher.cpp.s
+.PHONY : file/hasher/FileHasher.s
+
+# target to generate assembly for a file
+file/hasher/FileHasher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LzwCompression.dir\build.make CMakeFiles/LzwCompression.dir/file/hasher/FileHasher.cpp.s
+.PHONY : file/hasher/FileHasher.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -613,6 +650,7 @@ help:
 	@echo ... directoryCompressor
 	@echo ... file
 	@echo ... fileCompressor
+	@echo ... fileHasher
 	@echo ... pathUtils
 	@echo ... wordCodeReader
 	@echo ... wordCodeUtils
@@ -641,6 +679,9 @@ help:
 	@echo ... file/File.obj
 	@echo ... file/File.i
 	@echo ... file/File.s
+	@echo ... file/hasher/FileHasher.obj
+	@echo ... file/hasher/FileHasher.i
+	@echo ... file/hasher/FileHasher.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

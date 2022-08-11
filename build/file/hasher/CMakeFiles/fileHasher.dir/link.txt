@@ -1,0 +1,2 @@
+C:\mingw64\bin\ar.exe qc libfileHasher.a CMakeFiles/fileHasher.dir/FileHasher.cpp.obj
+C:\mingw64\bin\ranlib.exe libfileHasher.a

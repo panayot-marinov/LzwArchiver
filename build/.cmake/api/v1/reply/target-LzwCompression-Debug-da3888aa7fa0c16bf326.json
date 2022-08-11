@@ -28,13 +28,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 18,
+				"line" : 19,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 20,
+				"line" : 21,
 				"parent" : 0
 			}
 		]
@@ -71,7 +71,8 @@
 				9,
 				10,
 				11,
-				12
+				12,
+				13
 			]
 		}
 	],
@@ -83,15 +84,15 @@
 		},
 		{
 			"backtrace" : 2,
-			"id" : "commandParser::@881cc2a023a6d1fb4047"
-		},
-		{
-			"backtrace" : 2,
 			"id" : "arrayUtils::@666a61b35ffd66e14868"
 		},
 		{
 			"backtrace" : 2,
 			"id" : "charArrUtils::@666a61b35ffd66e14868"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "commandParser::@881cc2a023a6d1fb4047"
 		},
 		{
 			"backtrace" : 2,
@@ -103,15 +104,11 @@
 		},
 		{
 			"backtrace" : 2,
+			"id" : "fileHasher::@a19b0510ca9f22b88dff"
+		},
+		{
+			"backtrace" : 2,
 			"id" : "file::@31351f546dc73cfc2229"
-		},
-		{
-			"backtrace" : 2,
-			"id" : "wordCodeReader::@a167429e31e0678e5d95"
-		},
-		{
-			"backtrace" : 2,
-			"id" : "fileCompressor::@3fe750034c355533c1c5"
 		},
 		{
 			"backtrace" : 2,
@@ -119,11 +116,19 @@
 		},
 		{
 			"backtrace" : 2,
-			"id" : "wordCodeWriter::@48309f3e85fbb4b00d71"
+			"id" : "fileCompressor::@3fe750034c355533c1c5"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "wordCodeReader::@a167429e31e0678e5d95"
 		},
 		{
 			"backtrace" : 2,
 			"id" : "wordCodeUtils::@c3ffd6a84c8fd3a3ccca"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "wordCodeWriter::@48309f3e85fbb4b00d71"
 		}
 	],
 	"id" : "LzwCompression::@6890427a1f51a3e7e1df",
@@ -171,12 +176,17 @@
 			},
 			{
 				"backtrace" : 2,
+				"fragment" : "file\\libfile.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
 				"fragment" : "compressor\\file\\libfileCompressor.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "file\\libfile.a",
+				"fragment" : "file\\hasher\\libfileHasher.a",
 				"role" : "libraries"
 			},
 			{
@@ -231,7 +241,8 @@
 				9,
 				10,
 				11,
-				12
+				12,
+				13
 			]
 		}
 	],
@@ -289,6 +300,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "file/File.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "file/hasher/FileHasher.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

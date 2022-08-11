@@ -18,7 +18,8 @@
 						8,
 						9,
 						10,
-						11
+						11,
+						12
 					],
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
@@ -139,6 +140,21 @@
 					]
 				},
 				{
+					"build" : "file/hasher",
+					"jsonFile" : "directory-file.hasher-Debug-776cd02138a96fe482f2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "file/hasher",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
 					"build" : "path",
 					"jsonFile" : "directory-path-Debug-6e2de2bb9462fee2528c.json",
 					"minimumCMakeVersion" : 
@@ -150,7 +166,7 @@
 					"source" : "path",
 					"targetIndexes" : 
 					[
-						9
+						10
 					]
 				},
 				{
@@ -165,7 +181,7 @@
 					"source" : "wordCode/reader",
 					"targetIndexes" : 
 					[
-						10
+						11
 					]
 				},
 				{
@@ -180,7 +196,7 @@
 					"source" : "wordCode/writer",
 					"targetIndexes" : 
 					[
-						12
+						13
 					]
 				},
 				{
@@ -195,7 +211,7 @@
 					"source" : "wordCode",
 					"targetIndexes" : 
 					[
-						11
+						12
 					]
 				}
 			],
@@ -216,7 +232,8 @@
 						8,
 						9,
 						10,
-						11
+						11,
+						12
 					],
 					"name" : "LzwCompression",
 					"targetIndexes" : 
@@ -233,7 +250,8 @@
 						9,
 						10,
 						11,
-						12
+						12,
+						13
 					]
 				}
 			],
@@ -242,7 +260,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "LzwCompression::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-LzwCompression-Debug-24303ed02f7ca23be2b4.json",
+					"jsonFile" : "target-LzwCompression-Debug-da3888aa7fa0c16bf326.json",
 					"name" : "LzwCompression",
 					"projectIndex" : 0
 				},
@@ -304,27 +322,34 @@
 				},
 				{
 					"directoryIndex" : 8,
+					"id" : "fileHasher::@a19b0510ca9f22b88dff",
+					"jsonFile" : "target-fileHasher-Debug-097d9b3cf172da79c60c.json",
+					"name" : "fileHasher",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
 					"id" : "pathUtils::@2536f7ff02733c738055",
 					"jsonFile" : "target-pathUtils-Debug-ba865c753386b1594311.json",
 					"name" : "pathUtils",
 					"projectIndex" : 0
 				},
 				{
-					"directoryIndex" : 9,
+					"directoryIndex" : 10,
 					"id" : "wordCodeReader::@a167429e31e0678e5d95",
 					"jsonFile" : "target-wordCodeReader-Debug-5808afbba0027564c55c.json",
 					"name" : "wordCodeReader",
 					"projectIndex" : 0
 				},
 				{
-					"directoryIndex" : 11,
+					"directoryIndex" : 12,
 					"id" : "wordCodeUtils::@c3ffd6a84c8fd3a3ccca",
 					"jsonFile" : "target-wordCodeUtils-Debug-c48030c3ea0420b901e6.json",
 					"name" : "wordCodeUtils",
 					"projectIndex" : 0
 				},
 				{
-					"directoryIndex" : 10,
+					"directoryIndex" : 11,
 					"id" : "wordCodeWriter::@48309f3e85fbb4b00d71",
 					"jsonFile" : "target-wordCodeWriter-Debug-f1fea7e54603d560cfb6.json",
 					"name" : "wordCodeWriter",
