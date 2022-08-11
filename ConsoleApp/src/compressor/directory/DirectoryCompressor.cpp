@@ -375,4 +375,5 @@ void DirectoryCompressor::printArchiveInfo(const char *inputPath) const
         std::cout << (*it).first << " ; Level of compression: " << archiveHeader.levelOfCompression << '\n';
     }
     std::cout << "-------------------------------------" << std::endl;
+    delete tableOfContents;
 }

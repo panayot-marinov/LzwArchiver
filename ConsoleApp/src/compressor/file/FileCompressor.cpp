@@ -129,6 +129,8 @@ void FileCompressor::unarchive(File &inputFile, const char *outputPath)
         ByteCompressor byteCompressor;
         byteCompressor.decompressAndWriteBytes(*archivePair.second, outputFile);
     }
+    
+    delete archivePair.second;
 }
 
 bool FileCompressor::isArchivedFileCorrupted(File &inputFile)

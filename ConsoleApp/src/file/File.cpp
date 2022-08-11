@@ -281,8 +281,8 @@ void File::insertLevelOfCompression(float levelOfCompression)
 
     ArchiveHeader archiveHeader;
     uint64_t chksum = 0;
-    char * result = new char[15]; //reinterpret_cast<char *>(&chksum)
-    readStream.read(result, sizeof(chksum));
+    //char * result = new char[15]; //reinterpret_cast<char *>(&chksum)
+    readStream.read(reinterpret_cast<char *>(&chksum), sizeof(chksum));
     archiveHeader.chksum = chksum;
     readStream.ignore(1);
     readStream >> archiveHeader.name;
@@ -453,6 +453,7 @@ void File::appendFile(File &file)
         bytes = file.readBytes(APPEND_FILE_TRANSFER_BYTES, bytesRead);
     }
 
+    delete[] bytes;
     writeStream.close();
 }
 
@@ -580,6 +581,7 @@ void File::shiftLeftBytes(unsigned int from, unsigned int to, unsigned int count
         bytesToShift = std::min(BYTES_TO_SHIFT_STEP, to - currentReadPosition);
     }
 
+    delete[] buffer;
     writeStream.close();
     readStream.close();
 }

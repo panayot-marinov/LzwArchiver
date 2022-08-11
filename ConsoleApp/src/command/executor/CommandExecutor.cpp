@@ -85,7 +85,7 @@ void CommandExecutor::executeCommand(
     }
     else if (commandType == "ec")
     {
-        // TODO:
+        
     }
     else if (commandType == "help")
     {
